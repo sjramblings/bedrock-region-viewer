@@ -15,7 +15,26 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    outputs:
+      ready: ${{ steps.check.outputs.ready }}
+    env:
+      ROLE_ARN: ${{ secrets.AWS_ROLE_ARN }}
+      REGION: ${{ secrets.AWS_REGION }}
+    steps:
+      - id: check
+        run: |
+          if [ -z "${ROLE_ARN:-}" ] || [ -z "${REGION:-}" ]; then
+            echo "::warning::Skipping refresh. Add repo secrets AWS_ROLE_ARN and AWS_REGION after deploying infra/github-oidc-role.yaml. See README."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
   refresh:
+    needs: preflight
+    if: needs.preflight.outputs.ready == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -32,9 +51,10 @@ jobs:
       - name: Configure AWS credentials via OIDC
         uses: aws-actions/configure-aws-credentials@v6
         with:
-          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
-          aws-region: ${{ vars.AWS_REGION }}
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ secrets.AWS_REGION }}
           role-session-name: bedrock-region-viewer-refresh
+          mask-aws-account-id: true
 
       - name: Snapshot Bedrock catalog
         run: bun run fetch

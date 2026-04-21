@@ -17,55 +17,82 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  preflight:
     runs-on: ubuntu-latest
+    outputs:
+      ready: ${{ steps.check.outputs.ready }}
+    env:
+      ROLE_ARN: ${{ secrets.AWS_ROLE_ARN }}
+      REGION: ${{ secrets.AWS_REGION }}
+      APP_ID: ${{ secrets.AMPLIFY_APP_ID }}
+    steps:
+      - id: check
+        run: |
+          if [ -z "${ROLE_ARN:-}" ] || [ -z "${REGION:-}" ] || [ -z "${APP_ID:-}" ]; then
+            echo "::warning::Skipping deploy. Add repo secrets AWS_ROLE_ARN, AWS_REGION, AMPLIFY_APP_ID after deploying infra/github-oidc-role.yaml. See README."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  deploy:
+    needs: preflight
+    if: needs.preflight.outputs.ready == 'true'
+    runs-on: ubuntu-latest
+    env:
+      APP_ID: ${{ secrets.AMPLIFY_APP_ID }}
     steps:
       - uses: actions/checkout@v5
 
       - name: Configure AWS credentials via OIDC
         uses: aws-actions/configure-aws-credentials@v6
         with:
-          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
-          aws-region: ${{ vars.AWS_REGION }}
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ secrets.AWS_REGION }}
           role-session-name: bedrock-region-viewer-deploy
+          mask-aws-account-id: true
 
       - name: Package static site
         run: |
           cd public
-          zip -r ../site.zip . -x "*.DS_Store"
-          cd ..
-          ls -la site.zip
+          zip -rq ../site.zip . -x "*.DS_Store"
 
       - name: Create deployment
         id: create
         run: |
           set -euo pipefail
-          OUT=$(aws amplify create-deployment \
-            --app-id "${{ vars.AMPLIFY_APP_ID }}" \
+          RESP=$(aws amplify create-deployment \
+            --app-id "$APP_ID" \
             --branch-name main)
-          JOB_ID=$(echo "$OUT" | jq -r .jobId)
-          ZIP_UPLOAD_URL=$(echo "$OUT" | jq -r .zipUploadUrl)
+          JOB_ID=$(echo "$RESP" | jq -r .jobId)
+          ZIP_UPLOAD_URL=$(echo "$RESP" | jq -r .zipUploadUrl)
+          echo "::add-mask::$ZIP_UPLOAD_URL"
           echo "job_id=$JOB_ID" >> "$GITHUB_OUTPUT"
           echo "zip_upload_url=$ZIP_UPLOAD_URL" >> "$GITHUB_OUTPUT"
 
       - name: Upload bundle
+        env:
+          ZIP_UPLOAD_URL: ${{ steps.create.outputs.zip_upload_url }}
         run: |
-          curl -fsS -H "Content-Type: application/zip" \
+          curl -fsS -o /dev/null -H "Content-Type: application/zip" \
             --upload-file site.zip \
-            "${{ steps.create.outputs.zip_upload_url }}"
+            "$ZIP_UPLOAD_URL"
 
       - name: Start deployment
+        env:
+          JOB_ID: ${{ steps.create.outputs.job_id }}
         run: |
           aws amplify start-deployment \
-            --app-id "${{ vars.AMPLIFY_APP_ID }}" \
+            --app-id "$APP_ID" \
             --branch-name main \
-            --job-id "${{ steps.create.outputs.job_id }}"
+            --job-id "$JOB_ID" \
+            >/dev/null
 
       - name: Wait for deployment
+        env:
+          JOB_ID: ${{ steps.create.outputs.job_id }}
         run: |
           set -euo pipefail
-          JOB_ID="${{ steps.create.outputs.job_id }}"
-          APP_ID="${{ vars.AMPLIFY_APP_ID }}"
           for attempt in $(seq 1 60); do
             STATUS=$(aws amplify get-job \
               --app-id "$APP_ID" \
