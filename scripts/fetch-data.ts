@@ -62,6 +62,7 @@ type Profile = {
   description?: string;
   geo?: string;
   models: string[];
+  routeRegions: string[];
 };
 
 type RegionData = {
@@ -105,15 +106,26 @@ function mapModel(m: FoundationModelSummary): OnDemandModel {
 
 function mapProfile(p: InferenceProfileSummary): Profile {
   const id = p.inferenceProfileId ?? "";
+  const arns = (p.models ?? [])
+    .map((m) => m.modelArn ?? "")
+    .filter(Boolean);
+  // ARN shape: arn:aws:bedrock:<region>:<account>:foundation-model/<modelId>
+  // Each entry in p.models represents one route-through region, so model IDs
+  // are usually duplicated N times. Dedupe and surface the regions separately
+  // so the UI can show "which regions does this profile route through".
+  const models = [
+    ...new Set(arns.map((arn) => arn.split("/").pop() ?? arn)),
+  ].sort();
+  const routeRegions = [
+    ...new Set(arns.map((arn) => arn.split(":")[3] ?? "").filter(Boolean)),
+  ].sort();
   return {
     profileId: id,
     profileName: p.inferenceProfileName,
     description: p.description,
     geo: geoFromProfile(id),
-    models: (p.models ?? [])
-      .map((m) => m.modelArn ?? "")
-      .filter(Boolean)
-      .map((arn) => arn.split("/").pop() ?? arn),
+    models,
+    routeRegions,
   };
 }
 

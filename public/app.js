@@ -230,8 +230,23 @@ function renderProfiles(sectionId, profiles, includeGeo) {
     tr.appendChild(tdId);
 
     const tdModels = document.createElement("td");
-    tdModels.appendChild(tagList(p.models));
+    tdModels.appendChild(tagList(uniq(p.models)));
     tr.appendChild(tdModels);
+
+    const tdRoutes = document.createElement("td");
+    const routes = uniq(p.routeRegions);
+    if (routes.length === 0 && p.profileId?.startsWith("global.")) {
+      const div = document.createElement("div");
+      div.className = "tags";
+      const span = document.createElement("span");
+      span.className = "tag routes-all";
+      span.textContent = "All commercial regions";
+      div.appendChild(span);
+      tdRoutes.appendChild(div);
+    } else {
+      tdRoutes.appendChild(tagList(routes));
+    }
+    tr.appendChild(tdRoutes);
 
     tbody.appendChild(tr);
     shown++;
@@ -243,13 +258,25 @@ function renderProfiles(sectionId, profiles, includeGeo) {
 function tagList(items) {
   const div = document.createElement("div");
   div.className = "tags";
-  for (const it of items ?? []) {
+  if (!items || items.length === 0) {
+    const em = document.createElement("span");
+    em.className = "tag empty-tag";
+    em.textContent = "—";
+    div.appendChild(em);
+    return div;
+  }
+  for (const it of items) {
     const span = document.createElement("span");
     span.className = "tag";
     span.textContent = it;
     div.appendChild(span);
   }
   return div;
+}
+
+function uniq(items) {
+  if (!Array.isArray(items)) return [];
+  return [...new Set(items)].sort();
 }
 
 function toggleEmpty(sectionId, empty) {
