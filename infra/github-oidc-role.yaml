@@ -1,0 +1,144 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  GitHub Actions OIDC role + Amplify Hosting app for bedrock-region-viewer.
+  Reuses the existing GitHub OIDC provider in the account when one is already present
+  (OIDCProviderExists=true) to avoid "EntityAlreadyExists" on redeploy.
+
+Parameters:
+  OIDCProviderExists:
+    Type: String
+    Default: "true"
+    AllowedValues: ["true", "false"]
+    Description: Set true if the arn:...:oidc-provider/token.actions.githubusercontent.com already exists in this account (it does if you deployed the VCS stack earlier).
+
+  GitHubOrg:
+    Type: String
+    Default: sjramblings
+
+  GitHubRepo:
+    Type: String
+    Default: bedrock-region-viewer
+
+  CustomDomain:
+    Type: String
+    Default: awshostedmodels.sjramblings.io
+    Description: Custom domain for the Amplify app. DNS lives in a different account; after stack deploy, add the CNAME records emitted in the outputs.
+
+Conditions:
+  CreateOIDCProvider: !Equals [!Ref OIDCProviderExists, "false"]
+
+Resources:
+  GitHubOIDCProvider:
+    Type: AWS::IAM::OIDCProvider
+    Condition: CreateOIDCProvider
+    Properties:
+      Url: https://token.actions.githubusercontent.com
+      ClientIdList:
+        - sts.amazonaws.com
+      ThumbprintList:
+        - 6938fd4d98bab03faadb97b34396831e3780aea1
+
+  AmplifyApp:
+    Type: AWS::Amplify::App
+    Properties:
+      Name: bedrock-region-viewer
+      Description: AWS Bedrock models-by-region viewer. Static site, manual deploys from GitHub Actions.
+      Platform: WEB
+      CustomRules:
+        - Source: /<*>
+          Target: /index.html
+          Status: "404-200"
+
+  AmplifyMainBranch:
+    Type: AWS::Amplify::Branch
+    Properties:
+      AppId: !GetAtt AmplifyApp.AppId
+      BranchName: main
+      Stage: PRODUCTION
+      EnableAutoBuild: false
+      EnablePerformanceMode: false
+
+  AmplifyDomain:
+    Type: AWS::Amplify::Domain
+    Properties:
+      AppId: !GetAtt AmplifyApp.AppId
+      DomainName: !Ref CustomDomain
+      SubDomainSettings:
+        - Prefix: ""
+          BranchName: !GetAtt AmplifyMainBranch.BranchName
+      EnableAutoSubDomain: false
+
+  GitHubActionsDeployRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: github-actions-bedrock-region-viewer
+      Description: Assumed by GitHub Actions in sjramblings/bedrock-region-viewer to read Bedrock catalog and deploy to Amplify.
+      MaxSessionDuration: 3600
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Federated: !If
+                - CreateOIDCProvider
+                - !GetAtt GitHubOIDCProvider.Arn
+                - !Sub arn:aws:iam::${AWS::AccountId}:oidc-provider/token.actions.githubusercontent.com
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                token.actions.githubusercontent.com:aud: sts.amazonaws.com
+              StringLike:
+                token.actions.githubusercontent.com:sub: !Sub repo:${GitHubOrg}/${GitHubRepo}:*
+      Policies:
+        - PolicyName: bedrock-catalog-read
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - bedrock:ListFoundationModels
+                  - bedrock:ListInferenceProfiles
+                Resource: "*"
+        - PolicyName: amplify-deploy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - amplify:GetApp
+                  - amplify:GetBranch
+                  - amplify:GetJob
+                  - amplify:ListJobs
+                  - amplify:CreateDeployment
+                  - amplify:StartDeployment
+                Resource:
+                  - !Sub arn:aws:amplify:${AWS::Region}:${AWS::AccountId}:apps/${AmplifyApp.AppId}
+                  - !Sub arn:aws:amplify:${AWS::Region}:${AWS::AccountId}:apps/${AmplifyApp.AppId}/branches/main
+                  - !Sub arn:aws:amplify:${AWS::Region}:${AWS::AccountId}:apps/${AmplifyApp.AppId}/branches/main/*
+
+Outputs:
+  RoleArn:
+    Description: ARN to set as GitHub repository variable AWS_ROLE_ARN
+    Value: !GetAtt GitHubActionsDeployRole.Arn
+    Export:
+      Name: !Sub ${AWS::StackName}-RoleArn
+
+  AmplifyAppId:
+    Description: Set as GitHub repository variable AMPLIFY_APP_ID
+    Value: !GetAtt AmplifyApp.AppId
+
+  AmplifyDefaultDomain:
+    Description: Default amplifyapp.com domain. Visit to verify a deploy before DNS cutover.
+    Value: !Sub https://main.${AmplifyApp.DefaultDomain}
+
+  AmplifyRegion:
+    Description: Set as GitHub repository variable AWS_REGION
+    Value: !Ref AWS::Region
+
+  CustomDomainVerificationNote:
+    Description: >
+      After stack deploy, run `aws amplify get-domain-association --app-id <AmplifyAppId>
+      --domain-name <CustomDomain>` to retrieve the CNAME records (certificateVerificationDNSRecord +
+      one record per subDomain). Add those to the sjramblings.io Route53 hosted zone in the
+      OTHER AWS account. Domain will enter AVAILABLE state once DNS propagates (can take up to 24h).
+    Value: !Sub "aws amplify get-domain-association --app-id ${AmplifyApp.AppId} --domain-name ${CustomDomain} --region ${AWS::Region}"

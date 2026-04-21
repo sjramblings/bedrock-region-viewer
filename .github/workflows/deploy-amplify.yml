@@ -1,0 +1,83 @@
+name: Deploy to Amplify
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "public/**"
+      - ".github/workflows/deploy-amplify.yml"
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: deploy-amplify
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Configure AWS credentials via OIDC
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+          role-session-name: bedrock-region-viewer-deploy
+
+      - name: Package static site
+        run: |
+          cd public
+          zip -r ../site.zip . -x "*.DS_Store"
+          cd ..
+          ls -la site.zip
+
+      - name: Create deployment
+        id: create
+        run: |
+          set -euo pipefail
+          OUT=$(aws amplify create-deployment \
+            --app-id "${{ vars.AMPLIFY_APP_ID }}" \
+            --branch-name main)
+          JOB_ID=$(echo "$OUT" | jq -r .jobId)
+          ZIP_UPLOAD_URL=$(echo "$OUT" | jq -r .zipUploadUrl)
+          echo "job_id=$JOB_ID" >> "$GITHUB_OUTPUT"
+          echo "zip_upload_url=$ZIP_UPLOAD_URL" >> "$GITHUB_OUTPUT"
+
+      - name: Upload bundle
+        run: |
+          curl -fsS -H "Content-Type: application/zip" \
+            --upload-file site.zip \
+            "${{ steps.create.outputs.zip_upload_url }}"
+
+      - name: Start deployment
+        run: |
+          aws amplify start-deployment \
+            --app-id "${{ vars.AMPLIFY_APP_ID }}" \
+            --branch-name main \
+            --job-id "${{ steps.create.outputs.job_id }}"
+
+      - name: Wait for deployment
+        run: |
+          set -euo pipefail
+          JOB_ID="${{ steps.create.outputs.job_id }}"
+          APP_ID="${{ vars.AMPLIFY_APP_ID }}"
+          for attempt in $(seq 1 60); do
+            STATUS=$(aws amplify get-job \
+              --app-id "$APP_ID" \
+              --branch-name main \
+              --job-id "$JOB_ID" \
+              --query 'job.summary.status' --output text)
+            echo "[$attempt] status=$STATUS"
+            case "$STATUS" in
+              SUCCEED) echo "Deployment succeeded."; exit 0 ;;
+              FAILED|CANCELLED) echo "Deployment $STATUS."; exit 1 ;;
+            esac
+            sleep 10
+          done
+          echo "Timed out waiting for deployment."
+          exit 1

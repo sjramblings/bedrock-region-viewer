@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bedrock Models by Region</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="top-row">
+        <h1>Bedrock Models by Region</h1>
+        <button id="theme-toggle" type="button" aria-label="Toggle dark mode">🌓</button>
+      </div>
+      <div class="controls">
+        <label class="control">
+          <span>Region</span>
+          <select id="region-select"></select>
+        </label>
+        <label class="control grow">
+          <span>Filter</span>
+          <input id="filter" type="search" placeholder="provider, model name, id..." autocomplete="off" />
+        </label>
+      </div>
+      <p class="meta">
+        <span id="meta-generated">Loading…</span>
+        <span class="sep">·</span>
+        <span>Regenerate with <code>bun run fetch</code></span>
+      </p>
+      <div id="error-banner" class="banner hidden"></div>
+    </header>
+
+    <main>
+      <section class="section" data-section="onDemand">
+        <div class="section-head">
+          <h2>On-Demand <span class="count" id="count-onDemand">0</span></h2>
+          <p class="section-sub">Invoke directly with this region's Bedrock endpoint.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Provider</th>
+                <th>Model</th>
+                <th>Model ID</th>
+                <th>Input</th>
+                <th>Output</th>
+                <th>Stream</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-onDemand"></tbody>
+          </table>
+          <p class="empty" id="empty-onDemand">No on-demand models.</p>
+        </div>
+      </section>
+
+      <section class="section" data-section="regional">
+        <div class="section-head">
+          <h2>Regional Inference (Geo) <span class="count" id="count-regional">0</span></h2>
+          <p class="section-sub">
+            Cross-region inference profiles. Calls stay within the geography (US, EU, APAC, AU, CA, JP, US-Gov).
+          </p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Geo</th>
+                <th>Profile Name</th>
+                <th>Profile ID</th>
+                <th>Underlying Models</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-regional"></tbody>
+          </table>
+          <p class="empty" id="empty-regional">No regional inference profiles.</p>
+        </div>
+      </section>
+
+      <section class="section" data-section="global">
+        <div class="section-head">
+          <h2>Global Inference <span class="count" id="count-global">0</span></h2>
+          <p class="section-sub">
+            <code>global.*</code> profiles. Traffic can route to any commercial region for best availability.
+          </p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Profile Name</th>
+                <th>Profile ID</th>
+                <th>Underlying Models</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-global"></tbody>
+          </table>
+          <p class="empty" id="empty-global">No global inference profiles.</p>
+        </div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast hidden">Copied</div>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

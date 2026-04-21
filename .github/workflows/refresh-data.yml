@@ -1,0 +1,103 @@
+name: Refresh Bedrock catalog
+
+on:
+  schedule:
+    - cron: "0 14 * * *"
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Configure AWS credentials via OIDC
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+          role-session-name: bedrock-region-viewer-refresh
+
+      - name: Snapshot Bedrock catalog
+        run: bun run fetch
+
+      - name: Detect changes
+        id: diff
+        run: |
+          if git diff --quiet -- public/data.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            {
+              echo "summary<<EOF"
+              bun -e '
+                const d = await Bun.file("public/data.json").json();
+                const ok = Object.keys(d.regions).length;
+                const fail = Object.keys(d.errors ?? {}).length;
+                let totalOnDemand = 0, totalRegional = 0, totalGlobal = 0;
+                for (const r of Object.values(d.regions)) {
+                  totalOnDemand += (r.onDemand ?? []).length;
+                  totalRegional += (r.regional ?? []).length;
+                  totalGlobal += (r.global ?? []).length;
+                }
+                console.log(`Generated: ${d.generatedAt}`);
+                console.log(`Regions ok: ${ok}`);
+                console.log(`Regions with errors: ${fail}`);
+                console.log(`Entries: onDemand=${totalOnDemand} regional=${totalRegional} global=${totalGlobal}`);
+              '
+              echo "EOF"
+            } >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open PR with data.json update
+        if: steps.diff.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          DATE=$(date -u +%Y-%m-%d-%H%M)
+          BRANCH="data/nightly-${DATE}"
+          git config user.name "bedrock-catalog-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add public/data.json
+          git commit -m "chore(data): nightly Bedrock catalog refresh ${DATE}"
+          git push -u origin "$BRANCH"
+
+          BODY=$(cat <<BODYEOF
+          Automated nightly refresh of \`public/data.json\` from the AWS Bedrock APIs.
+
+          \`\`\`
+          ${{ steps.diff.outputs.summary }}
+          \`\`\`
+
+          This PR only modifies \`public/data.json\`. Auto-merge is enabled; it will squash-merge once required checks pass.
+          BODYEOF
+          )
+
+          gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "chore(data): nightly refresh ${DATE}" \
+            --body "$BODY" \
+            --label automated,data-refresh
+
+          gh pr merge --auto --squash --delete-branch "$BRANCH"

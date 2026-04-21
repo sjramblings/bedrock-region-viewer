@@ -1,0 +1,17 @@
+{
+  "name": "bedrock-region-viewer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fetch": "bun run scripts/fetch-data.ts",
+    "serve": "bun x serve public -l 8080"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock": "^3.700.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.5.0"
+  }
+}
