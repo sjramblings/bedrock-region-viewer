@@ -115,18 +115,45 @@ gh workflow run deploy-amplify.yml
 # or: push any change touching public/
 ```
 
-## Nightly data refresh
+## Nightly data refresh + change alerts
 
 `refresh-data.yml` runs at **14:00 UTC** (≈ midnight AEST / 01:00 AEDT). It:
 
-1. Assumes `AWS_ROLE_ARN` via OIDC.
-2. Runs `bun run fetch` → writes new `public/data.json`.
-3. If the file changed: commits **only `public/data.json`** to `data/nightly-<date>` and opens a PR with auto-merge (squash) enabled.
-4. On merge, `deploy-amplify.yml` fires and redeploys the static bundle.
+1. Saves the current `public/data.json` as a baseline (pre-fetch).
+2. Assumes `AWS_ROLE_ARN` via OIDC.
+3. Runs `bun run fetch` → writes a new `public/data.json`.
+4. Runs `bun run scripts/diff-data.ts` comparing baseline vs new. It ignores `generatedAt` and `errors` — only tracks model/profile ID set membership across `onDemand`, `regional`, and `global`.
+5. **If no model availability changes** → silent no-op. No PR, no issue, no noise.
+6. **If changes detected** → opens a GitHub **issue** summarizing the delta (aggregate + per-region breakdown) AND a PR committing the new `data.json` with auto-merge enabled. The PR body links back to the issue.
 
-If no diff, the workflow is a no-op. No PRs when the catalog is unchanged.
+On merge, `deploy-amplify.yml` fires and redeploys the static bundle.
 
-Why a PR instead of direct push: repo policy is **no direct pushes to `main`**. The workflow stages only `public/data.json`, so the PR diff is mechanically guaranteed to be data-only.
+### Issue format
+
+Title: `Bedrock catalog changes: +N models, -M models, +P profiles (YYYY-MM-DD)`
+
+Body (abbreviated):
+```
+## New
+### On-demand models
+- `anthropic.claude-opus-4-7`
+
+### Inference profiles
+- `us.anthropic.claude-opus-4-7`
+- `global.anthropic.claude-opus-4-7`
+
+## Per-region breakdown
+#### us-east-1
+- +on-demand `anthropic.claude-opus-4-7`
+- +regional `us.anthropic.claude-opus-4-7`
+- +global `global.anthropic.claude-opus-4-7`
+```
+
+Subscribe to issues (or filter on the `model-changes` label) to get pinged when AWS adds or removes a model. The same markdown also lands in the workflow step summary — visible in the Actions tab without needing to click through.
+
+### Why a PR instead of direct push
+
+Repo policy is **no direct pushes to `main`**. The workflow stages only `public/data.json`, so the PR diff is mechanically guaranteed to be data-only.
 
 ## Regenerating data locally
 

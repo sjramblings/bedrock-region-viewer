@@ -9,6 +9,7 @@ permissions:
   id-token: write
   contents: write
   pull-requests: write
+  issues: write
 
 concurrency:
   group: refresh-data
@@ -56,38 +57,31 @@ jobs:
           role-session-name: bedrock-region-viewer-refresh
           mask-aws-account-id: true
 
+      - name: Save previous snapshot
+        run: cp public/data.json /tmp/previous.json
+
       - name: Snapshot Bedrock catalog
         run: bun run fetch
 
-      - name: Detect changes
+      - name: Diff catalog against previous snapshot
         id: diff
         run: |
-          if git diff --quiet -- public/data.json; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
+          set -euo pipefail
+          RESULT=$(bun run scripts/diff-data.ts /tmp/previous.json public/data.json)
+          HAS=$(echo "$RESULT" | jq -r .hasChanges)
+          echo "changed=$HAS" >> "$GITHUB_OUTPUT"
+          if [ "$HAS" = "true" ]; then
+            echo "$RESULT" | jq -r .title > /tmp/issue-title.txt
+            echo "$RESULT" | jq -r .body > /tmp/issue-body.md
             {
-              echo "summary<<EOF"
-              bun -e '
-                const d = await Bun.file("public/data.json").json();
-                const ok = Object.keys(d.regions).length;
-                const fail = Object.keys(d.errors ?? {}).length;
-                let totalOnDemand = 0, totalRegional = 0, totalGlobal = 0;
-                for (const r of Object.values(d.regions)) {
-                  totalOnDemand += (r.onDemand ?? []).length;
-                  totalRegional += (r.regional ?? []).length;
-                  totalGlobal += (r.global ?? []).length;
-                }
-                console.log(`Generated: ${d.generatedAt}`);
-                console.log(`Regions ok: ${ok}`);
-                console.log(`Regions with errors: ${fail}`);
-                console.log(`Entries: onDemand=${totalOnDemand} regional=${totalRegional} global=${totalGlobal}`);
-              '
-              echo "EOF"
-            } >> "$GITHUB_OUTPUT"
+              echo "## Catalog changes detected"
+              echo "$RESULT" | jq -r .body
+            } >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "No model availability changes." >> "$GITHUB_STEP_SUMMARY"
           fi
 
-      - name: Open PR with data.json update
+      - name: Open PR and create tracking issue
         if: steps.diff.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -102,22 +96,30 @@ jobs:
           git commit -m "chore(data): nightly Bedrock catalog refresh ${DATE}"
           git push -u origin "$BRANCH"
 
-          BODY=$(cat <<BODYEOF
-          Automated nightly refresh of \`public/data.json\` from the AWS Bedrock APIs.
+          # Ensure labels exist (idempotent).
+          gh label create model-changes --color FBCA04 --description "Automated alert when Bedrock catalog model/profile availability changes" --force >/dev/null
+          gh label create automated --color EDEDED --description "Opened by automation" --force >/dev/null
 
-          \`\`\`
-          ${{ steps.diff.outputs.summary }}
-          \`\`\`
+          # Create the tracking issue first; capture URL to link from the PR.
+          ISSUE_URL=$(gh issue create \
+            --title "$(cat /tmp/issue-title.txt)" \
+            --body-file /tmp/issue-body.md \
+            --label model-changes,automated)
 
-          This PR only modifies \`public/data.json\`. Auto-merge is enabled; it will squash-merge once required checks pass.
-          BODYEOF
-          )
+          # PR body references the issue.
+          {
+            echo "Automated nightly refresh of \`public/data.json\` from the AWS Bedrock APIs."
+            echo ""
+            echo "Model availability changes tracked in ${ISSUE_URL}."
+            echo ""
+            echo "This PR only modifies \`public/data.json\`. Auto-merge is enabled; it will squash-merge once required checks pass."
+          } > /tmp/pr-body.md
 
           gh pr create \
             --base main \
             --head "$BRANCH" \
             --title "chore(data): nightly refresh ${DATE}" \
-            --body "$BODY" \
-            --label automated,data-refresh
+            --body-file /tmp/pr-body.md \
+            --label automated
 
           gh pr merge --auto --squash --delete-branch "$BRANCH"
