@@ -87,8 +87,26 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
+
           DATE=$(date -u +%Y-%m-%d-%H%M)
           BRANCH="data/nightly-${DATE}"
+          PR_CREATED=0
+
+          # If anything fails after we've pushed the branch but before the PR
+          # exists, delete the orphan branch so the remote stays clean. Past
+          # failures (e.g. "GitHub Actions is not permitted to create or
+          # approve pull requests" when the repo setting is off) left these
+          # branches lingering.
+          cleanup() {
+            local rc=$?
+            if [ "$rc" -ne 0 ] && [ "$PR_CREATED" -eq 0 ]; then
+              echo "::warning::PR creation did not complete. Deleting orphan branch ${BRANCH}."
+              git push origin --delete "${BRANCH}" 2>/dev/null || true
+            fi
+            return $rc
+          }
+          trap cleanup EXIT
+
           git config user.name "bedrock-catalog-bot"
           git config user.email "bot@users.noreply.github.com"
           git checkout -b "$BRANCH"
@@ -101,6 +119,8 @@ jobs:
           gh label create automated --color EDEDED --description "Opened by automation" --force >/dev/null
 
           # Create the tracking issue first; capture URL to link from the PR.
+          # Issue creation does not require the "Allow Actions to create PRs"
+          # repo setting, so this still fires even if PR creation is blocked.
           ISSUE_URL=$(gh issue create \
             --title "$(cat /tmp/issue-title.txt)" \
             --body-file /tmp/issue-body.md \
@@ -115,11 +135,20 @@ jobs:
             echo "This PR only modifies \`public/data.json\`. Auto-merge is enabled; it will squash-merge once required checks pass."
           } > /tmp/pr-body.md
 
-          gh pr create \
+          # gh pr create can fail with a confusing error when the repo
+          # setting "Allow GitHub Actions to create and approve pull requests"
+          # is OFF (Settings -> Actions -> General -> Workflow permissions).
+          # workflow `permissions: pull-requests: write` is necessary but not
+          # sufficient on its own.
+          if ! gh pr create \
             --base main \
             --head "$BRANCH" \
             --title "chore(data): nightly refresh ${DATE}" \
             --body-file /tmp/pr-body.md \
-            --label automated
+            --label automated; then
+            echo "::error::gh pr create failed. Most likely cause: the repo setting 'Allow GitHub Actions to create and approve pull requests' is OFF. Enable it at: Settings -> Actions -> General -> Workflow permissions. The orphan branch ${BRANCH} will be deleted automatically; the tracking issue ${ISSUE_URL} remains as a record of the catalog change."
+            exit 1
+          fi
+          PR_CREATED=1
 
           gh pr merge --auto --squash --delete-branch "$BRANCH"
