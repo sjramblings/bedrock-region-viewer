@@ -6,6 +6,17 @@ on:
     paths:
       - "public/**"
       - ".github/workflows/deploy-amplify.yml"
+  # Catch the case where the nightly Refresh Bedrock catalog workflow
+  # auto-merges its data PR. That merge is authored by github-actions[bot]
+  # via GITHUB_TOKEN, and GitHub deliberately suppresses subsequent push
+  # events from GITHUB_TOKEN to prevent recursive workflow runs (see
+  # https://docs.github.com/en/actions/security-for-github-actions/
+  # security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow).
+  # Without this trigger, refreshed data sits on main without being deployed.
+  workflow_run:
+    workflows: ["Refresh Bedrock catalog"]
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -18,6 +29,11 @@ concurrency:
 
 jobs:
   preflight:
+    # Skip when the upstream Refresh Bedrock catalog run failed or was
+    # cancelled. push and workflow_dispatch always proceed.
+    if: >
+      github.event_name != 'workflow_run' ||
+      github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     outputs:
       ready: ${{ steps.check.outputs.ready }}
