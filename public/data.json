@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-28T12:22:56.321Z",
+  "generatedAt": "2026-04-29T15:53:45.538Z",
   "regions": {
     "us-east-1": {
       "onDemand": [
@@ -2522,20 +2522,6 @@
           ]
         },
         {
-          "profileId": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
-          "profileName": "US Anthropic Claude 3.7 Sonnet",
-          "description": "Routes requests to Anthropic Claude 3.7 Sonnet in us-east-1, us-east-2 and us-west-2.",
-          "geo": "us",
-          "models": [
-            "anthropic.claude-3-7-sonnet-20250219-v1:0"
-          ],
-          "routeRegions": [
-            "us-east-1",
-            "us-east-2",
-            "us-west-2"
-          ]
-        },
-        {
           "profileId": "us.anthropic.claude-3-haiku-20240307-v1:0",
           "profileName": "US Anthropic Claude 3 Haiku",
           "description": "Routes requests to Anthropic Claude 3 Haiku in us-east-1, us-west-2 and us-east-2.",
@@ -4599,20 +4585,6 @@
           "geo": "us",
           "models": [
             "anthropic.claude-3-5-haiku-20241022-v1:0"
-          ],
-          "routeRegions": [
-            "us-east-1",
-            "us-east-2",
-            "us-west-2"
-          ]
-        },
-        {
-          "profileId": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
-          "profileName": "US Anthropic Claude 3.7 Sonnet",
-          "description": "Routes requests to Anthropic Claude 3.7 Sonnet in us-east-1, us-east-2 and us-west-2.",
-          "geo": "us",
-          "models": [
-            "anthropic.claude-3-7-sonnet-20250219-v1:0"
           ],
           "routeRegions": [
             "us-east-1",
@@ -7106,21 +7078,6 @@
           ]
         },
         {
-          "profileId": "eu.anthropic.claude-3-7-sonnet-20250219-v1:0",
-          "profileName": "EU Anthropic Claude 3.7 Sonnet",
-          "description": "Routes requests to Anthropic Claude 3.7 Sonnet in eu-central-1, eu-north-1, eu-west-1 and eu-west-3.",
-          "geo": "eu",
-          "models": [
-            "anthropic.claude-3-7-sonnet-20250219-v1:0"
-          ],
-          "routeRegions": [
-            "eu-central-1",
-            "eu-north-1",
-            "eu-west-1",
-            "eu-west-3"
-          ]
-        },
-        {
           "profileId": "eu.anthropic.claude-3-haiku-20240307-v1:0",
           "profileName": "EU Anthropic Claude 3 Haiku",
           "description": "Routes requests to Anthropic Claude 3 Haiku in eu-central-1, eu-west-1 and eu-west-3.",
@@ -8735,21 +8692,6 @@
           ]
         },
         {
-          "profileId": "eu.anthropic.claude-3-7-sonnet-20250219-v1:0",
-          "profileName": "EU Anthropic Claude 3.7 Sonnet",
-          "description": "Routes requests to Anthropic Claude 3.7 Sonnet in eu-central-1, eu-north-1, eu-west-1 and eu-west-3.",
-          "geo": "eu",
-          "models": [
-            "anthropic.claude-3-7-sonnet-20250219-v1:0"
-          ],
-          "routeRegions": [
-            "eu-central-1",
-            "eu-north-1",
-            "eu-west-1",
-            "eu-west-3"
-          ]
-        },
-        {
           "profileId": "eu.anthropic.claude-3-haiku-20240307-v1:0",
           "profileName": "EU Anthropic Claude 3 Haiku",
           "description": "Routes requests to Anthropic Claude 3 Haiku in eu-central-1, eu-west-1 and eu-west-3.",
@@ -9406,21 +9348,6 @@
           "geo": "eu",
           "models": [
             "amazon.nova-pro-v1:0"
-          ],
-          "routeRegions": [
-            "eu-central-1",
-            "eu-north-1",
-            "eu-west-1",
-            "eu-west-3"
-          ]
-        },
-        {
-          "profileId": "eu.anthropic.claude-3-7-sonnet-20250219-v1:0",
-          "profileName": "EU Anthropic Claude 3.7 Sonnet",
-          "description": "Routes requests to Anthropic Claude 3.7 Sonnet in eu-central-1, eu-north-1, eu-west-1 and eu-west-3.",
-          "geo": "eu",
-          "models": [
-            "anthropic.claude-3-7-sonnet-20250219-v1:0"
           ],
           "routeRegions": [
             "eu-central-1",
@@ -10120,21 +10047,6 @@
           "geo": "eu",
           "models": [
             "amazon.nova-pro-v1:0"
-          ],
-          "routeRegions": [
-            "eu-central-1",
-            "eu-north-1",
-            "eu-west-1",
-            "eu-west-3"
-          ]
-        },
-        {
-          "profileId": "eu.anthropic.claude-3-7-sonnet-20250219-v1:0",
-          "profileName": "EU Anthropic Claude 3.7 Sonnet",
-          "description": "Routes requests to Anthropic Claude 3.7 Sonnet in eu-central-1, eu-north-1, eu-west-1 and eu-west-3.",
-          "geo": "eu",
-          "models": [
-            "anthropic.claude-3-7-sonnet-20250219-v1:0"
           ],
           "routeRegions": [
             "eu-central-1",
@@ -11262,24 +11174,6 @@
           ]
         },
         {
-          "profileId": "apac.anthropic.claude-3-7-sonnet-20250219-v1:0",
-          "profileName": "APAC Anthropic Claude 3.7 Sonnet",
-          "description": "Routes requests to Anthropic Claude 3.7 Sonnet in ap-northeast-1, ap-northeast-2, ap-northeast-3, ap-south-1, ap-south-2, ap-southeast-1 and ap-southeast-2.",
-          "geo": "apac",
-          "models": [
-            "anthropic.claude-3-7-sonnet-20250219-v1:0"
-          ],
-          "routeRegions": [
-            "ap-northeast-1",
-            "ap-northeast-2",
-            "ap-northeast-3",
-            "ap-south-1",
-            "ap-south-2",
-            "ap-southeast-1",
-            "ap-southeast-2"
-          ]
-        },
-        {
           "profileId": "apac.anthropic.claude-3-haiku-20240307-v1:0",
           "profileName": "APAC Anthropic Claude 3 Haiku",
           "description": "Routes requests to Anthropic Claude 3 Haiku in ap-northeast-1, ap-northeast-2, ap-southeast-2, ap-south-1 and ap-southeast-1.",
@@ -11698,24 +11592,6 @@
           ]
         },
         {
-          "profileId": "apac.anthropic.claude-3-7-sonnet-20250219-v1:0",
-          "profileName": "APAC Anthropic Claude 3.7 Sonnet",
-          "description": "Routes requests to Anthropic Claude 3.7 Sonnet in ap-northeast-1, ap-northeast-2, ap-northeast-3, ap-south-1, ap-south-2, ap-southeast-1 and ap-southeast-2.",
-          "geo": "apac",
-          "models": [
-            "anthropic.claude-3-7-sonnet-20250219-v1:0"
-          ],
-          "routeRegions": [
-            "ap-northeast-1",
-            "ap-northeast-2",
-            "ap-northeast-3",
-            "ap-south-1",
-            "ap-south-2",
-            "ap-southeast-1",
-            "ap-southeast-2"
-          ]
-        },
-        {
           "profileId": "apac.anthropic.claude-3-haiku-20240307-v1:0",
           "profileName": "APAC Anthropic Claude 3 Haiku",
           "description": "Routes requests to Anthropic Claude 3 Haiku in ap-northeast-1, ap-northeast-2, ap-southeast-2, ap-south-1 and ap-southeast-1.",
@@ -11940,24 +11816,6 @@
             "ap-northeast-2",
             "ap-northeast-3",
             "ap-south-1",
-            "ap-southeast-1",
-            "ap-southeast-2"
-          ]
-        },
-        {
-          "profileId": "apac.anthropic.claude-3-7-sonnet-20250219-v1:0",
-          "profileName": "APAC Anthropic Claude 3.7 Sonnet",
-          "description": "Routes requests to Anthropic Claude 3.7 Sonnet in ap-northeast-1, ap-northeast-2, ap-northeast-3, ap-south-1, ap-south-2, ap-southeast-1 and ap-southeast-2.",
-          "geo": "apac",
-          "models": [
-            "anthropic.claude-3-7-sonnet-20250219-v1:0"
-          ],
-          "routeRegions": [
-            "ap-northeast-1",
-            "ap-northeast-2",
-            "ap-northeast-3",
-            "ap-south-1",
-            "ap-south-2",
             "ap-southeast-1",
             "ap-southeast-2"
           ]
@@ -13241,24 +13099,6 @@
           ]
         },
         {
-          "profileId": "apac.anthropic.claude-3-7-sonnet-20250219-v1:0",
-          "profileName": "APAC Anthropic Claude 3.7 Sonnet",
-          "description": "Routes requests to Anthropic Claude 3.7 Sonnet in ap-northeast-1, ap-northeast-2, ap-northeast-3, ap-south-1, ap-south-2, ap-southeast-1 and ap-southeast-2.",
-          "geo": "apac",
-          "models": [
-            "anthropic.claude-3-7-sonnet-20250219-v1:0"
-          ],
-          "routeRegions": [
-            "ap-northeast-1",
-            "ap-northeast-2",
-            "ap-northeast-3",
-            "ap-south-1",
-            "ap-south-2",
-            "ap-southeast-1",
-            "ap-southeast-2"
-          ]
-        },
-        {
           "profileId": "apac.anthropic.claude-3-haiku-20240307-v1:0",
           "profileName": "APAC Anthropic Claude 3 Haiku",
           "description": "Routes requests to Anthropic Claude 3 Haiku in ap-northeast-1, ap-northeast-2, ap-southeast-2, ap-south-1 and ap-southeast-1.",
@@ -14255,24 +14095,6 @@
             "ap-northeast-2",
             "ap-northeast-3",
             "ap-south-1",
-            "ap-southeast-1",
-            "ap-southeast-2"
-          ]
-        },
-        {
-          "profileId": "apac.anthropic.claude-3-7-sonnet-20250219-v1:0",
-          "profileName": "APAC Anthropic Claude 3.7 Sonnet",
-          "description": "Routes requests to Anthropic Claude 3.7 Sonnet in ap-northeast-1, ap-northeast-2, ap-northeast-3, ap-south-1, ap-south-2, ap-southeast-1 and ap-southeast-2.",
-          "geo": "apac",
-          "models": [
-            "anthropic.claude-3-7-sonnet-20250219-v1:0"
-          ],
-          "routeRegions": [
-            "ap-northeast-1",
-            "ap-northeast-2",
-            "ap-northeast-3",
-            "ap-south-1",
-            "ap-south-2",
             "ap-southeast-1",
             "ap-southeast-2"
           ]
