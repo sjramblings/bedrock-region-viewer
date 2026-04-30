@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-29T15:53:45.538Z",
+  "generatedAt": "2026-04-30T15:45:03.789Z",
   "regions": {
     "us-east-1": {
       "onDemand": [
@@ -1130,20 +1130,6 @@
           "geo": "us",
           "models": [
             "anthropic.claude-3-5-haiku-20241022-v1:0"
-          ],
-          "routeRegions": [
-            "us-east-1",
-            "us-east-2",
-            "us-west-2"
-          ]
-        },
-        {
-          "profileId": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
-          "profileName": "US Anthropic Claude 3.7 Sonnet",
-          "description": "Routes requests to Anthropic Claude 3.7 Sonnet in us-east-1, us-east-2 and us-west-2.",
-          "geo": "us",
-          "models": [
-            "anthropic.claude-3-7-sonnet-20250219-v1:0"
           ],
           "routeRegions": [
             "us-east-1",
