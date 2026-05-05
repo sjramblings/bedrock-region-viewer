@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-30T15:45:03.789Z",
+  "generatedAt": "2026-05-05T15:49:51.295Z",
   "regions": {
     "us-east-1": {
       "onDemand": [
@@ -1427,7 +1427,7 @@
         {
           "profileId": "us.meta.llama4-maverick-17b-instruct-v1:0",
           "profileName": "US Llama 4 Maverick 17B Instruct",
-          "description": "Routes requests to Llama 4 Maverick 17B Instruct in us-east-1, us-east-2 and us-west-2.",
+          "description": "Routes requests to Llama 4 Maverick 17B Instruct in us-east-1, us-west-2 and us-east-2.",
           "geo": "us",
           "models": [
             "meta.llama4-maverick-17b-instruct-v1:0"
@@ -3338,7 +3338,7 @@
         {
           "profileId": "us.meta.llama4-maverick-17b-instruct-v1:0",
           "profileName": "US Llama 4 Maverick 17B Instruct",
-          "description": "Routes requests to US Llama 4 Maverick 17B Instruct in us-east-1, us-east-2, us-west-1 and us-west-2.",
+          "description": "Routes requests to Llama 4 Maverick 17B Instruct in us-east-1, us-east-2, us-west-1 and us-west-2.",
           "geo": "us",
           "models": [
             "meta.llama4-maverick-17b-instruct-v1:0"
@@ -3353,7 +3353,7 @@
         {
           "profileId": "us.meta.llama4-scout-17b-instruct-v1:0",
           "profileName": "US Llama 4 Scout 17B Instruct",
-          "description": "Routes requests to US Llama 4 Scout 17B Instruct in us-east-1, us-east-2, us-west-1 and us-west-2.",
+          "description": "Routes requests to Llama 4 Scout 17B Instruct in us-east-1, us-east-2, us-west-1 and us-west-2.",
           "geo": "us",
           "models": [
             "meta.llama4-scout-17b-instruct-v1:0"
@@ -14156,6 +14156,19 @@
           "geo": "au",
           "models": [
             "anthropic.claude-opus-4-6-v1"
+          ],
+          "routeRegions": [
+            "ap-southeast-2",
+            "ap-southeast-4"
+          ]
+        },
+        {
+          "profileId": "au.anthropic.claude-opus-4-7",
+          "profileName": "AU Anthropic Claude Opus 4.7",
+          "description": "Routes requests to Claude Opus 4.7 in ap-southeast-2, ap-southeast-4.",
+          "geo": "au",
+          "models": [
+            "anthropic.claude-opus-4-7"
           ],
           "routeRegions": [
             "ap-southeast-2",
