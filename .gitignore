@@ -4,3 +4,9 @@ bun.lockb
 .env
 .env.*
 !.env.example
+
+# Vite build output for the aligned-port React site
+site/dist/
+
+# TypeScript incremental build cache
+site/*.tsbuildinfo
