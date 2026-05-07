@@ -93,13 +93,17 @@ function geoFromProfile(profileId: string): string | undefined {
 }
 
 function mapModel(m: FoundationModelSummary): OnDemandModel {
+  // Sort modality + inferenceType arrays — AWS does not guarantee order,
+  // and unsorted arrays produce spurious git diffs when only the ordering
+  // shuffled. Sets fed to diff-data.ts ignore order, but the raw git diff
+  // is what humans (and any future commit-by-commit extractor) read.
   return {
     modelId: m.modelId ?? "",
     providerName: m.providerName,
     modelName: m.modelName,
-    inputModalities: m.inputModalities ?? [],
-    outputModalities: m.outputModalities ?? [],
-    inferenceTypesSupported: m.inferenceTypesSupported ?? [],
+    inputModalities: [...(m.inputModalities ?? [])].sort(),
+    outputModalities: [...(m.outputModalities ?? [])].sort(),
+    inferenceTypesSupported: [...(m.inferenceTypesSupported ?? [])].sort(),
     responseStreamingSupported: m.responseStreamingSupported,
   };
 }
@@ -174,6 +178,30 @@ async function fetchRegion(region: string): Promise<RegionData> {
   return { onDemand: onDemandModels, regional, global };
 }
 
+// Recursively sort object keys so JSON.stringify produces byte-stable
+// output across runs. Object property iteration order in JS depends on
+// insertion order, so any change in the producer code (ordering of fetch
+// results, Map iteration, etc.) silently shuffles keys in the serialised
+// output and creates spurious git diffs. With this helper the diff signal
+// is meaningful: a non-zero diff means model availability genuinely
+// changed (or generatedAt advanced).
+function stableStringify(value: unknown): string {
+  const sortKeys = (v: unknown): unknown => {
+    if (Array.isArray(v)) return v.map(sortKeys);
+    if (v && typeof v === "object") {
+      const o = v as Record<string, unknown>;
+      return Object.keys(o)
+        .sort()
+        .reduce<Record<string, unknown>>((acc, k) => {
+          acc[k] = sortKeys(o[k]);
+          return acc;
+        }, {});
+    }
+    return v;
+  };
+  return JSON.stringify(sortKeys(value), null, 2) + "\n";
+}
+
 async function main() {
   const output: Output = {
     generatedAt: new Date().toISOString(),
@@ -212,7 +240,7 @@ async function main() {
 
   const outPath = resolve(import.meta.dir, "..", "public", "data.json");
   await mkdir(dirname(outPath), { recursive: true });
-  await writeFile(outPath, JSON.stringify(output, null, 2));
+  await writeFile(outPath, stableStringify(output));
 
   const ok = Object.keys(output.regions).length;
   const failed = Object.keys(output.errors).length;
