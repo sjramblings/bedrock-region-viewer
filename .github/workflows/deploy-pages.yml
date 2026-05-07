@@ -1,0 +1,96 @@
+name: Deploy site to GitHub Pages
+
+# Mirrors sjramblings/aws-ip-ranges/.github/workflows/build-site.yml
+# behaviour: build the Vite site and publish to Pages on every push to main
+# that affects the site, plus PR builds (verify-only) and manual dispatch.
+#
+# This workflow is independent from `deploy-amplify.yml`, which continues to
+# deploy the legacy vanilla `public/` site to AWS Amplify. Both deploys
+# coexist:
+#   * Amplify  → awshostedmodels.sjramblings.io (legacy public/)
+#   * Pages    → sjramblings.github.io/bedrock-region-viewer (new site/)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - "public/data.json"
+      - ".github/workflows/deploy-pages.yml"
+  pull_request:
+    paths:
+      - "site/**"
+      - "public/data.json"
+      - ".github/workflows/deploy-pages.yml"
+  # When the nightly Refresh Bedrock catalog workflow auto-merges its
+  # data PR, GitHub suppresses the resulting push event from triggering
+  # other workflows. This workflow_run trigger catches that merge so
+  # fresh data redeploys to Pages without manual intervention.
+  workflow_run:
+    workflows: ["Refresh Bedrock catalog"]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, but don't cancel in-progress
+# runs — we want the latest data to land even if a build is mid-flight.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build site
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      # The repo ships site/public/data.json as a symlink to the canonical
+      # public/data.json so the dev server reads the nightly snapshot
+      # without duplicating the file. CI checkouts on Linux preserve
+      # symlinks, but we replace it with a real copy here so the Vite
+      # build step is robust to any future change in checkout behaviour
+      # and so the artifact uploaded to Pages contains the data inline.
+      - name: Materialise data.json
+        run: |
+          rm -f site/public/data.json
+          cp public/data.json site/public/data.json
+
+      - name: Install site dependencies
+        working-directory: ./site
+        run: bun install --frozen-lockfile
+
+      - name: Build site
+        working-directory: ./site
+        run: bun run build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site/dist
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    # Skip deployment on PR builds — PRs verify the build only, never overwrite production.
+    if: github.event_name != 'pull_request'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
