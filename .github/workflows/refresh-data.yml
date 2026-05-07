@@ -152,3 +152,28 @@ jobs:
           PR_CREATED=1
 
           gh pr merge --auto --squash --delete-branch "$BRANCH"
+
+      - name: History-depth trigger (start time-series dashboard at ~90 commits)
+        if: always()
+        run: |
+          set -euo pipefail
+          # Count commits that touched public/data.json on origin/main so the
+          # number reflects what is actually on the default branch — not the
+          # ephemeral nightly branch this run may have just created. Threshold
+          # of 90 is roughly three months of nightly data, the point at which
+          # a git-history-as-time-series dashboard (mirroring the aws-ip-ranges
+          # pattern) becomes worth building.
+          git fetch origin main --depth=200 >/dev/null 2>&1 || true
+          COUNT=$(git log origin/main --oneline -- public/data.json 2>/dev/null | wc -l | tr -d ' ')
+          echo "## Data history depth" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "\`public/data.json\` has **${COUNT}** commits on \`main\`." >> "$GITHUB_STEP_SUMMARY"
+          if [ "${COUNT}" -ge 90 ]; then
+            echo "::notice::data.json has ${COUNT} commits on main — threshold of 90 reached. Time to start the time-series dashboard port (see aws-ip-ranges pattern)."
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "**🚦 Trigger fired** — threshold of 90 reached. Time to start the time-series dashboard port. See \`sjramblings/aws-ip-ranges\` for the reference pattern." >> "$GITHUB_STEP_SUMMARY"
+          else
+            REMAINING=$((90 - COUNT))
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "${REMAINING} more commit$([ "$REMAINING" -eq 1 ] && echo "" || echo "s") until the time-series dashboard trigger fires." >> "$GITHUB_STEP_SUMMARY"
+          fi
