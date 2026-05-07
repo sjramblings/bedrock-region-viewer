@@ -313,3 +313,150 @@ tbody tr:hover { background: color-mix(in srgb, var(--accent) 6%, transparent); 
 }
 
 .toast.show { opacity: 1; }
+
+.top-nav { display: flex; gap: 12px; align-items: center; }
+.top-nav a { color: var(--accent); text-decoration: none; font-size: 14px; }
+.top-nav a:hover { text-decoration: underline; }
+
+/* ─── Globe page ─────────────────────────────────────────────────────────── */
+
+.globe-page main.globe-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 24px;
+  padding: 16px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .globe-page main.globe-main { grid-template-columns: 1fr; }
+}
+
+.globe-nav { display: flex; gap: 12px; align-items: center; }
+.globe-nav a { color: var(--accent); text-decoration: none; font-size: 14px; }
+.globe-nav a:hover { text-decoration: underline; }
+
+.globe-stage {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+#globe-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+}
+
+.globe-tooltip {
+  position: absolute;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+  pointer-events: none;
+  min-width: 160px;
+  z-index: 10;
+}
+
+.globe-tooltip .tt-region { font-family: var(--mono); color: var(--accent); font-weight: 600; }
+.globe-tooltip .tt-stat { margin-top: 2px; }
+.globe-tooltip .tt-geo { margin-top: 4px; color: var(--muted); font-size: 11px; }
+
+.globe-detail {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 260px;
+  max-height: calc(100% - 24px);
+  overflow-y: auto;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.22);
+  font-size: 13px;
+}
+
+.globe-detail.hidden { display: none; }
+
+.globe-detail-close {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: transparent;
+  border: 0;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.detail-region { margin: 0 24px 4px 0; font-family: var(--mono); font-size: 14px; color: var(--accent); }
+.detail-summary { margin: 0 0 10px; color: var(--muted); font-size: 12px; }
+
+.detail-profiles { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.detail-profiles li {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 6px 8px;
+  font-size: 12px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 8px;
+  align-items: baseline;
+}
+.detail-profiles code { font-family: var(--mono); font-size: 11px; word-break: break-all; }
+.detail-profiles .profile-kind { color: var(--muted); font-size: 11px; grid-column: 1; }
+.detail-profiles .profile-models { color: var(--muted); font-size: 11px; grid-column: 2; grid-row: 1 / span 2; align-self: center; white-space: nowrap; }
+.detail-profiles .profile-empty { color: var(--muted); font-style: italic; grid-template-columns: 1fr; }
+
+.globe-legend {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 13px;
+}
+.globe-legend h3 { margin: 0 0 10px; font-size: 13px; font-weight: 600; }
+.globe-legend ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.globe-legend li { display: flex; align-items: center; gap: 8px; }
+
+.swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.swatch[data-geo="us"]       { background: #FF9900; }
+.swatch[data-geo="eu"]       { background: #3B82F6; }
+.swatch[data-geo="apac"]     { background: #22D3D9; }
+.swatch[data-geo="au"]       { background: #84CC16; }
+.swatch[data-geo="ca"]       { background: #EF4444; }
+.swatch[data-geo="jp"]       { background: #EC4899; }
+.swatch[data-geo="us-gov"]   { background: #A78BFA; }
+.swatch[data-geo="multi"]    { background: #F59E0B; }
+.swatch[data-geo="ondemand"] { background: #64748B; }
+
+.swatch-ring[data-geo="global"] {
+  background: transparent;
+  border: 2px solid #0FB5BA;
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+}
+
+.legend-note {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+}

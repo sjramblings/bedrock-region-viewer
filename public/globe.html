@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bedrock Globe — Inference-Profile Geography</title>
+    <meta name="description" content="AWS Bedrock model availability on a globe, coloured by inference-profile geographic membership." />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+  </head>
+  <body class="globe-page">
+    <header class="top">
+      <div class="top-row">
+        <h1>Bedrock Globe</h1>
+        <nav class="globe-nav">
+          <a href="index.html">Region viewer →</a>
+          <button id="theme-toggle" type="button" aria-label="Toggle dark mode">🌓</button>
+        </nav>
+      </div>
+      <p class="meta">
+        <span id="meta-generated">Loading…</span>
+        <span class="sep">·</span>
+        <span>Drag to rotate · click a pin for detail</span>
+      </p>
+      <div id="error-banner" class="banner hidden"></div>
+    </header>
+
+    <main class="globe-main">
+      <section class="globe-stage">
+        <div id="globe-container"></div>
+        <aside id="globe-detail" class="globe-detail hidden">
+          <button class="globe-detail-close" type="button" aria-label="Close">×</button>
+          <h2 id="detail-region" class="detail-region">—</h2>
+          <p id="detail-summary" class="detail-summary"></p>
+          <ul id="detail-profiles" class="detail-profiles"></ul>
+        </aside>
+      </section>
+
+      <section class="globe-legend" aria-label="Legend">
+        <h3>Inference-profile membership</h3>
+        <ul>
+          <li><span class="swatch" data-geo="us"></span>US (us.* profiles)</li>
+          <li><span class="swatch" data-geo="eu"></span>EU (eu.* profiles)</li>
+          <li><span class="swatch" data-geo="apac"></span>APAC (apac.* profiles)</li>
+          <li><span class="swatch" data-geo="au"></span>Australia (au.* profiles)</li>
+          <li><span class="swatch" data-geo="ca"></span>Canada (ca.* profiles)</li>
+          <li><span class="swatch" data-geo="jp"></span>Japan (jp.* profiles)</li>
+          <li><span class="swatch" data-geo="us-gov"></span>GovCloud (us-gov.* profiles)</li>
+          <li><span class="swatch" data-geo="multi"></span>Multiple geos</li>
+          <li><span class="swatch" data-geo="ondemand"></span>On-demand only — no profile</li>
+          <li><span class="swatch swatch-ring" data-geo="global"></span>Ring: also in a global.* profile</li>
+        </ul>
+        <p class="legend-note">Pin size scales with on-demand model count.</p>
+      </section>
+    </main>
+
+    <script src="globe.js"></script>
+  </body>
+</html>
