@@ -9,7 +9,6 @@ permissions:
   id-token: write
   contents: write
   pull-requests: write
-  issues: write
 
 concurrency:
   group: refresh-data
@@ -81,7 +80,7 @@ jobs:
             echo "No model availability changes." >> "$GITHUB_STEP_SUMMARY"
           fi
 
-      - name: Open PR and create tracking issue
+      - name: Open PR for nightly data refresh
         if: steps.diff.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -114,23 +113,13 @@ jobs:
           git commit -m "chore(data): nightly Bedrock catalog refresh ${DATE}"
           git push -u origin "$BRANCH"
 
-          # Ensure labels exist (idempotent).
-          gh label create model-changes --color FBCA04 --description "Automated alert when Bedrock catalog model/profile availability changes" --force >/dev/null
+          # Ensure the `automated` label exists (idempotent) for the PR.
           gh label create automated --color EDEDED --description "Opened by automation" --force >/dev/null
 
-          # Create the tracking issue first; capture URL to link from the PR.
-          # Issue creation does not require the "Allow Actions to create PRs"
-          # repo setting, so this still fires even if PR creation is blocked.
-          ISSUE_URL=$(gh issue create \
-            --title "$(cat /tmp/issue-title.txt)" \
-            --body-file /tmp/issue-body.md \
-            --label model-changes,automated)
-
-          # PR body references the issue.
           {
             echo "Automated nightly refresh of \`public/data.json\` from the AWS Bedrock APIs."
             echo ""
-            echo "Model availability changes tracked in ${ISSUE_URL}."
+            echo "Model availability changes are published as a GitHub Release (tag \`data-YYYY-MM-DD\`) by the \`release-data\` workflow once this PR auto-merges. See \`releases.atom\` for an RSS feed of catalog changes."
             echo ""
             echo "This PR only modifies \`public/data.json\`. Auto-merge is enabled; it will squash-merge once required checks pass."
           } > /tmp/pr-body.md
@@ -146,7 +135,7 @@ jobs:
             --title "chore(data): nightly refresh ${DATE}" \
             --body-file /tmp/pr-body.md \
             --label automated; then
-            echo "::error::gh pr create failed. Most likely cause: the repo setting 'Allow GitHub Actions to create and approve pull requests' is OFF. Enable it at: Settings -> Actions -> General -> Workflow permissions. The orphan branch ${BRANCH} will be deleted automatically; the tracking issue ${ISSUE_URL} remains as a record of the catalog change."
+            echo "::error::gh pr create failed. Most likely cause: the repo setting 'Allow GitHub Actions to create and approve pull requests' is OFF. Enable it at: Settings -> Actions -> General -> Workflow permissions. The orphan branch ${BRANCH} will be deleted automatically."
             exit 1
           fi
           PR_CREATED=1

@@ -1,0 +1,89 @@
+name: Cut release on data change
+
+on:
+  workflow_run:
+    workflows: ["Refresh Bedrock catalog"]
+    types:
+      - completed
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-data
+  cancel-in-progress: false
+
+jobs:
+  release:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 2
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Short-circuit if data.json unchanged in last commit
+        id: check
+        run: |
+          set -euo pipefail
+          if git diff --quiet HEAD~1 HEAD -- public/data.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No change to public/data.json in HEAD; skipping release." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build diff against previous commit
+        if: steps.check.outputs.changed == 'true'
+        id: diff
+        run: |
+          set -euo pipefail
+          git show HEAD~1:public/data.json > /tmp/previous.json
+          RESULT=$(bun run scripts/diff-data.ts /tmp/previous.json public/data.json)
+          HAS=$(echo "$RESULT" | jq -r .hasChanges)
+          if [ "$HAS" != "true" ]; then
+            # Defensive: data.json bytes changed but diff-data considers them semantically equal
+            # (e.g. only generatedAt timestamp moved). No release in that case.
+            echo "::notice::data.json bytes changed but diff-data.ts found no semantic change; skipping release."
+            echo "release=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "$RESULT" | jq -r .title > /tmp/release-title.txt
+          echo "$RESULT" | jq -r .body  > /tmp/release-body.md
+          echo "tag=data-$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+          echo "release=true" >> "$GITHUB_OUTPUT"
+          {
+            echo "## Release candidate"
+            echo ""
+            echo "**Tag:** \`data-$(date -u +%Y-%m-%d)\`"
+            echo ""
+            echo "**Title:** $(cat /tmp/release-title.txt)"
+            echo ""
+            cat /tmp/release-body.md
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Create release (idempotent)
+        if: steps.check.outputs.changed == 'true' && steps.diff.outputs.release == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TAG="${{ steps.diff.outputs.tag }}"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "::notice::Release ${TAG} already exists; skipping."
+            exit 0
+          fi
+          gh release create "$TAG" \
+            --target main \
+            --title "$(cat /tmp/release-title.txt)" \
+            --notes-file /tmp/release-body.md
+          echo "::notice::Created release ${TAG}."

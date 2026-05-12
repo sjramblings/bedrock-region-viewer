@@ -30,6 +30,7 @@ bedrock-region-viewer/
 │   └── github-oidc-role.yaml     # OIDC role + Amplify app + domain
 ├── .github/workflows/
 │   ├── refresh-data.yml          # nightly: fetch -> PR -> auto-merge
+│   ├── release-data.yml          # on refresh-data success: cut GitHub Release
 │   └── deploy-amplify.yml        # on push to main: upload zip -> Amplify
 ├── scripts/fetch-data.ts         # AWS SDK -> public/data.json
 ├── public/                       # static site
@@ -123,12 +124,14 @@ gh workflow run deploy-amplify.yml
 2. Assumes `AWS_ROLE_ARN` via OIDC.
 3. Runs `bun run fetch` → writes a new `public/data.json`.
 4. Runs `bun run scripts/diff-data.ts` comparing baseline vs new. It ignores `generatedAt` and `errors` — only tracks model/profile ID set membership across `onDemand`, `regional`, and `global`.
-5. **If no model availability changes** → silent no-op. No PR, no issue, no noise.
-6. **If changes detected** → opens a GitHub **issue** summarizing the delta (aggregate + per-region breakdown) AND a PR committing the new `data.json` with auto-merge enabled. The PR body links back to the issue.
+5. **If no model availability changes** → silent no-op. No PR, no release, no noise.
+6. **If changes detected** → opens a PR committing the new `data.json` with auto-merge enabled.
 
-On merge, `deploy-amplify.yml` fires and redeploys the static bundle.
+On merge, `deploy-amplify.yml` fires and redeploys the static bundle. Independently, `release-data.yml` fires on `workflow_run` completion of `refresh-data` and — once the data PR has merged to `main` — publishes a **GitHub Release** with the change summary as release notes.
 
-### Issue format
+### Release format
+
+Tag: `data-YYYY-MM-DD` (calendar versioning — one release per change-detected day; idempotent on same-day re-runs).
 
 Title: `Bedrock catalog changes: +N models, -M models, +P profiles (YYYY-MM-DD)`
 
@@ -149,7 +152,12 @@ Body (abbreviated):
 - +global `global.anthropic.claude-opus-4-7`
 ```
 
-Subscribe to issues (or filter on the `model-changes` label) to get pinged when AWS adds or removes a model. The same markdown also lands in the workflow step summary — visible in the Actions tab without needing to click through.
+Subscribe via the Releases RSS feed to get pinged when AWS adds or removes a model:
+
+- Human-facing: <https://github.com/sjramblings/bedrock-region-viewer/releases>
+- RSS feed: <https://github.com/sjramblings/bedrock-region-viewer/releases.atom>
+
+The same markdown also lands in the workflow step summary — visible in the Actions tab without needing to click through.
 
 ### Why a PR instead of direct push
 
