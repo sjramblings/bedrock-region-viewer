@@ -1,0 +1,130 @@
+name: Cut release on data change
+
+on:
+  workflow_run:
+    workflows: ["Refresh Bedrock catalog"]
+    types:
+      - completed
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-data
+  cancel-in-progress: false
+
+jobs:
+  release:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      # fetch-depth 50 is enough to find the previous public/data.json-touching
+      # commit even if non-data commits land between two nightly refreshes.
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 50
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      # Resolve the actual commits that bound the most recent data.json change,
+      # not the positional HEAD~1..HEAD pair. This avoids two failure modes:
+      #
+      #   (P1) On a no-change night refresh-data still completes successfully and
+      #        fires this workflow. If we keyed off (date -u) the tag, we would
+      #        re-release yesterday's diff under today's date. Tagging from the
+      #        commit's own date makes the idempotency check naturally correct.
+      #
+      #   (P2) If anything unrelated lands on main between refresh-data
+      #        completing and this job starting, HEAD~1..HEAD no longer
+      #        straddles the data change. Walking `git log -- public/data.json`
+      #        finds the right pair regardless of what HEAD is.
+      - name: Resolve last + previous data.json commits
+        id: commits
+        run: |
+          set -euo pipefail
+          LAST=$(git log -n 1 --format=%H -- public/data.json || true)
+          if [ -z "$LAST" ]; then
+            echo "No public/data.json history reachable; skipping."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          PREV=$(git log -n 2 --format=%H -- public/data.json | tail -n 1)
+          if [ "$PREV" = "$LAST" ]; then
+            echo "Only one data.json commit reachable; nothing to diff against."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          TAG="data-$(git log -1 --format=%cs "$LAST")"
+          echo "last=$LAST" >> "$GITHUB_OUTPUT"
+          echo "prev=$PREV" >> "$GITHUB_OUTPUT"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "ready=true" >> "$GITHUB_OUTPUT"
+          echo "Last data commit: $LAST" >> "$GITHUB_STEP_SUMMARY"
+          echo "Previous data commit: $PREV" >> "$GITHUB_STEP_SUMMARY"
+          echo "Proposed tag: $TAG" >> "$GITHUB_STEP_SUMMARY"
+
+      # Cheap pre-check before we do any work — if the tag already exists, the
+      # last data commit has been released and there is nothing to do.
+      - name: Skip if release already exists for this commit
+        if: steps.commits.outputs.ready == 'true'
+        id: gate
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TAG="${{ steps.commits.outputs.tag }}"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "::notice::Release ${TAG} already exists for commit ${{ steps.commits.outputs.last }}; skipping."
+            echo "proceed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "proceed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build diff between previous and last data commits
+        if: steps.gate.outputs.proceed == 'true'
+        id: diff
+        run: |
+          set -euo pipefail
+          git show "${{ steps.commits.outputs.prev }}:public/data.json" > /tmp/previous.json
+          git show "${{ steps.commits.outputs.last }}:public/data.json" > /tmp/current.json
+          RESULT=$(bun run scripts/diff-data.ts /tmp/previous.json /tmp/current.json)
+          HAS=$(echo "$RESULT" | jq -r .hasChanges)
+          if [ "$HAS" != "true" ]; then
+            # data.json bytes changed but diff-data.ts considers them
+            # semantically equal (e.g. only generatedAt moved). No release.
+            echo "::notice::data.json bytes changed between commits but diff-data.ts found no semantic change; skipping release."
+            echo "release=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "$RESULT" | jq -r .title > /tmp/release-title.txt
+          echo "$RESULT" | jq -r .body  > /tmp/release-body.md
+          echo "release=true" >> "$GITHUB_OUTPUT"
+          {
+            echo "## Release candidate"
+            echo ""
+            echo "**Tag:** \`${{ steps.commits.outputs.tag }}\`"
+            echo ""
+            echo "**Title:** $(cat /tmp/release-title.txt)"
+            echo ""
+            cat /tmp/release-body.md
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Create release
+        if: steps.gate.outputs.proceed == 'true' && steps.diff.outputs.release == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TAG="${{ steps.commits.outputs.tag }}"
+          gh release create "$TAG" \
+            --target "${{ steps.commits.outputs.last }}" \
+            --title "$(cat /tmp/release-title.txt)" \
+            --notes-file /tmp/release-body.md
+          echo "::notice::Created release ${TAG} on commit ${{ steps.commits.outputs.last }}."
