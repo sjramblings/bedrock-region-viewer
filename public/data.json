@@ -13,11 +13,11 @@
     "eu-south-1": "The security token included in the request is invalid",
     "eu-south-2": "The security token included in the request is invalid",
     "il-central-1": "The security token included in the request is invalid",
-    "me-central-1": "UnknownError",
+    "me-central-1": "ECONNREFUSED",
     "me-south-1": "ECONNREFUSED",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-05-13T16:15:19.135Z",
+  "generatedAt": "2026-05-28T17:32:42.589Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -72,6 +72,17 @@
           ],
           "profileId": "global.anthropic.claude-opus-4-7",
           "profileName": "Global Anthropic Claude Opus 4.7",
+          "routeRegions": [
+            "ap-northeast-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Opus 4.8 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "global.anthropic.claude-opus-4-8",
+          "profileName": "Global Anthropic Claude Opus 4.8",
           "routeRegions": [
             "ap-northeast-1"
           ]
@@ -1069,6 +1080,19 @@
           ]
         },
         {
+          "description": "Routes requests to Claude Opus 4.8 in ap-northeast-3, ap-northeast-1.",
+          "geo": "jp",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "jp.anthropic.claude-opus-4-8",
+          "profileName": "JP Anthropic Claude Opus 4.8",
+          "routeRegions": [
+            "ap-northeast-1",
+            "ap-northeast-3"
+          ]
+        },
+        {
           "description": "Routes requests to Claude Sonnet 4.5 in ap-northeast-3, ap-northeast-1.",
           "geo": "jp",
           "models": [
@@ -1149,6 +1173,17 @@
           ],
           "profileId": "global.anthropic.claude-opus-4-7",
           "profileName": "Global Anthropic Claude Opus 4.7",
+          "routeRegions": [
+            "ap-northeast-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Opus 4.8 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "global.anthropic.claude-opus-4-8",
+          "profileName": "Global Anthropic Claude Opus 4.8",
           "routeRegions": [
             "ap-northeast-2"
           ]
@@ -1524,6 +1559,17 @@
           ]
         },
         {
+          "description": "Routes requests to Claude Opus 4.8 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "global.anthropic.claude-opus-4-8",
+          "profileName": "Global Anthropic Claude Opus 4.8",
+          "routeRegions": [
+            "ap-northeast-3"
+          ]
+        },
+        {
           "description": "Routes requests to Claude Sonnet 4.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-sonnet-4-5-20250929-v1:0"
@@ -1649,6 +1695,19 @@
           ]
         },
         {
+          "description": "Routes requests to Claude Opus 4.8 in ap-northeast-3, ap-northeast-1.",
+          "geo": "jp",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "jp.anthropic.claude-opus-4-8",
+          "profileName": "JP Anthropic Claude Opus 4.8",
+          "routeRegions": [
+            "ap-northeast-1",
+            "ap-northeast-3"
+          ]
+        },
+        {
           "description": "Routes requests to Claude Sonnet 4.5 in ap-northeast-3, ap-northeast-1.",
           "geo": "jp",
           "models": [
@@ -1729,6 +1788,17 @@
           ],
           "profileId": "global.anthropic.claude-opus-4-7",
           "profileName": "Global Anthropic Claude Opus 4.7",
+          "routeRegions": [
+            "ap-south-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Opus 4.8 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "global.anthropic.claude-opus-4-8",
+          "profileName": "Global Anthropic Claude Opus 4.8",
           "routeRegions": [
             "ap-south-1"
           ]
@@ -2699,6 +2769,17 @@
           ]
         },
         {
+          "description": "Routes requests to Claude Opus 4.8 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "global.anthropic.claude-opus-4-8",
+          "profileName": "Global Anthropic Claude Opus 4.8",
+          "routeRegions": [
+            "ap-southeast-1"
+          ]
+        },
+        {
           "description": "Routes requests to Claude Sonnet 4.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-sonnet-4-5-20250929-v1:0"
@@ -2998,6 +3079,17 @@
           ],
           "profileId": "global.anthropic.claude-opus-4-7",
           "profileName": "Global Anthropic Claude Opus 4.7",
+          "routeRegions": [
+            "ap-southeast-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Opus 4.8 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "global.anthropic.claude-opus-4-8",
+          "profileName": "Global Anthropic Claude Opus 4.8",
           "routeRegions": [
             "ap-southeast-2"
           ]
@@ -3984,6 +4076,19 @@
           ]
         },
         {
+          "description": "Routes requests to Claude Opus 4.8 in ap-southeast-2, ap-southeast-4.",
+          "geo": "au",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "au.anthropic.claude-opus-4-8",
+          "profileName": "AU Anthropic Claude Opus 4.8",
+          "routeRegions": [
+            "ap-southeast-2",
+            "ap-southeast-4"
+          ]
+        },
+        {
           "description": "Routes requests to AU Anthropic Claude Sonnet 4.5 in ap-southeast-2 and ap-southeast-4.",
           "geo": "au",
           "models": [
@@ -4064,6 +4169,17 @@
           ],
           "profileId": "global.anthropic.claude-opus-4-7",
           "profileName": "Global Anthropic Claude Opus 4.7",
+          "routeRegions": [
+            "ca-central-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Opus 4.8 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "global.anthropic.claude-opus-4-8",
+          "profileName": "Global Anthropic Claude Opus 4.8",
           "routeRegions": [
             "ca-central-1"
           ]
@@ -4402,6 +4518,21 @@
           ]
         },
         {
+          "description": "Routes requests to Claude Opus 4.8 in us-east-1, us-east-2, ca-central-1, us-west-2.",
+          "geo": "us",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "us.anthropic.claude-opus-4-8",
+          "profileName": "US Anthropic Claude Opus 4.8",
+          "routeRegions": [
+            "ca-central-1",
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to Anthropic Claude Sonnet 4.5 in ca-central-1, us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
@@ -4486,6 +4617,17 @@
           ],
           "profileId": "global.anthropic.claude-opus-4-7",
           "profileName": "Global Anthropic Claude Opus 4.7",
+          "routeRegions": [
+            "eu-central-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Opus 4.8 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "global.anthropic.claude-opus-4-8",
+          "profileName": "Global Anthropic Claude Opus 4.8",
           "routeRegions": [
             "eu-central-1"
           ]
@@ -4969,6 +5111,23 @@
           ]
         },
         {
+          "description": "Routes requests to Claude Opus 4.8 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1, eu-central-1.",
+          "geo": "eu",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "eu.anthropic.claude-opus-4-8",
+          "profileName": "EU Anthropic Claude Opus 4.8",
+          "routeRegions": [
+            "eu-central-1",
+            "eu-north-1",
+            "eu-south-1",
+            "eu-south-2",
+            "eu-west-1",
+            "eu-west-3"
+          ]
+        },
+        {
           "description": "Routes requests to Claude Sonnet 4 in eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1 and eu-west-3.",
           "geo": "eu",
           "models": [
@@ -5151,6 +5310,17 @@
           ],
           "profileId": "global.anthropic.claude-opus-4-7",
           "profileName": "Global Anthropic Claude Opus 4.7",
+          "routeRegions": [
+            "eu-north-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Opus 4.8 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "global.anthropic.claude-opus-4-8",
+          "profileName": "Global Anthropic Claude Opus 4.8",
           "routeRegions": [
             "eu-north-1"
           ]
@@ -5640,6 +5810,23 @@
           ]
         },
         {
+          "description": "Routes requests to Claude Opus 4.8 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1, eu-central-1.",
+          "geo": "eu",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "eu.anthropic.claude-opus-4-8",
+          "profileName": "EU Anthropic Claude Opus 4.8",
+          "routeRegions": [
+            "eu-central-1",
+            "eu-north-1",
+            "eu-south-1",
+            "eu-south-2",
+            "eu-west-1",
+            "eu-west-3"
+          ]
+        },
+        {
           "description": "Routes requests to Claude Sonnet 4 in eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1 and eu-west-3.",
           "geo": "eu",
           "models": [
@@ -5794,6 +5981,17 @@
           ],
           "profileId": "global.anthropic.claude-opus-4-7",
           "profileName": "Global Anthropic Claude Opus 4.7",
+          "routeRegions": [
+            "eu-west-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Opus 4.8 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "global.anthropic.claude-opus-4-8",
+          "profileName": "Global Anthropic Claude Opus 4.8",
           "routeRegions": [
             "eu-west-1"
           ]
@@ -6621,6 +6819,23 @@
           ]
         },
         {
+          "description": "Routes requests to Claude Opus 4.8 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1, eu-central-1.",
+          "geo": "eu",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "eu.anthropic.claude-opus-4-8",
+          "profileName": "EU Anthropic Claude Opus 4.8",
+          "routeRegions": [
+            "eu-central-1",
+            "eu-north-1",
+            "eu-south-1",
+            "eu-south-2",
+            "eu-west-1",
+            "eu-west-3"
+          ]
+        },
+        {
           "description": "Routes requests to Claude Sonnet 4 in eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1 and eu-west-3.",
           "geo": "eu",
           "models": [
@@ -6837,6 +7052,17 @@
           ],
           "profileId": "global.anthropic.claude-opus-4-7",
           "profileName": "Global Anthropic Claude Opus 4.7",
+          "routeRegions": [
+            "eu-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Opus 4.8 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "global.anthropic.claude-opus-4-8",
+          "profileName": "Global Anthropic Claude Opus 4.8",
           "routeRegions": [
             "eu-west-2"
           ]
@@ -7750,6 +7976,24 @@
           ]
         },
         {
+          "description": "Routes requests to Claude Opus 4.8 in eu-north-1, eu-west-3, eu-south-1, eu-west-2, eu-south-2, eu-west-1, eu-central-1.",
+          "geo": "eu",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "eu.anthropic.claude-opus-4-8",
+          "profileName": "EU Anthropic Claude Opus 4.8",
+          "routeRegions": [
+            "eu-central-1",
+            "eu-north-1",
+            "eu-south-1",
+            "eu-south-2",
+            "eu-west-1",
+            "eu-west-2",
+            "eu-west-3"
+          ]
+        },
+        {
           "description": "Routes requests to Anthropic Claude Sonnet 4.5 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1, eu-central-1 and eu-west-2.",
           "geo": "eu",
           "models": [
@@ -7876,6 +8120,17 @@
           ],
           "profileId": "global.anthropic.claude-opus-4-7",
           "profileName": "Global Anthropic Claude Opus 4.7",
+          "routeRegions": [
+            "eu-west-3"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Opus 4.8 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "global.anthropic.claude-opus-4-8",
+          "profileName": "Global Anthropic Claude Opus 4.8",
           "routeRegions": [
             "eu-west-3"
           ]
@@ -8224,6 +8479,23 @@
           ]
         },
         {
+          "description": "Routes requests to Claude Opus 4.8 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1, eu-central-1.",
+          "geo": "eu",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "eu.anthropic.claude-opus-4-8",
+          "profileName": "EU Anthropic Claude Opus 4.8",
+          "routeRegions": [
+            "eu-central-1",
+            "eu-north-1",
+            "eu-south-1",
+            "eu-south-2",
+            "eu-west-1",
+            "eu-west-3"
+          ]
+        },
+        {
           "description": "Routes requests to Claude Sonnet 4 in eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1 and eu-west-3.",
           "geo": "eu",
           "models": [
@@ -8395,6 +8667,17 @@
           ],
           "profileId": "global.anthropic.claude-opus-4-7",
           "profileName": "Global Anthropic Claude Opus 4.7",
+          "routeRegions": [
+            "sa-east-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Opus 4.8 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "global.anthropic.claude-opus-4-8",
+          "profileName": "Global Anthropic Claude Opus 4.8",
           "routeRegions": [
             "sa-east-1"
           ]
@@ -9131,6 +9414,17 @@
           ],
           "profileId": "global.anthropic.claude-opus-4-7",
           "profileName": "Global Anthropic Claude Opus 4.7",
+          "routeRegions": [
+            "us-east-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Opus 4.8 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "global.anthropic.claude-opus-4-8",
+          "profileName": "Global Anthropic Claude Opus 4.8",
           "routeRegions": [
             "us-east-1"
           ]
@@ -10299,7 +10593,7 @@
           ]
         },
         {
-          "description": "Routes requests to Nova Pro in us-east-2, us-east-1 and us-west-2.",
+          "description": "Routes requests to Nova Pro in us-east-1, us-west-2 and us-east-2.",
           "geo": "us",
           "models": [
             "amazon.nova-pro-v1:0"
@@ -10430,6 +10724,20 @@
           ],
           "profileId": "us.anthropic.claude-opus-4-7",
           "profileName": "US Anthropic Claude Opus 4.7",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Opus 4.8 in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "us.anthropic.claude-opus-4-8",
+          "profileName": "US Anthropic Claude Opus 4.8",
           "routeRegions": [
             "us-east-1",
             "us-east-2",
@@ -10951,6 +11259,17 @@
           ],
           "profileId": "global.anthropic.claude-opus-4-7",
           "profileName": "Global Anthropic Claude Opus 4.7",
+          "routeRegions": [
+            "us-east-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Opus 4.8 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "global.anthropic.claude-opus-4-8",
+          "profileName": "Global Anthropic Claude Opus 4.8",
           "routeRegions": [
             "us-east-2"
           ]
@@ -11656,7 +11975,7 @@
           ]
         },
         {
-          "description": "Routes requests to Nova Pro in us-east-2, us-east-1 and us-west-2.",
+          "description": "Routes requests to Nova Pro in us-east-1, us-west-2 and us-east-2.",
           "geo": "us",
           "models": [
             "amazon.nova-pro-v1:0"
@@ -11775,6 +12094,20 @@
           ],
           "profileId": "us.anthropic.claude-opus-4-7",
           "profileName": "US Anthropic Claude Opus 4.7",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Opus 4.8 in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "us.anthropic.claude-opus-4-8",
+          "profileName": "US Anthropic Claude Opus 4.8",
           "routeRegions": [
             "us-east-1",
             "us-east-2",
@@ -12289,6 +12622,17 @@
           ]
         },
         {
+          "description": "Routes requests to Claude Opus 4.8 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "global.anthropic.claude-opus-4-8",
+          "profileName": "Global Anthropic Claude Opus 4.8",
+          "routeRegions": [
+            "us-west-1"
+          ]
+        },
+        {
           "description": "Routes requests to Claude Sonnet 4.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-sonnet-4-5-20250929-v1:0"
@@ -12433,6 +12777,21 @@
           ],
           "profileId": "us.anthropic.claude-opus-4-7",
           "profileName": "US Anthropic Claude Opus 4.7",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-1",
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Opus 4.8 in us-east-1, us-east-2, us-west-1, us-west-2.",
+          "geo": "us",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "us.anthropic.claude-opus-4-8",
+          "profileName": "US Anthropic Claude Opus 4.8",
           "routeRegions": [
             "us-east-1",
             "us-east-2",
@@ -12630,6 +12989,17 @@
           ],
           "profileId": "global.anthropic.claude-opus-4-7",
           "profileName": "Global Anthropic Claude Opus 4.7",
+          "routeRegions": [
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Opus 4.8 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "global.anthropic.claude-opus-4-8",
+          "profileName": "Global Anthropic Claude Opus 4.8",
           "routeRegions": [
             "us-west-2"
           ]
@@ -13727,7 +14097,7 @@
           ]
         },
         {
-          "description": "Routes requests to Nova Pro in us-east-2, us-east-1 and us-west-2.",
+          "description": "Routes requests to Nova Pro in us-east-1, us-west-2 and us-east-2.",
           "geo": "us",
           "models": [
             "amazon.nova-pro-v1:0"
@@ -13858,6 +14228,20 @@
           ],
           "profileId": "us.anthropic.claude-opus-4-7",
           "profileName": "US Anthropic Claude Opus 4.7",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Opus 4.8 in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "anthropic.claude-opus-4-8"
+          ],
+          "profileId": "us.anthropic.claude-opus-4-8",
+          "profileName": "US Anthropic Claude Opus 4.8",
           "routeRegions": [
             "us-east-1",
             "us-east-2",
