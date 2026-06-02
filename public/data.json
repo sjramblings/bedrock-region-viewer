@@ -17,7 +17,7 @@
     "me-south-1": "ECONNREFUSED",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-05-28T17:32:42.589Z",
+  "generatedAt": "2026-06-02T18:02:27.707Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -10675,20 +10675,6 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Opus 4 in us-east-1, us-east-2 and us-west-2.",
-          "geo": "us",
-          "models": [
-            "anthropic.claude-opus-4-20250514-v1:0"
-          ],
-          "profileId": "us.anthropic.claude-opus-4-20250514-v1:0",
-          "profileName": "US Claude Opus 4",
-          "routeRegions": [
-            "us-east-1",
-            "us-east-2",
-            "us-west-2"
-          ]
-        },
-        {
           "description": "Routes requests to Anthropic Claude Opus 4.5 in us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
@@ -12038,20 +12024,6 @@
           ],
           "profileId": "us.anthropic.claude-opus-4-1-20250805-v1:0",
           "profileName": "US Claude Opus 4.1",
-          "routeRegions": [
-            "us-east-1",
-            "us-east-2",
-            "us-west-2"
-          ]
-        },
-        {
-          "description": "Routes requests to Claude Opus 4 in us-east-1, us-east-2 and us-west-2.",
-          "geo": "us",
-          "models": [
-            "anthropic.claude-opus-4-20250514-v1:0"
-          ],
-          "profileId": "us.anthropic.claude-opus-4-20250514-v1:0",
-          "profileName": "US Claude Opus 4",
           "routeRegions": [
             "us-east-1",
             "us-east-2",
@@ -14172,20 +14144,6 @@
           ],
           "profileId": "us.anthropic.claude-opus-4-1-20250805-v1:0",
           "profileName": "US Claude Opus 4.1",
-          "routeRegions": [
-            "us-east-1",
-            "us-east-2",
-            "us-west-2"
-          ]
-        },
-        {
-          "description": "Routes requests to Claude Opus 4 in us-east-1, us-east-2 and us-west-2.",
-          "geo": "us",
-          "models": [
-            "anthropic.claude-opus-4-20250514-v1:0"
-          ],
-          "profileId": "us.anthropic.claude-opus-4-20250514-v1:0",
-          "profileName": "US Claude Opus 4",
           "routeRegions": [
             "us-east-1",
             "us-east-2",
