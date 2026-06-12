@@ -17,7 +17,7 @@
     "me-south-1": "ECONNREFUSED",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-06-10T16:55:13.488Z",
+  "generatedAt": "2026-06-12T16:40:23.974Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -4098,6 +4098,19 @@
             "ap-south-1",
             "ap-south-2",
             "ap-southeast-1",
+            "ap-southeast-2",
+            "ap-southeast-4"
+          ]
+        },
+        {
+          "description": "Routes requests to Anthropic Claude Fable 5 in ap-southeast-2 and ap-southeast-4.",
+          "geo": "au",
+          "models": [
+            "anthropic.claude-fable-5"
+          ],
+          "profileId": "au.anthropic.claude-fable-5",
+          "profileName": "AU Anthropic Claude Fable 5",
+          "routeRegions": [
             "ap-southeast-2",
             "ap-southeast-4"
           ]
