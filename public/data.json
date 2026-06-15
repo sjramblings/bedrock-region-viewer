@@ -17,7 +17,7 @@
     "me-south-1": "ECONNREFUSED",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-06-13T15:28:39.399Z",
+  "generatedAt": "2026-06-15T18:21:50.262Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -11610,6 +11610,24 @@
         }
       ],
       "onDemand": [
+        {
+          "inferenceTypesSupported": [
+            "INFERENCE_PROFILE",
+            "ON_DEMAND"
+          ],
+          "inputModalities": [
+            "IMAGE",
+            "TEXT",
+            "VIDEO"
+          ],
+          "modelId": "amazon.nova-lite-v1:0",
+          "modelName": "Nova Lite",
+          "outputModalities": [
+            "TEXT"
+          ],
+          "providerName": "Amazon",
+          "responseStreamingSupported": true
+        },
         {
           "inferenceTypesSupported": [
             "ON_DEMAND"
