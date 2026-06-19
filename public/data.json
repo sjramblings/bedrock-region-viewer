@@ -17,7 +17,7 @@
     "me-south-1": "ECONNREFUSED",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-06-15T18:21:50.262Z",
+  "generatedAt": "2026-06-19T16:29:49.221Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -5903,7 +5903,7 @@
           ]
         },
         {
-          "description": "Routes requests to Anthropic Claude Haiku 4.5 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1 and eu-central-1.",
+          "description": "Routes requests to Anthropic Claude Haiku 4.5 in eu-west-1, eu-north-1, eu-west-3, eu-south-1, eu-south-2 and eu-central-1.",
           "geo": "eu",
           "models": [
             "anthropic.claude-haiku-4-5-20251001-v1:0"
@@ -13545,21 +13545,6 @@
           ],
           "modelId": "anthropic.claude-3-sonnet-20240229-v1:0",
           "modelName": "Claude 3 Sonnet",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-5-haiku-20241022-v1:0",
-          "modelName": "Claude 3.5 Haiku",
           "outputModalities": [
             "TEXT"
           ],
