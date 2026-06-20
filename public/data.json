@@ -17,7 +17,7 @@
     "me-south-1": "ECONNREFUSED",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-06-19T16:29:49.221Z",
+  "generatedAt": "2026-06-20T15:42:18.737Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -10875,20 +10875,6 @@
           ]
         },
         {
-          "description": "Routes requests to US Anthropic Claude 3.5 Haiku in us-east-1, us-east-2 and us-west-2.",
-          "geo": "us",
-          "models": [
-            "anthropic.claude-3-5-haiku-20241022-v1:0"
-          ],
-          "profileId": "us.anthropic.claude-3-5-haiku-20241022-v1:0",
-          "profileName": "US Anthropic Claude 3.5 Haiku",
-          "routeRegions": [
-            "us-east-1",
-            "us-east-2",
-            "us-west-2"
-          ]
-        },
-        {
           "description": "Routes requests to Anthropic Claude 3 Haiku in us-east-1 and us-west-2.",
           "geo": "us",
           "models": [
@@ -12279,20 +12265,6 @@
           ],
           "profileId": "us.amazon.nova-pro-v1:0",
           "profileName": "US Nova Pro",
-          "routeRegions": [
-            "us-east-1",
-            "us-east-2",
-            "us-west-2"
-          ]
-        },
-        {
-          "description": "Routes requests to Anthropic Claude 3.5 Haiku in us-west-2, us-east-1 and us-east-2.",
-          "geo": "us",
-          "models": [
-            "anthropic.claude-3-5-haiku-20241022-v1:0"
-          ],
-          "profileId": "us.anthropic.claude-3-5-haiku-20241022-v1:0",
-          "profileName": "US Anthropic Claude 3.5 Haiku",
           "routeRegions": [
             "us-east-1",
             "us-east-2",
@@ -14441,20 +14413,6 @@
           ],
           "profileId": "us.amazon.nova-pro-v1:0",
           "profileName": "US Nova Pro",
-          "routeRegions": [
-            "us-east-1",
-            "us-east-2",
-            "us-west-2"
-          ]
-        },
-        {
-          "description": "Routes requests to Anthropic Claude 3.5 Haiku in us-east-1, us-east-2 and us-west-2.",
-          "geo": "us",
-          "models": [
-            "anthropic.claude-3-5-haiku-20241022-v1:0"
-          ],
-          "profileId": "us.anthropic.claude-3-5-haiku-20241022-v1:0",
-          "profileName": "US Anthropic Claude 3.5 Haiku",
           "routeRegions": [
             "us-east-1",
             "us-east-2",
