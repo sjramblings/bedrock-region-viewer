@@ -17,7 +17,7 @@
     "me-south-1": "ECONNREFUSED",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-07-25T14:57:22.483Z",
+  "generatedAt": "2026-07-30T15:47:12.109Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -314,22 +314,6 @@
           ],
           "modelId": "anthropic.claude-3-haiku-20240307-v1:0",
           "modelName": "Claude 3 Haiku",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-5-sonnet-20240620-v1:0",
-          "modelName": "Claude 3.5 Sonnet",
           "outputModalities": [
             "TEXT"
           ],
@@ -3430,39 +3414,6 @@
           ],
           "modelId": "anthropic.claude-3-haiku-20240307-v1:0",
           "modelName": "Claude 3 Haiku",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-sonnet-20240229-v1:0",
-          "modelName": "Claude 3 Sonnet",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "INFERENCE_PROFILE",
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-5-sonnet-20241022-v2:0",
-          "modelName": "Claude 3.5 Sonnet v2",
           "outputModalities": [
             "TEXT"
           ],
@@ -6605,22 +6556,6 @@
             "ON_DEMAND"
           ],
           "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-sonnet-20240229-v1:0",
-          "modelName": "Claude 3 Sonnet",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
             "TEXT"
           ],
           "modelId": "cohere.embed-english-v3",
@@ -8837,22 +8772,6 @@
             "ON_DEMAND"
           ],
           "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-sonnet-20240229-v1:0",
-          "modelName": "Claude 3 Sonnet",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
             "TEXT"
           ],
           "modelId": "cohere.embed-english-v3",
@@ -10441,22 +10360,6 @@
           ],
           "modelId": "anthropic.claude-3-haiku-20240307-v1:0",
           "modelName": "Claude 3 Haiku",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-sonnet-20240229-v1:0",
-          "modelName": "Claude 3 Sonnet",
           "outputModalities": [
             "TEXT"
           ],
@@ -14058,22 +13961,6 @@
           ],
           "modelId": "anthropic.claude-3-haiku-20240307-v1:0",
           "modelName": "Claude 3 Haiku",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-sonnet-20240229-v1:0",
-          "modelName": "Claude 3 Sonnet",
           "outputModalities": [
             "TEXT"
           ],
