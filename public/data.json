@@ -17,7 +17,7 @@
     "me-south-1": "ECONNREFUSED",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-08-15T14:15:39.112Z",
+  "generatedAt": "2026-08-19T14:25:47.785Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -10880,36 +10880,6 @@
           "inputModalities": [
             "TEXT"
           ],
-          "modelId": "cohere.command-r-v1:0",
-          "modelName": "Command R",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Cohere",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "TEXT"
-          ],
-          "modelId": "cohere.command-r-plus-v1:0",
-          "modelName": "Command R+",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Cohere",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "TEXT"
-          ],
           "modelId": "cohere.embed-english-v3",
           "modelName": "Embed English",
           "outputModalities": [
@@ -14071,7 +14041,7 @@
           ]
         },
         {
-          "description": "Routes requests to Nova Pro in us-east-1, us-east-2, us-west-1 and us-west-2.",
+          "description": "Routes requests to Nova Pro in us-west-1, us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
             "amazon.nova-pro-v1:0"
@@ -14700,36 +14670,6 @@
             "TEXT"
           ],
           "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "TEXT"
-          ],
-          "modelId": "cohere.command-r-v1:0",
-          "modelName": "Command R",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Cohere",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "TEXT"
-          ],
-          "modelId": "cohere.command-r-plus-v1:0",
-          "modelName": "Command R+",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Cohere",
           "responseStreamingSupported": true
         },
         {
