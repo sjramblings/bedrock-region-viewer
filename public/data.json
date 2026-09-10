@@ -17,7 +17,7 @@
     "me-south-1": "",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-09-09T17:28:12.435Z",
+  "generatedAt": "2026-09-10T17:26:16.702Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -369,22 +369,6 @@
           ],
           "providerName": "Amazon",
           "responseStreamingSupported": false
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-haiku-20240307-v1:0",
-          "modelName": "Claude 3 Haiku",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
         },
         {
           "inferenceTypesSupported": [
@@ -3805,22 +3789,6 @@
             "ON_DEMAND"
           ],
           "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-haiku-20240307-v1:0",
-          "modelName": "Claude 3 Haiku",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
             "TEXT"
           ],
           "modelId": "cohere.embed-english-v3",
@@ -5644,23 +5612,6 @@
         },
         {
           "inferenceTypesSupported": [
-            "INFERENCE_PROFILE",
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-haiku-20240307-v1:0",
-          "modelName": "Claude 3 Haiku",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
             "ON_DEMAND"
           ],
           "inputModalities": [
@@ -7290,22 +7241,6 @@
             "ON_DEMAND"
           ],
           "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-haiku-20240307-v1:0",
-          "modelName": "Claude 3 Haiku",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
             "TEXT"
           ],
           "modelId": "cohere.embed-english-v3",
@@ -8487,22 +8422,6 @@
             "IMAGE",
             "TEXT"
           ],
-          "modelId": "anthropic.claude-3-haiku-20240307-v1:0",
-          "modelName": "Claude 3 Haiku",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
           "modelId": "anthropic.claude-3-sonnet-20240229-v1:0",
           "modelName": "Claude 3 Sonnet",
           "outputModalities": [
@@ -9632,22 +9551,6 @@
           ],
           "providerName": "Amazon",
           "responseStreamingSupported": false
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-haiku-20240307-v1:0",
-          "modelName": "Claude 3 Haiku",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
         },
         {
           "inferenceTypesSupported": [
@@ -11363,22 +11266,6 @@
           ],
           "providerName": "Amazon",
           "responseStreamingSupported": false
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-haiku-20240307-v1:0",
-          "modelName": "Claude 3 Haiku",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
         },
         {
           "inferenceTypesSupported": [
@@ -14863,7 +14750,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Sonnet 4.6 in us-east-1, us-east-2, us-west-1, us-west-2.",
+          "description": "Routes requests to Anthropic Claude Sonnet 4.6 in us-east-1, us-east-2, us-west-1 and us-west-2.",
           "geo": "us",
           "models": [
             "anthropic.claude-sonnet-4-6"
@@ -15390,22 +15277,6 @@
           ],
           "providerName": "Amazon",
           "responseStreamingSupported": false
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-haiku-20240307-v1:0",
-          "modelName": "Claude 3 Haiku",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
         },
         {
           "inferenceTypesSupported": [
