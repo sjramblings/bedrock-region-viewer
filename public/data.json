@@ -17,7 +17,7 @@
     "me-south-1": "",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-09-10T17:26:16.702Z",
+  "generatedAt": "2026-09-14T18:58:33.888Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -308,22 +308,6 @@
           ],
           "providerName": "Amazon",
           "responseStreamingSupported": false
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "SPEECH"
-          ],
-          "modelId": "amazon.nova-sonic-v1:0",
-          "modelName": "Nova Sonic",
-          "outputModalities": [
-            "SPEECH",
-            "TEXT"
-          ],
-          "providerName": "Amazon",
-          "responseStreamingSupported": true
         },
         {
           "inferenceTypesSupported": [
@@ -6398,22 +6382,6 @@
             "ON_DEMAND"
           ],
           "inputModalities": [
-            "SPEECH"
-          ],
-          "modelId": "amazon.nova-sonic-v1:0",
-          "modelName": "Nova Sonic",
-          "outputModalities": [
-            "SPEECH",
-            "TEXT"
-          ],
-          "providerName": "Amazon",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
             "TEXT"
           ],
           "modelId": "amazon.titan-embed-text-v2:0",
@@ -11191,22 +11159,6 @@
           ],
           "providerName": "Amazon",
           "responseStreamingSupported": false
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "SPEECH"
-          ],
-          "modelId": "amazon.nova-sonic-v1:0",
-          "modelName": "Nova Sonic",
-          "outputModalities": [
-            "SPEECH",
-            "TEXT"
-          ],
-          "providerName": "Amazon",
-          "responseStreamingSupported": true
         },
         {
           "inferenceTypesSupported": [
