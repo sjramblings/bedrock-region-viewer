@@ -17,7 +17,7 @@
     "me-south-1": "",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-09-14T18:58:33.888Z",
+  "generatedAt": "2026-09-18T17:24:40.715Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -171,6 +171,17 @@
           ],
           "profileId": "global.cohere.embed-v4:0",
           "profileName": "Global Cohere Embed v4",
+          "routeRegions": [
+            "ap-northeast-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "models": [
+            "moonshotai.kimi-k3"
+          ],
+          "profileId": "global.moonshotai.kimi-k3",
+          "profileName": "Global Moonshot AI Kimi K3",
           "routeRegions": [
             "ap-northeast-1"
           ]
@@ -1317,6 +1328,17 @@
           ]
         },
         {
+          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "models": [
+            "moonshotai.kimi-k3"
+          ],
+          "profileId": "global.moonshotai.kimi-k3",
+          "profileName": "Global Moonshot AI Kimi K3",
+          "routeRegions": [
+            "ap-northeast-2"
+          ]
+        },
+        {
           "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
@@ -1797,6 +1819,17 @@
           ]
         },
         {
+          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "models": [
+            "moonshotai.kimi-k3"
+          ],
+          "profileId": "global.moonshotai.kimi-k3",
+          "profileName": "Global Moonshot AI Kimi K3",
+          "routeRegions": [
+            "ap-northeast-3"
+          ]
+        },
+        {
           "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
@@ -2125,6 +2158,17 @@
           ],
           "profileId": "global.cohere.embed-v4:0",
           "profileName": "Global Cohere Embed v4",
+          "routeRegions": [
+            "ap-south-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "models": [
+            "moonshotai.kimi-k3"
+          ],
+          "profileId": "global.moonshotai.kimi-k3",
+          "profileName": "Global Moonshot AI Kimi K3",
           "routeRegions": [
             "ap-south-1"
           ]
@@ -3205,6 +3249,17 @@
           ]
         },
         {
+          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "models": [
+            "moonshotai.kimi-k3"
+          ],
+          "profileId": "global.moonshotai.kimi-k3",
+          "profileName": "Global Moonshot AI Kimi K3",
+          "routeRegions": [
+            "ap-southeast-1"
+          ]
+        },
+        {
           "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
@@ -3614,6 +3669,17 @@
           ],
           "profileId": "global.cohere.embed-v4:0",
           "profileName": "Global Cohere Embed v4",
+          "routeRegions": [
+            "ap-southeast-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "models": [
+            "moonshotai.kimi-k3"
+          ],
+          "profileId": "global.moonshotai.kimi-k3",
+          "profileName": "Global Moonshot AI Kimi K3",
           "routeRegions": [
             "ap-southeast-2"
           ]
@@ -4785,6 +4851,17 @@
           ]
         },
         {
+          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "models": [
+            "moonshotai.kimi-k3"
+          ],
+          "profileId": "global.moonshotai.kimi-k3",
+          "profileName": "Global Moonshot AI Kimi K3",
+          "routeRegions": [
+            "ca-central-1"
+          ]
+        },
+        {
           "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
@@ -5245,6 +5322,21 @@
           ]
         },
         {
+          "description": "Routes requests to Kimi K3 in us-east-1, us-east-2, ca-central-1, us-west-2.",
+          "geo": "us",
+          "models": [
+            "moonshotai.kimi-k3"
+          ],
+          "profileId": "us.moonshotai.kimi-k3",
+          "profileName": "US Moonshot AI Kimi K3",
+          "routeRegions": [
+            "ca-central-1",
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to GPT-5.6 Luna in us-east-1, us-east-2, ca-central-1, us-west-2.",
           "geo": "us",
           "models": [
@@ -5462,6 +5554,17 @@
           ],
           "profileId": "global.cohere.embed-v4:0",
           "profileName": "Global Cohere Embed v4",
+          "routeRegions": [
+            "eu-central-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "models": [
+            "moonshotai.kimi-k3"
+          ],
+          "profileId": "global.moonshotai.kimi-k3",
+          "profileName": "Global Moonshot AI Kimi K3",
           "routeRegions": [
             "eu-central-1"
           ]
@@ -6276,6 +6379,17 @@
           ]
         },
         {
+          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "models": [
+            "moonshotai.kimi-k3"
+          ],
+          "profileId": "global.moonshotai.kimi-k3",
+          "profileName": "Global Moonshot AI Kimi K3",
+          "routeRegions": [
+            "eu-north-1"
+          ]
+        },
+        {
           "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
@@ -7070,6 +7184,17 @@
           ],
           "profileId": "global.cohere.embed-v4:0",
           "profileName": "Global Cohere Embed v4",
+          "routeRegions": [
+            "eu-west-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "models": [
+            "moonshotai.kimi-k3"
+          ],
+          "profileId": "global.moonshotai.kimi-k3",
+          "profileName": "Global Moonshot AI Kimi K3",
           "routeRegions": [
             "eu-west-1"
           ]
@@ -8231,6 +8356,17 @@
           ],
           "profileId": "global.cohere.embed-v4:0",
           "profileName": "Global Cohere Embed v4",
+          "routeRegions": [
+            "eu-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "models": [
+            "moonshotai.kimi-k3"
+          ],
+          "profileId": "global.moonshotai.kimi-k3",
+          "profileName": "Global Moonshot AI Kimi K3",
           "routeRegions": [
             "eu-west-2"
           ]
@@ -9423,6 +9559,17 @@
           ]
         },
         {
+          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "models": [
+            "moonshotai.kimi-k3"
+          ],
+          "profileId": "global.moonshotai.kimi-k3",
+          "profileName": "Global Moonshot AI Kimi K3",
+          "routeRegions": [
+            "eu-west-3"
+          ]
+        },
+        {
           "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
@@ -10066,6 +10213,17 @@
           ],
           "profileId": "global.cohere.embed-v4:0",
           "profileName": "Global Cohere Embed v4",
+          "routeRegions": [
+            "sa-east-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "models": [
+            "moonshotai.kimi-k3"
+          ],
+          "profileId": "global.moonshotai.kimi-k3",
+          "profileName": "Global Moonshot AI Kimi K3",
           "routeRegions": [
             "sa-east-1"
           ]
@@ -10923,6 +11081,17 @@
           ],
           "profileId": "global.cohere.embed-v4:0",
           "profileName": "Global Cohere Embed v4",
+          "routeRegions": [
+            "us-east-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "models": [
+            "moonshotai.kimi-k3"
+          ],
+          "profileId": "global.moonshotai.kimi-k3",
+          "profileName": "Global Moonshot AI Kimi K3",
           "routeRegions": [
             "us-east-1"
           ]
@@ -12394,6 +12563,20 @@
           ]
         },
         {
+          "description": "Routes requests to Kimi K3 in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "moonshotai.kimi-k3"
+          ],
+          "profileId": "us.moonshotai.kimi-k3",
+          "profileName": "US Moonshot AI Kimi K3",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to GPT-5.6 Luna in us-east-1, us-east-2, us-west-2.",
           "geo": "us",
           "models": [
@@ -12871,6 +13054,17 @@
           ],
           "profileId": "global.cohere.embed-v4:0",
           "profileName": "Global Cohere Embed v4",
+          "routeRegions": [
+            "us-east-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "models": [
+            "moonshotai.kimi-k3"
+          ],
+          "profileId": "global.moonshotai.kimi-k3",
+          "profileName": "Global Moonshot AI Kimi K3",
           "routeRegions": [
             "us-east-2"
           ]
@@ -13997,6 +14191,20 @@
           ]
         },
         {
+          "description": "Routes requests to Kimi K3 in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "moonshotai.kimi-k3"
+          ],
+          "profileId": "us.moonshotai.kimi-k3",
+          "profileName": "US Moonshot AI Kimi K3",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to GPT-5.6 Luna in us-east-1, us-east-2, us-west-2.",
           "geo": "us",
           "models": [
@@ -14438,6 +14646,17 @@
           ]
         },
         {
+          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "models": [
+            "moonshotai.kimi-k3"
+          ],
+          "profileId": "global.moonshotai.kimi-k3",
+          "profileName": "Global Moonshot AI Kimi K3",
+          "routeRegions": [
+            "us-west-1"
+          ]
+        },
+        {
           "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
@@ -14777,6 +14996,21 @@
           ]
         },
         {
+          "description": "Routes requests to Kimi K3 in us-east-1, us-east-2, us-west-1, us-west-2.",
+          "geo": "us",
+          "models": [
+            "moonshotai.kimi-k3"
+          ],
+          "profileId": "us.moonshotai.kimi-k3",
+          "profileName": "US Moonshot AI Kimi K3",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-1",
+            "us-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to GPT-5.6 Luna in us-east-1, us-east-2, us-west-1, us-west-2.",
           "geo": "us",
           "models": [
@@ -15050,6 +15284,17 @@
           ],
           "profileId": "global.cohere.embed-v4:0",
           "profileName": "Global Cohere Embed v4",
+          "routeRegions": [
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "models": [
+            "moonshotai.kimi-k3"
+          ],
+          "profileId": "global.moonshotai.kimi-k3",
+          "profileName": "Global Moonshot AI Kimi K3",
           "routeRegions": [
             "us-west-2"
           ]
@@ -16447,6 +16692,20 @@
           ],
           "profileId": "us.mistral.pixtral-large-2502-v1:0",
           "profileName": "US Mistral Pixtral Large 25.02",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Kimi K3 in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "moonshotai.kimi-k3"
+          ],
+          "profileId": "us.moonshotai.kimi-k3",
+          "profileName": "US Moonshot AI Kimi K3",
           "routeRegions": [
             "us-east-1",
             "us-east-2",
