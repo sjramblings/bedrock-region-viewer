@@ -17,7 +17,7 @@
     "me-south-1": "",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-09-24T18:05:55.423Z",
+  "generatedAt": "2026-09-28T20:20:26.917Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -176,6 +176,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Sonnet 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "global.anthropic.claude-sonnet-5-5",
+          "profileName": "Global Anthropic Claude Sonnet 5.5",
+          "routeRegions": [
+            "ap-northeast-1"
+          ]
+        },
+        {
           "description": "Routes requests to Embed v4 globally across all supported AWS Regions.",
           "models": [
             "cohere.embed-v4:0"
@@ -253,7 +264,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Astra globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Astra globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-astra"
           ],
@@ -1396,6 +1407,17 @@
           ]
         },
         {
+          "description": "Routes requests to Claude Sonnet 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "global.anthropic.claude-sonnet-5-5",
+          "profileName": "Global Anthropic Claude Sonnet 5.5",
+          "routeRegions": [
+            "ap-northeast-2"
+          ]
+        },
+        {
           "description": "Routes requests to Embed v4 globally across all supported AWS Regions.",
           "models": [
             "cohere.embed-v4:0"
@@ -1473,7 +1495,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Astra globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Astra globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-astra"
           ],
@@ -1942,6 +1964,17 @@
           ]
         },
         {
+          "description": "Routes requests to Claude Sonnet 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "global.anthropic.claude-sonnet-5-5",
+          "profileName": "Global Anthropic Claude Sonnet 5.5",
+          "routeRegions": [
+            "ap-northeast-3"
+          ]
+        },
+        {
           "description": "Routes requests to Embed v4 globally across all supported AWS Regions.",
           "models": [
             "cohere.embed-v4:0"
@@ -2019,7 +2052,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Astra globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Astra globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-astra"
           ],
@@ -2354,6 +2387,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Sonnet 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "global.anthropic.claude-sonnet-5-5",
+          "profileName": "Global Anthropic Claude Sonnet 5.5",
+          "routeRegions": [
+            "ap-south-1"
+          ]
+        },
+        {
           "description": "Routes requests to Embed v4 globally across all supported AWS Regions.",
           "models": [
             "cohere.embed-v4:0"
@@ -2431,7 +2475,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Astra globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Astra globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-astra"
           ],
@@ -3495,6 +3539,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Sonnet 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "global.anthropic.claude-sonnet-5-5",
+          "profileName": "Global Anthropic Claude Sonnet 5.5",
+          "routeRegions": [
+            "ap-southeast-1"
+          ]
+        },
+        {
           "description": "Routes requests to Embed v4 globally across all supported AWS Regions.",
           "models": [
             "cohere.embed-v4:0"
@@ -3572,7 +3627,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Astra globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Astra globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-astra"
           ],
@@ -3953,7 +4008,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Sonnet 4.6 globally across all supported AWS Regions.",
+          "description": "Routes requests to Anthropic Claude Sonnet 4.6 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-sonnet-4-6"
           ],
@@ -3970,6 +4025,17 @@
           ],
           "profileId": "global.anthropic.claude-sonnet-5",
           "profileName": "Global Anthropic Claude Sonnet 5",
+          "routeRegions": [
+            "ap-southeast-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Anthropic Claude Sonnet 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "global.anthropic.claude-sonnet-5-5",
+          "profileName": "Global Anthropic Claude Sonnet 5.5",
           "routeRegions": [
             "ap-southeast-2"
           ]
@@ -4052,7 +4118,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Astra globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Astra globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-astra"
           ],
@@ -5047,7 +5113,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Sonnet 4.6 in ap-southeast-2, ap-southeast-4.",
+          "description": "Routes requests to Anthropic Claude Sonnet 4.6 in ap-southeast-2 and ap-southeast-4.",
           "geo": "au",
           "models": [
             "anthropic.claude-sonnet-4-6"
@@ -5220,6 +5286,17 @@
           ]
         },
         {
+          "description": "Routes requests to Claude Sonnet 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "global.anthropic.claude-sonnet-5-5",
+          "profileName": "Global Anthropic Claude Sonnet 5.5",
+          "routeRegions": [
+            "ca-central-1"
+          ]
+        },
+        {
           "description": "Routes requests to Embed v4 globally across all supported AWS Regions.",
           "models": [
             "cohere.embed-v4:0"
@@ -5297,7 +5374,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Astra globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Astra globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-astra"
           ],
@@ -5848,7 +5925,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Astra in us-east-1, us-east-2, ca-central-1, us-west-2.",
+          "description": "Routes requests to OpenAI GPT-6 Astra in ca-central-1, us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
             "openai.gpt-6-astra"
@@ -6055,6 +6132,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Sonnet 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "global.anthropic.claude-sonnet-5-5",
+          "profileName": "Global Anthropic Claude Sonnet 5.5",
+          "routeRegions": [
+            "eu-central-1"
+          ]
+        },
+        {
           "description": "Routes requests to Embed v4 globally across all supported AWS Regions.",
           "models": [
             "cohere.embed-v4:0"
@@ -6132,7 +6220,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Astra globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Astra globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-astra"
           ],
@@ -6947,6 +7035,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Sonnet 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "global.anthropic.claude-sonnet-5-5",
+          "profileName": "Global Anthropic Claude Sonnet 5.5",
+          "routeRegions": [
+            "eu-north-1"
+          ]
+        },
+        {
           "description": "Routes requests to Embed v4 globally across all supported AWS Regions.",
           "models": [
             "cohere.embed-v4:0"
@@ -7024,7 +7123,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Astra globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Astra globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-astra"
           ],
@@ -7829,6 +7928,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Sonnet 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "global.anthropic.claude-sonnet-5-5",
+          "profileName": "Global Anthropic Claude Sonnet 5.5",
+          "routeRegions": [
+            "eu-west-1"
+          ]
+        },
+        {
           "description": "Routes requests to Embed v4 globally across all supported AWS Regions.",
           "models": [
             "cohere.embed-v4:0"
@@ -7906,7 +8016,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Astra globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Astra globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-astra"
           ],
@@ -9073,6 +9183,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Sonnet 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "global.anthropic.claude-sonnet-5-5",
+          "profileName": "Global Anthropic Claude Sonnet 5.5",
+          "routeRegions": [
+            "eu-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to Embed v4 globally across all supported AWS Regions.",
           "models": [
             "cohere.embed-v4:0"
@@ -9150,7 +9271,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Astra globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Astra globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-astra"
           ],
@@ -10344,6 +10465,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Sonnet 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "global.anthropic.claude-sonnet-5-5",
+          "profileName": "Global Anthropic Claude Sonnet 5.5",
+          "routeRegions": [
+            "eu-west-3"
+          ]
+        },
+        {
           "description": "Routes requests to Embed v4 globally across all supported AWS Regions.",
           "models": [
             "cohere.embed-v4:0"
@@ -10421,7 +10553,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Astra globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Astra globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-astra"
           ],
@@ -11075,6 +11207,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Sonnet 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "global.anthropic.claude-sonnet-5-5",
+          "profileName": "Global Anthropic Claude Sonnet 5.5",
+          "routeRegions": [
+            "sa-east-1"
+          ]
+        },
+        {
           "description": "Routes requests to Embed v4 globally across all supported AWS Regions.",
           "models": [
             "cohere.embed-v4:0"
@@ -11152,7 +11295,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Astra globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Astra globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-astra"
           ],
@@ -11998,6 +12141,17 @@
           ]
         },
         {
+          "description": "Routes requests to Claude Sonnet 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "global.anthropic.claude-sonnet-5-5",
+          "profileName": "Global Anthropic Claude Sonnet 5.5",
+          "routeRegions": [
+            "us-east-1"
+          ]
+        },
+        {
           "description": "Routes requests to Embed v4 globally across all supported AWS Regions.",
           "models": [
             "cohere.embed-v4:0"
@@ -12075,7 +12229,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Astra globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Astra globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-astra"
           ],
@@ -13628,7 +13782,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Astra in us-east-1, us-east-2, us-west-2.",
+          "description": "Routes requests to OpenAI GPT-6 Astra in us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
             "openai.gpt-6-astra"
@@ -14096,6 +14250,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Sonnet 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "global.anthropic.claude-sonnet-5-5",
+          "profileName": "Global Anthropic Claude Sonnet 5.5",
+          "routeRegions": [
+            "us-east-2"
+          ]
+        },
+        {
           "description": "Routes requests to Embed v4 globally across all supported AWS Regions.",
           "models": [
             "cohere.embed-v4:0"
@@ -14173,7 +14338,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Astra globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Astra globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-astra"
           ],
@@ -15380,7 +15545,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Astra in us-east-1, us-east-2, us-west-2.",
+          "description": "Routes requests to OpenAI GPT-6 Astra in us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
             "openai.gpt-6-astra"
@@ -15807,6 +15972,17 @@
           ]
         },
         {
+          "description": "Routes requests to Claude Sonnet 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "global.anthropic.claude-sonnet-5-5",
+          "profileName": "Global Anthropic Claude Sonnet 5.5",
+          "routeRegions": [
+            "us-west-1"
+          ]
+        },
+        {
           "description": "Routes requests to Embed v4 globally across all supported AWS Regions.",
           "models": [
             "cohere.embed-v4:0"
@@ -15884,7 +16060,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Astra globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Astra globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-astra"
           ],
@@ -16314,7 +16490,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Astra in us-east-1, us-east-2, us-west-1, us-west-2.",
+          "description": "Routes requests to OpenAI GPT-6 Astra in us-east-1, us-east-2, us-west-1 and us-west-2.",
           "geo": "us",
           "models": [
             "openai.gpt-6-astra"
@@ -16577,6 +16753,17 @@
           ]
         },
         {
+          "description": "Routes requests to Claude Sonnet 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "global.anthropic.claude-sonnet-5-5",
+          "profileName": "Global Anthropic Claude Sonnet 5.5",
+          "routeRegions": [
+            "us-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to Embed v4 globally across all supported AWS Regions.",
           "models": [
             "cohere.embed-v4:0"
@@ -16654,7 +16841,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Astra globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Astra globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-astra"
           ],
@@ -18140,7 +18327,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Astra in us-east-1, us-east-2, us-west-2.",
+          "description": "Routes requests to OpenAI GPT-6 Astra in us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
             "openai.gpt-6-astra"
