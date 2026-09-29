@@ -17,7 +17,7 @@
     "me-south-1": "",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-09-28T20:20:26.917Z",
+  "generatedAt": "2026-09-29T19:04:08.761Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -314,6 +314,17 @@
           ],
           "profileId": "global.xai.grok-4.6",
           "profileName": "Global xAI Grok 4.6",
+          "routeRegions": [
+            "ap-northeast-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Grok 4.7 globally across all supported AWS Regions.",
+          "models": [
+            "xai.grok-4.7"
+          ],
+          "profileId": "global.xai.grok-4.7",
+          "profileName": "Global xAI Grok 4.7",
           "routeRegions": [
             "ap-northeast-1"
           ]
@@ -1407,7 +1418,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Sonnet 5.5 globally across all supported AWS Regions.",
+          "description": "Routes requests to Anthropic Claude Sonnet 5.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-sonnet-5-5"
           ],
@@ -1545,6 +1556,17 @@
           ],
           "profileId": "global.xai.grok-4.6",
           "profileName": "Global xAI Grok 4.6",
+          "routeRegions": [
+            "ap-northeast-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Grok 4.7 globally across all supported AWS Regions.",
+          "models": [
+            "xai.grok-4.7"
+          ],
+          "profileId": "global.xai.grok-4.7",
+          "profileName": "Global xAI Grok 4.7",
           "routeRegions": [
             "ap-northeast-2"
           ]
@@ -1964,7 +1986,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Sonnet 5.5 globally across all supported AWS Regions.",
+          "description": "Routes requests to Anthropic Claude Sonnet 5.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-sonnet-5-5"
           ],
@@ -2102,6 +2124,17 @@
           ],
           "profileId": "global.xai.grok-4.6",
           "profileName": "Global xAI Grok 4.6",
+          "routeRegions": [
+            "ap-northeast-3"
+          ]
+        },
+        {
+          "description": "Routes requests to Grok 4.7 globally across all supported AWS Regions.",
+          "models": [
+            "xai.grok-4.7"
+          ],
+          "profileId": "global.xai.grok-4.7",
+          "profileName": "Global xAI Grok 4.7",
           "routeRegions": [
             "ap-northeast-3"
           ]
@@ -2525,6 +2558,17 @@
           ],
           "profileId": "global.xai.grok-4.6",
           "profileName": "Global xAI Grok 4.6",
+          "routeRegions": [
+            "ap-south-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Grok 4.7 globally across all supported AWS Regions.",
+          "models": [
+            "xai.grok-4.7"
+          ],
+          "profileId": "global.xai.grok-4.7",
+          "profileName": "Global xAI Grok 4.7",
           "routeRegions": [
             "ap-south-1"
           ]
@@ -3680,6 +3724,17 @@
           "routeRegions": [
             "ap-southeast-1"
           ]
+        },
+        {
+          "description": "Routes requests to Grok 4.7 globally across all supported AWS Regions.",
+          "models": [
+            "xai.grok-4.7"
+          ],
+          "profileId": "global.xai.grok-4.7",
+          "profileName": "Global xAI Grok 4.7",
+          "routeRegions": [
+            "ap-southeast-1"
+          ]
         }
       ],
       "onDemand": [
@@ -4168,6 +4223,17 @@
           ],
           "profileId": "global.xai.grok-4.6",
           "profileName": "Global xAI Grok 4.6",
+          "routeRegions": [
+            "ap-southeast-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Grok 4.7 globally across all supported AWS Regions.",
+          "models": [
+            "xai.grok-4.7"
+          ],
+          "profileId": "global.xai.grok-4.7",
+          "profileName": "Global xAI Grok 4.7",
           "routeRegions": [
             "ap-southeast-2"
           ]
@@ -5286,7 +5352,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Sonnet 5.5 globally across all supported AWS Regions.",
+          "description": "Routes requests to Anthropic Claude Sonnet 5.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-sonnet-5-5"
           ],
@@ -5424,6 +5490,17 @@
           ],
           "profileId": "global.xai.grok-4.6",
           "profileName": "Global xAI Grok 4.6",
+          "routeRegions": [
+            "ca-central-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Grok 4.7 globally across all supported AWS Regions.",
+          "models": [
+            "xai.grok-4.7"
+          ],
+          "profileId": "global.xai.grok-4.7",
+          "profileName": "Global xAI Grok 4.7",
           "routeRegions": [
             "ca-central-1"
           ]
@@ -5983,6 +6060,21 @@
             "us-east-2",
             "us-west-2"
           ]
+        },
+        {
+          "description": "Routes requests to Grok 4.7 in us-east-1, us-east-2, ca-central-1, us-west-2.",
+          "geo": "us",
+          "models": [
+            "xai.grok-4.7"
+          ],
+          "profileId": "us.xai.grok-4.7",
+          "profileName": "US xAI Grok 4.7",
+          "routeRegions": [
+            "ca-central-1",
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
         }
       ]
     },
@@ -6270,6 +6362,17 @@
           ],
           "profileId": "global.xai.grok-4.6",
           "profileName": "Global xAI Grok 4.6",
+          "routeRegions": [
+            "eu-central-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Grok 4.7 globally across all supported AWS Regions.",
+          "models": [
+            "xai.grok-4.7"
+          ],
+          "profileId": "global.xai.grok-4.7",
+          "profileName": "Global xAI Grok 4.7",
           "routeRegions": [
             "eu-central-1"
           ]
@@ -7176,6 +7279,17 @@
           "routeRegions": [
             "eu-north-1"
           ]
+        },
+        {
+          "description": "Routes requests to Grok 4.7 globally across all supported AWS Regions.",
+          "models": [
+            "xai.grok-4.7"
+          ],
+          "profileId": "global.xai.grok-4.7",
+          "profileName": "Global xAI Grok 4.7",
+          "routeRegions": [
+            "eu-north-1"
+          ]
         }
       ],
       "onDemand": [
@@ -8066,6 +8180,17 @@
           ],
           "profileId": "global.xai.grok-4.6",
           "profileName": "Global xAI Grok 4.6",
+          "routeRegions": [
+            "eu-west-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Grok 4.7 globally across all supported AWS Regions.",
+          "models": [
+            "xai.grok-4.7"
+          ],
+          "profileId": "global.xai.grok-4.7",
+          "profileName": "Global xAI Grok 4.7",
           "routeRegions": [
             "eu-west-1"
           ]
@@ -9324,6 +9449,17 @@
           "routeRegions": [
             "eu-west-2"
           ]
+        },
+        {
+          "description": "Routes requests to Grok 4.7 globally across all supported AWS Regions.",
+          "models": [
+            "xai.grok-4.7"
+          ],
+          "profileId": "global.xai.grok-4.7",
+          "profileName": "Global xAI Grok 4.7",
+          "routeRegions": [
+            "eu-west-2"
+          ]
         }
       ],
       "onDemand": [
@@ -10246,7 +10382,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Sonnet 4.6 in eu-north-1, eu-west-3, eu-south-1, eu-west-2, eu-south-2, eu-west-1, eu-central-1.",
+          "description": "Routes requests to Anthropic Claude Sonnet 4.6 in eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1, eu-west-2 and eu-west-3.",
           "geo": "eu",
           "models": [
             "anthropic.claude-sonnet-4-6"
@@ -10603,6 +10739,17 @@
           ],
           "profileId": "global.xai.grok-4.6",
           "profileName": "Global xAI Grok 4.6",
+          "routeRegions": [
+            "eu-west-3"
+          ]
+        },
+        {
+          "description": "Routes requests to Grok 4.7 globally across all supported AWS Regions.",
+          "models": [
+            "xai.grok-4.7"
+          ],
+          "profileId": "global.xai.grok-4.7",
+          "profileName": "Global xAI Grok 4.7",
           "routeRegions": [
             "eu-west-3"
           ]
@@ -11345,6 +11492,17 @@
           ],
           "profileId": "global.xai.grok-4.6",
           "profileName": "Global xAI Grok 4.6",
+          "routeRegions": [
+            "sa-east-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Grok 4.7 globally across all supported AWS Regions.",
+          "models": [
+            "xai.grok-4.7"
+          ],
+          "profileId": "global.xai.grok-4.7",
+          "profileName": "Global xAI Grok 4.7",
           "routeRegions": [
             "sa-east-1"
           ]
@@ -12141,7 +12299,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Sonnet 5.5 globally across all supported AWS Regions.",
+          "description": "Routes requests to Anthropic Claude Sonnet 5.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-sonnet-5-5"
           ],
@@ -12279,6 +12437,17 @@
           ],
           "profileId": "global.xai.grok-4.6",
           "profileName": "Global xAI Grok 4.6",
+          "routeRegions": [
+            "us-east-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Grok 4.7 globally across all supported AWS Regions.",
+          "models": [
+            "xai.grok-4.7"
+          ],
+          "profileId": "global.xai.grok-4.7",
+          "profileName": "Global xAI Grok 4.7",
           "routeRegions": [
             "us-east-1"
           ]
@@ -14090,6 +14259,20 @@
             "us-east-2",
             "us-west-2"
           ]
+        },
+        {
+          "description": "Routes requests to Grok 4.7 in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "xai.grok-4.7"
+          ],
+          "profileId": "us.xai.grok-4.7",
+          "profileName": "US xAI Grok 4.7",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
         }
       ]
     },
@@ -14388,6 +14571,17 @@
           ],
           "profileId": "global.xai.grok-4.6",
           "profileName": "Global xAI Grok 4.6",
+          "routeRegions": [
+            "us-east-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Grok 4.7 globally across all supported AWS Regions.",
+          "models": [
+            "xai.grok-4.7"
+          ],
+          "profileId": "global.xai.grok-4.7",
+          "profileName": "Global xAI Grok 4.7",
           "routeRegions": [
             "us-east-2"
           ]
@@ -15252,7 +15446,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Sonnet 4.6 in us-east-1, us-east-2, us-west-2.",
+          "description": "Routes requests to Anthropic Claude Sonnet 4.6 in us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
             "anthropic.claude-sonnet-4-6"
@@ -15823,6 +16017,20 @@
             "us-east-2",
             "us-west-2"
           ]
+        },
+        {
+          "description": "Routes requests to Grok 4.7 in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "xai.grok-4.7"
+          ],
+          "profileId": "us.xai.grok-4.7",
+          "profileName": "US xAI Grok 4.7",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
         }
       ]
     },
@@ -15972,7 +16180,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Sonnet 5.5 globally across all supported AWS Regions.",
+          "description": "Routes requests to Anthropic Claude Sonnet 5.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-sonnet-5-5"
           ],
@@ -16110,6 +16318,17 @@
           ],
           "profileId": "global.xai.grok-4.6",
           "profileName": "Global xAI Grok 4.6",
+          "routeRegions": [
+            "us-west-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Grok 4.7 globally across all supported AWS Regions.",
+          "models": [
+            "xai.grok-4.7"
+          ],
+          "profileId": "global.xai.grok-4.7",
+          "profileName": "Global xAI Grok 4.7",
           "routeRegions": [
             "us-west-1"
           ]
@@ -16593,6 +16812,21 @@
             "us-west-1",
             "us-west-2"
           ]
+        },
+        {
+          "description": "Routes requests to Grok 4.7 in us-east-1, us-east-2, us-west-1, us-west-2.",
+          "geo": "us",
+          "models": [
+            "xai.grok-4.7"
+          ],
+          "profileId": "us.xai.grok-4.7",
+          "profileName": "US xAI Grok 4.7",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-1",
+            "us-west-2"
+          ]
         }
       ]
     },
@@ -16753,7 +16987,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Sonnet 5.5 globally across all supported AWS Regions.",
+          "description": "Routes requests to Anthropic Claude Sonnet 5.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-sonnet-5-5"
           ],
@@ -16891,6 +17125,17 @@
           ],
           "profileId": "global.xai.grok-4.6",
           "profileName": "Global xAI Grok 4.6",
+          "routeRegions": [
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Grok 4.7 globally across all supported AWS Regions.",
+          "models": [
+            "xai.grok-4.7"
+          ],
+          "profileId": "global.xai.grok-4.7",
+          "profileName": "Global xAI Grok 4.7",
           "routeRegions": [
             "us-west-2"
           ]
@@ -18051,7 +18296,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Sonnet 4.6 in us-east-1, us-east-2, us-west-2.",
+          "description": "Routes requests to Anthropic Claude Sonnet 4.6 in us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
             "anthropic.claude-sonnet-4-6"
@@ -18600,6 +18845,20 @@
           ],
           "profileId": "us.xai.grok-4.6",
           "profileName": "US xAI Grok 4.6",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Grok 4.7 in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "xai.grok-4.7"
+          ],
+          "profileId": "us.xai.grok-4.7",
+          "profileName": "US xAI Grok 4.7",
           "routeRegions": [
             "us-east-1",
             "us-east-2",
