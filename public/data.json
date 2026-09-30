@@ -17,7 +17,7 @@
     "me-south-1": "",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-09-29T19:04:08.761Z",
+  "generatedAt": "2026-09-30T18:45:00.080Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -297,6 +297,17 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.1 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.1-sol"
+          ],
+          "profileId": "global.openai.gpt-6.1-sol",
+          "profileName": "Global OpenAI GPT-6.1 Sol",
+          "routeRegions": [
+            "ap-northeast-1"
+          ]
+        },
+        {
           "description": "Routes requests to Pegasus v1.2 globally across all supported AWS Regions.",
           "models": [
             "twelvelabs.pegasus-1-2-v1:0"
@@ -349,22 +360,6 @@
         },
         {
           "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "amazon.nova-canvas-v1:0",
-          "modelName": "Nova Canvas",
-          "outputModalities": [
-            "IMAGE"
-          ],
-          "providerName": "Amazon",
-          "responseStreamingSupported": false
-        },
-        {
-          "inferenceTypesSupported": [
             "INFERENCE_PROFILE",
             "ON_DEMAND"
           ],
@@ -380,22 +375,6 @@
           ],
           "providerName": "Amazon",
           "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "amazon.nova-reel-v1:0",
-          "modelName": "Nova Reel",
-          "outputModalities": [
-            "VIDEO"
-          ],
-          "providerName": "Amazon",
-          "responseStreamingSupported": false
         },
         {
           "inferenceTypesSupported": [
@@ -1539,6 +1518,17 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.1 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.1-sol"
+          ],
+          "profileId": "global.openai.gpt-6.1-sol",
+          "profileName": "Global OpenAI GPT-6.1 Sol",
+          "routeRegions": [
+            "ap-northeast-2"
+          ]
+        },
+        {
           "description": "Routes requests to Pegasus v1.2 globally across all supported AWS Regions.",
           "models": [
             "twelvelabs.pegasus-1-2-v1:0"
@@ -1614,6 +1604,40 @@
           ],
           "modelId": "anthropic.claude-3-5-sonnet-20240620-v1:0",
           "modelName": "Claude 3.5 Sonnet",
+          "outputModalities": [
+            "TEXT"
+          ],
+          "providerName": "Anthropic",
+          "responseStreamingSupported": true
+        },
+        {
+          "inferenceTypesSupported": [
+            "INFERENCE_PROFILE",
+            "ON_DEMAND"
+          ],
+          "inputModalities": [
+            "IMAGE",
+            "TEXT"
+          ],
+          "modelId": "anthropic.claude-opus-5",
+          "modelName": "Claude Opus 5",
+          "outputModalities": [
+            "TEXT"
+          ],
+          "providerName": "Anthropic",
+          "responseStreamingSupported": true
+        },
+        {
+          "inferenceTypesSupported": [
+            "INFERENCE_PROFILE",
+            "ON_DEMAND"
+          ],
+          "inputModalities": [
+            "IMAGE",
+            "TEXT"
+          ],
+          "modelId": "anthropic.claude-sonnet-5",
+          "modelName": "Claude Sonnet 5",
           "outputModalities": [
             "TEXT"
           ],
@@ -2107,6 +2131,17 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.1 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.1-sol"
+          ],
+          "profileId": "global.openai.gpt-6.1-sol",
+          "profileName": "Global OpenAI GPT-6.1 Sol",
+          "routeRegions": [
+            "ap-northeast-3"
+          ]
+        },
+        {
           "description": "Routes requests to Pegasus v1.2 globally across all supported AWS Regions.",
           "models": [
             "twelvelabs.pegasus-1-2-v1:0"
@@ -2536,6 +2571,17 @@
           ],
           "profileId": "global.openai.gpt-6-sol",
           "profileName": "Global OpenAI GPT-6 Sol",
+          "routeRegions": [
+            "ap-south-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.1 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.1-sol"
+          ],
+          "profileId": "global.openai.gpt-6.1-sol",
+          "profileName": "Global OpenAI GPT-6.1 Sol",
           "routeRegions": [
             "ap-south-1"
           ]
@@ -3561,7 +3607,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Sonnet 4.6 globally across all supported AWS Regions.",
+          "description": "Routes requests to Anthropic Claude Sonnet 4.6 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-sonnet-4-6"
           ],
@@ -3704,6 +3750,17 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.1 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.1-sol"
+          ],
+          "profileId": "global.openai.gpt-6.1-sol",
+          "profileName": "Global OpenAI GPT-6.1 Sol",
+          "routeRegions": [
+            "ap-southeast-1"
+          ]
+        },
+        {
           "description": "Routes requests to Pegasus v1.2 globally across all supported AWS Regions.",
           "models": [
             "twelvelabs.pegasus-1-2-v1:0"
@@ -3764,6 +3821,23 @@
           ],
           "modelId": "anthropic.claude-3-5-sonnet-20240620-v1:0",
           "modelName": "Claude 3.5 Sonnet",
+          "outputModalities": [
+            "TEXT"
+          ],
+          "providerName": "Anthropic",
+          "responseStreamingSupported": true
+        },
+        {
+          "inferenceTypesSupported": [
+            "INFERENCE_PROFILE",
+            "ON_DEMAND"
+          ],
+          "inputModalities": [
+            "IMAGE",
+            "TEXT"
+          ],
+          "modelId": "anthropic.claude-sonnet-5",
+          "modelName": "Claude Sonnet 5",
           "outputModalities": [
             "TEXT"
           ],
@@ -4201,6 +4275,17 @@
           ],
           "profileId": "global.openai.gpt-6-sol",
           "profileName": "Global OpenAI GPT-6 Sol",
+          "routeRegions": [
+            "ap-southeast-2"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.1 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.1-sol"
+          ],
+          "profileId": "global.openai.gpt-6.1-sol",
+          "profileName": "Global OpenAI GPT-6.1 Sol",
           "routeRegions": [
             "ap-southeast-2"
           ]
@@ -5473,6 +5558,17 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.1 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.1-sol"
+          ],
+          "profileId": "global.openai.gpt-6.1-sol",
+          "profileName": "Global OpenAI GPT-6.1 Sol",
+          "routeRegions": [
+            "ca-central-1"
+          ]
+        },
+        {
           "description": "Routes requests to Pegasus v1.2 globally across all supported AWS Regions.",
           "models": [
             "twelvelabs.pegasus-1-2-v1:0"
@@ -6047,6 +6143,21 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.1 Sol in us-east-1, us-east-2, ca-central-1, us-west-2.",
+          "geo": "us",
+          "models": [
+            "openai.gpt-6.1-sol"
+          ],
+          "profileId": "us.openai.gpt-6.1-sol",
+          "profileName": "US OpenAI GPT-6.1 Sol",
+          "routeRegions": [
+            "ca-central-1",
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to Grok 4.6 in us-east-1, us-east-2, ca-central-1, us-west-2.",
           "geo": "us",
           "models": [
@@ -6340,6 +6451,17 @@
           ],
           "profileId": "global.openai.gpt-6-sol",
           "profileName": "Global OpenAI GPT-6 Sol",
+          "routeRegions": [
+            "eu-central-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.1 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.1-sol"
+          ],
+          "profileId": "global.openai.gpt-6.1-sol",
+          "profileName": "Global OpenAI GPT-6.1 Sol",
           "routeRegions": [
             "eu-central-1"
           ]
@@ -7259,6 +7381,17 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.1 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.1-sol"
+          ],
+          "profileId": "global.openai.gpt-6.1-sol",
+          "profileName": "Global OpenAI GPT-6.1 Sol",
+          "routeRegions": [
+            "eu-north-1"
+          ]
+        },
+        {
           "description": "Routes requests to Pegasus v1.2 globally across all supported AWS Regions.",
           "models": [
             "twelvelabs.pegasus-1-2-v1:0"
@@ -8163,6 +8296,17 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.1 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.1-sol"
+          ],
+          "profileId": "global.openai.gpt-6.1-sol",
+          "profileName": "Global OpenAI GPT-6.1 Sol",
+          "routeRegions": [
+            "eu-west-1"
+          ]
+        },
+        {
           "description": "Routes requests to Pegasus v1.2 globally across all supported AWS Regions.",
           "models": [
             "twelvelabs.pegasus-1-2-v1:0"
@@ -8197,38 +8341,6 @@
         }
       ],
       "onDemand": [
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "amazon.nova-canvas-v1:0",
-          "modelName": "Nova Canvas",
-          "outputModalities": [
-            "IMAGE"
-          ],
-          "providerName": "Amazon",
-          "responseStreamingSupported": false
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "amazon.nova-reel-v1:0",
-          "modelName": "Nova Reel",
-          "outputModalities": [
-            "VIDEO"
-          ],
-          "providerName": "Amazon",
-          "responseStreamingSupported": false
-        },
         {
           "inferenceTypesSupported": [
             "ON_DEMAND"
@@ -9429,6 +9541,17 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.1 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.1-sol"
+          ],
+          "profileId": "global.openai.gpt-6.1-sol",
+          "profileName": "Global OpenAI GPT-6.1 Sol",
+          "routeRegions": [
+            "eu-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to Pegasus v1.2 globally across all supported AWS Regions.",
           "models": [
             "twelvelabs.pegasus-1-2-v1:0"
@@ -10579,7 +10702,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Sonnet 4.6 globally across all supported AWS Regions.",
+          "description": "Routes requests to Anthropic Claude Sonnet 4.6 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-sonnet-4-6"
           ],
@@ -10717,6 +10840,17 @@
           ],
           "profileId": "global.openai.gpt-6-sol",
           "profileName": "Global OpenAI GPT-6 Sol",
+          "routeRegions": [
+            "eu-west-3"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.1 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.1-sol"
+          ],
+          "profileId": "global.openai.gpt-6.1-sol",
+          "profileName": "Global OpenAI GPT-6.1 Sol",
           "routeRegions": [
             "eu-west-3"
           ]
@@ -11470,6 +11604,17 @@
           ],
           "profileId": "global.openai.gpt-6-sol",
           "profileName": "Global OpenAI GPT-6 Sol",
+          "routeRegions": [
+            "sa-east-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.1 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.1-sol"
+          ],
+          "profileId": "global.openai.gpt-6.1-sol",
+          "profileName": "Global OpenAI GPT-6.1 Sol",
           "routeRegions": [
             "sa-east-1"
           ]
@@ -12420,6 +12565,17 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.1 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.1-sol"
+          ],
+          "profileId": "global.openai.gpt-6.1-sol",
+          "profileName": "Global OpenAI GPT-6.1 Sol",
+          "routeRegions": [
+            "us-east-1"
+          ]
+        },
+        {
           "description": "Routes requests to Pegasus v1.2 globally across all supported AWS Regions.",
           "models": [
             "twelvelabs.pegasus-1-2-v1:0"
@@ -12520,23 +12676,6 @@
         },
         {
           "inferenceTypesSupported": [
-            "ON_DEMAND",
-            "PROVISIONED"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "amazon.nova-canvas-v1:0",
-          "modelName": "Nova Canvas",
-          "outputModalities": [
-            "IMAGE"
-          ],
-          "providerName": "Amazon",
-          "responseStreamingSupported": false
-        },
-        {
-          "inferenceTypesSupported": [
             "INFERENCE_PROFILE",
             "ON_DEMAND"
           ],
@@ -12586,38 +12725,6 @@
           ],
           "providerName": "Amazon",
           "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "amazon.nova-reel-v1:0",
-          "modelName": "Nova Reel",
-          "outputModalities": [
-            "VIDEO"
-          ],
-          "providerName": "Amazon",
-          "responseStreamingSupported": false
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "amazon.nova-reel-v1:1",
-          "modelName": "Nova Reel",
-          "outputModalities": [
-            "VIDEO"
-          ],
-          "providerName": "Amazon",
-          "responseStreamingSupported": false
         },
         {
           "inferenceTypesSupported": [
@@ -13993,6 +14100,20 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.1 Sol in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "openai.gpt-6.1-sol"
+          ],
+          "profileId": "us.openai.gpt-6.1-sol",
+          "profileName": "US OpenAI GPT-6.1 Sol",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to Stable Image Conservative Upscale in us-east-1, us-east-2, us-west-2.",
           "geo": "us",
           "models": [
@@ -14549,6 +14670,17 @@
           ],
           "profileId": "global.openai.gpt-6-sol",
           "profileName": "Global OpenAI GPT-6 Sol",
+          "routeRegions": [
+            "us-east-2"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.1 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.1-sol"
+          ],
+          "profileId": "global.openai.gpt-6.1-sol",
+          "profileName": "Global OpenAI GPT-6.1 Sol",
           "routeRegions": [
             "us-east-2"
           ]
@@ -15781,6 +15913,20 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.1 Sol in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "openai.gpt-6.1-sol"
+          ],
+          "profileId": "us.openai.gpt-6.1-sol",
+          "profileName": "US OpenAI GPT-6.1 Sol",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to Stable Image Conservative Upscale in us-east-1, us-east-2, us-west-2.",
           "geo": "us",
           "models": [
@@ -16301,6 +16447,17 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.1 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.1-sol"
+          ],
+          "profileId": "global.openai.gpt-6.1-sol",
+          "profileName": "Global OpenAI GPT-6.1 Sol",
+          "routeRegions": [
+            "us-west-1"
+          ]
+        },
+        {
           "description": "Routes requests to Pegasus v1.2 globally across all supported AWS Regions.",
           "models": [
             "twelvelabs.pegasus-1-2-v1:0"
@@ -16754,6 +16911,21 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.1 Sol in us-east-1, us-east-2, us-west-1, us-west-2.",
+          "geo": "us",
+          "models": [
+            "openai.gpt-6.1-sol"
+          ],
+          "profileId": "us.openai.gpt-6.1-sol",
+          "profileName": "US OpenAI GPT-6.1 Sol",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-1",
+            "us-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to Pegasus v1.2 in us-east-1, us-east-2, us-west-1, us-west-2.",
           "geo": "us",
           "models": [
@@ -17103,6 +17275,17 @@
           ],
           "profileId": "global.openai.gpt-6-sol",
           "profileName": "Global OpenAI GPT-6 Sol",
+          "routeRegions": [
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.1 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.1-sol"
+          ],
+          "profileId": "global.openai.gpt-6.1-sol",
+          "profileName": "Global OpenAI GPT-6.1 Sol",
           "routeRegions": [
             "us-west-2"
           ]
@@ -18607,6 +18790,20 @@
           ],
           "profileId": "us.openai.gpt-6-sol",
           "profileName": "US OpenAI GPT-6 Sol",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.1 Sol in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "openai.gpt-6.1-sol"
+          ],
+          "profileId": "us.openai.gpt-6.1-sol",
+          "profileName": "US OpenAI GPT-6.1 Sol",
           "routeRegions": [
             "us-east-1",
             "us-east-2",
