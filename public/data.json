@@ -17,7 +17,7 @@
     "me-south-1": "",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-09-30T18:45:00.080Z",
+  "generatedAt": "2026-10-01T19:11:47.735Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -6011,6 +6011,21 @@
           ]
         },
         {
+          "description": "Routes requests to Claude Sonnet 5.5 in us-east-1, us-east-2, ca-central-1, us-west-2.",
+          "geo": "us",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "us.anthropic.claude-sonnet-5-5",
+          "profileName": "US Anthropic Claude Sonnet 5.5",
+          "routeRegions": [
+            "ca-central-1",
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to Kimi K3 in us-east-1, us-east-2, ca-central-1, us-west-2.",
           "geo": "us",
           "models": [
@@ -7036,6 +7051,23 @@
           ]
         },
         {
+          "description": "Routes requests to Claude Sonnet 5.5 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1, eu-central-1.",
+          "geo": "eu",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "eu.anthropic.claude-sonnet-5-5",
+          "profileName": "EU Anthropic Claude Sonnet 5.5",
+          "routeRegions": [
+            "eu-central-1",
+            "eu-north-1",
+            "eu-south-1",
+            "eu-south-2",
+            "eu-west-1",
+            "eu-west-3"
+          ]
+        },
+        {
           "description": "Routes requests to Embed v4 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1, eu-central-1.",
           "geo": "eu",
           "models": [
@@ -7958,6 +7990,23 @@
           ],
           "profileId": "eu.anthropic.claude-sonnet-5",
           "profileName": "EU Anthropic Claude Sonnet 5",
+          "routeRegions": [
+            "eu-central-1",
+            "eu-north-1",
+            "eu-south-1",
+            "eu-south-2",
+            "eu-west-1",
+            "eu-west-3"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Sonnet 5.5 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1, eu-central-1.",
+          "geo": "eu",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "eu.anthropic.claude-sonnet-5-5",
+          "profileName": "EU Anthropic Claude Sonnet 5.5",
           "routeRegions": [
             "eu-central-1",
             "eu-north-1",
@@ -9162,6 +9211,23 @@
           ]
         },
         {
+          "description": "Routes requests to Claude Sonnet 5.5 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1, eu-central-1.",
+          "geo": "eu",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "eu.anthropic.claude-sonnet-5-5",
+          "profileName": "EU Anthropic Claude Sonnet 5.5",
+          "routeRegions": [
+            "eu-central-1",
+            "eu-north-1",
+            "eu-south-1",
+            "eu-south-2",
+            "eu-west-1",
+            "eu-west-3"
+          ]
+        },
+        {
           "description": "Routes requests to Embed v4 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1, eu-central-1.",
           "geo": "eu",
           "models": [
@@ -9723,8 +9789,42 @@
             "IMAGE",
             "TEXT"
           ],
+          "modelId": "anthropic.claude-opus-5-5",
+          "modelName": "Claude Opus 5.5",
+          "outputModalities": [
+            "TEXT"
+          ],
+          "providerName": "Anthropic",
+          "responseStreamingSupported": true
+        },
+        {
+          "inferenceTypesSupported": [
+            "INFERENCE_PROFILE",
+            "ON_DEMAND"
+          ],
+          "inputModalities": [
+            "IMAGE",
+            "TEXT"
+          ],
           "modelId": "anthropic.claude-sonnet-4-6",
           "modelName": "Claude Sonnet 4.6",
+          "outputModalities": [
+            "TEXT"
+          ],
+          "providerName": "Anthropic",
+          "responseStreamingSupported": true
+        },
+        {
+          "inferenceTypesSupported": [
+            "INFERENCE_PROFILE",
+            "ON_DEMAND"
+          ],
+          "inputModalities": [
+            "IMAGE",
+            "TEXT"
+          ],
+          "modelId": "anthropic.claude-sonnet-5",
+          "modelName": "Claude Sonnet 5",
           "outputModalities": [
             "TEXT"
           ],
@@ -10541,6 +10641,24 @@
           ]
         },
         {
+          "description": "Routes requests to Claude Sonnet 5.5 in eu-north-1, eu-west-3, eu-south-1, eu-west-2, eu-south-2, eu-west-1, eu-central-1.",
+          "geo": "eu",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "eu.anthropic.claude-sonnet-5-5",
+          "profileName": "EU Anthropic Claude Sonnet 5.5",
+          "routeRegions": [
+            "eu-central-1",
+            "eu-north-1",
+            "eu-south-1",
+            "eu-south-2",
+            "eu-west-1",
+            "eu-west-2",
+            "eu-west-3"
+          ]
+        },
+        {
           "description": "Routes requests to Embed v4 in eu-north-1, eu-west-3, eu-south-1, eu-west-2, eu-south-2, eu-west-1, eu-central-1.",
           "geo": "eu",
           "models": [
@@ -11265,6 +11383,23 @@
           ],
           "profileId": "eu.anthropic.claude-sonnet-5",
           "profileName": "EU Anthropic Claude Sonnet 5",
+          "routeRegions": [
+            "eu-central-1",
+            "eu-north-1",
+            "eu-south-1",
+            "eu-south-2",
+            "eu-west-1",
+            "eu-west-3"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Sonnet 5.5 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1, eu-central-1.",
+          "geo": "eu",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "eu.anthropic.claude-sonnet-5-5",
+          "profileName": "EU Anthropic Claude Sonnet 5.5",
           "routeRegions": [
             "eu-central-1",
             "eu-north-1",
@@ -13574,7 +13709,7 @@
           ]
         },
         {
-          "description": "Routes requests to Nova Pro in us-east-1, us-west-2 and us-east-2.",
+          "description": "Routes requests to Nova Pro in us-west-2, us-east-2 and us-east-1.",
           "geo": "us",
           "models": [
             "amazon.nova-pro-v1:0"
@@ -13803,6 +13938,20 @@
           ],
           "profileId": "us.anthropic.claude-sonnet-5",
           "profileName": "US Anthropic Claude Sonnet 5",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Sonnet 5.5 in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "us.anthropic.claude-sonnet-5-5",
+          "profileName": "US Anthropic Claude Sonnet 5.5",
           "routeRegions": [
             "us-east-1",
             "us-east-2",
@@ -15382,7 +15531,7 @@
           ]
         },
         {
-          "description": "Routes requests to Nova Pro in us-east-1, us-west-2 and us-east-2.",
+          "description": "Routes requests to Nova Pro in us-west-2, us-east-2 and us-east-1.",
           "geo": "us",
           "models": [
             "amazon.nova-pro-v1:0"
@@ -15599,6 +15748,20 @@
           ],
           "profileId": "us.anthropic.claude-sonnet-5",
           "profileName": "US Anthropic Claude Sonnet 5",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Sonnet 5.5 in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "us.anthropic.claude-sonnet-5-5",
+          "profileName": "US Anthropic Claude Sonnet 5.5",
           "routeRegions": [
             "us-east-1",
             "us-east-2",
@@ -16726,6 +16889,21 @@
           ],
           "profileId": "us.anthropic.claude-sonnet-5",
           "profileName": "US Anthropic Claude Sonnet 5",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-1",
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Sonnet 5.5 in us-east-1, us-east-2, us-west-1, us-west-2.",
+          "geo": "us",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "us.anthropic.claude-sonnet-5-5",
+          "profileName": "US Anthropic Claude Sonnet 5.5",
           "routeRegions": [
             "us-east-1",
             "us-east-2",
@@ -18271,7 +18449,7 @@
           ]
         },
         {
-          "description": "Routes requests to Nova Pro in us-east-1, us-west-2 and us-east-2.",
+          "description": "Routes requests to Nova Pro in us-west-2, us-east-2 and us-east-1.",
           "geo": "us",
           "models": [
             "amazon.nova-pro-v1:0"
@@ -18500,6 +18678,20 @@
           ],
           "profileId": "us.anthropic.claude-sonnet-5",
           "profileName": "US Anthropic Claude Sonnet 5",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Claude Sonnet 5.5 in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "us.anthropic.claude-sonnet-5-5",
+          "profileName": "US Anthropic Claude Sonnet 5.5",
           "routeRegions": [
             "us-east-1",
             "us-east-2",
