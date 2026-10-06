@@ -17,7 +17,7 @@
     "me-south-1": "",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-10-01T19:11:47.735Z",
+  "generatedAt": "2026-10-06T19:16:12.173Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -339,6 +339,17 @@
           "routeRegions": [
             "ap-northeast-1"
           ]
+        },
+        {
+          "description": "Routes requests to GLM 5.3 globally across all supported AWS Regions.",
+          "models": [
+            "zai.glm-5.3"
+          ],
+          "profileId": "global.zai.glm-5.3",
+          "profileName": "Global Z.AI GLM 5.3",
+          "routeRegions": [
+            "ap-northeast-1"
+          ]
         }
       ],
       "onDemand": [
@@ -351,6 +362,23 @@
           ],
           "modelId": "amazon.nova-2-sonic-v1:0",
           "modelName": "Nova 2 Sonic",
+          "outputModalities": [
+            "SPEECH",
+            "TEXT"
+          ],
+          "providerName": "Amazon",
+          "responseStreamingSupported": true
+        },
+        {
+          "inferenceTypesSupported": [
+            "ON_DEMAND"
+          ],
+          "inputModalities": [
+            "SPEECH",
+            "TEXT"
+          ],
+          "modelId": "amazon.nova-2-5-sonic",
+          "modelName": "Nova 2.5 Sonic",
           "outputModalities": [
             "SPEECH",
             "TEXT"
@@ -1560,6 +1588,17 @@
           "routeRegions": [
             "ap-northeast-2"
           ]
+        },
+        {
+          "description": "Routes requests to GLM 5.3 globally across all supported AWS Regions.",
+          "models": [
+            "zai.glm-5.3"
+          ],
+          "profileId": "global.zai.glm-5.3",
+          "profileName": "Global Z.AI GLM 5.3",
+          "routeRegions": [
+            "ap-northeast-2"
+          ]
         }
       ],
       "onDemand": [
@@ -2173,6 +2212,17 @@
           "routeRegions": [
             "ap-northeast-3"
           ]
+        },
+        {
+          "description": "Routes requests to GLM 5.3 globally across all supported AWS Regions.",
+          "models": [
+            "zai.glm-5.3"
+          ],
+          "profileId": "global.zai.glm-5.3",
+          "profileName": "Global Z.AI GLM 5.3",
+          "routeRegions": [
+            "ap-northeast-3"
+          ]
         }
       ],
       "onDemand": [
@@ -2615,6 +2665,17 @@
           ],
           "profileId": "global.xai.grok-4.7",
           "profileName": "Global xAI Grok 4.7",
+          "routeRegions": [
+            "ap-south-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GLM 5.3 globally across all supported AWS Regions.",
+          "models": [
+            "zai.glm-5.3"
+          ],
+          "profileId": "global.zai.glm-5.3",
+          "profileName": "Global Z.AI GLM 5.3",
           "routeRegions": [
             "ap-south-1"
           ]
@@ -3792,6 +3853,17 @@
           "routeRegions": [
             "ap-southeast-1"
           ]
+        },
+        {
+          "description": "Routes requests to GLM 5.3 globally across all supported AWS Regions.",
+          "models": [
+            "zai.glm-5.3"
+          ],
+          "profileId": "global.zai.glm-5.3",
+          "profileName": "Global Z.AI GLM 5.3",
+          "routeRegions": [
+            "ap-southeast-1"
+          ]
         }
       ],
       "onDemand": [
@@ -4319,6 +4391,17 @@
           ],
           "profileId": "global.xai.grok-4.7",
           "profileName": "Global xAI Grok 4.7",
+          "routeRegions": [
+            "ap-southeast-2"
+          ]
+        },
+        {
+          "description": "Routes requests to GLM 5.3 globally across all supported AWS Regions.",
+          "models": [
+            "zai.glm-5.3"
+          ],
+          "profileId": "global.zai.glm-5.3",
+          "profileName": "Global Z.AI GLM 5.3",
           "routeRegions": [
             "ap-southeast-2"
           ]
@@ -5600,6 +5683,17 @@
           "routeRegions": [
             "ca-central-1"
           ]
+        },
+        {
+          "description": "Routes requests to GLM 5.3 globally across all supported AWS Regions.",
+          "models": [
+            "zai.glm-5.3"
+          ],
+          "profileId": "global.zai.glm-5.3",
+          "profileName": "Global Z.AI GLM 5.3",
+          "routeRegions": [
+            "ca-central-1"
+          ]
         }
       ],
       "onDemand": [
@@ -6510,6 +6604,17 @@
           ],
           "profileId": "global.xai.grok-4.7",
           "profileName": "Global xAI Grok 4.7",
+          "routeRegions": [
+            "eu-central-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GLM 5.3 globally across all supported AWS Regions.",
+          "models": [
+            "zai.glm-5.3"
+          ],
+          "profileId": "global.zai.glm-5.3",
+          "profileName": "Global Z.AI GLM 5.3",
           "routeRegions": [
             "eu-central-1"
           ]
@@ -7455,6 +7560,17 @@
           "routeRegions": [
             "eu-north-1"
           ]
+        },
+        {
+          "description": "Routes requests to GLM 5.3 globally across all supported AWS Regions.",
+          "models": [
+            "zai.glm-5.3"
+          ],
+          "profileId": "global.zai.glm-5.3",
+          "profileName": "Global Z.AI GLM 5.3",
+          "routeRegions": [
+            "eu-north-1"
+          ]
         }
       ],
       "onDemand": [
@@ -7467,6 +7583,23 @@
           ],
           "modelId": "amazon.nova-2-sonic-v1:0",
           "modelName": "Nova 2 Sonic",
+          "outputModalities": [
+            "SPEECH",
+            "TEXT"
+          ],
+          "providerName": "Amazon",
+          "responseStreamingSupported": true
+        },
+        {
+          "inferenceTypesSupported": [
+            "ON_DEMAND"
+          ],
+          "inputModalities": [
+            "SPEECH",
+            "TEXT"
+          ],
+          "modelId": "amazon.nova-2-5-sonic",
+          "modelName": "Nova 2.5 Sonic",
           "outputModalities": [
             "SPEECH",
             "TEXT"
@@ -8384,6 +8517,17 @@
           ],
           "profileId": "global.xai.grok-4.7",
           "profileName": "Global xAI Grok 4.7",
+          "routeRegions": [
+            "eu-west-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GLM 5.3 globally across all supported AWS Regions.",
+          "models": [
+            "zai.glm-5.3"
+          ],
+          "profileId": "global.zai.glm-5.3",
+          "profileName": "Global Z.AI GLM 5.3",
           "routeRegions": [
             "eu-west-1"
           ]
@@ -9646,6 +9790,17 @@
           ],
           "profileId": "global.xai.grok-4.7",
           "profileName": "Global xAI Grok 4.7",
+          "routeRegions": [
+            "eu-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to GLM 5.3 globally across all supported AWS Regions.",
+          "models": [
+            "zai.glm-5.3"
+          ],
+          "profileId": "global.zai.glm-5.3",
+          "profileName": "Global Z.AI GLM 5.3",
           "routeRegions": [
             "eu-west-2"
           ]
@@ -11005,6 +11160,17 @@
           "routeRegions": [
             "eu-west-3"
           ]
+        },
+        {
+          "description": "Routes requests to GLM 5.3 globally across all supported AWS Regions.",
+          "models": [
+            "zai.glm-5.3"
+          ],
+          "profileId": "global.zai.glm-5.3",
+          "profileName": "Global Z.AI GLM 5.3",
+          "routeRegions": [
+            "eu-west-3"
+          ]
         }
       ],
       "onDemand": [
@@ -11783,6 +11949,17 @@
           ],
           "profileId": "global.xai.grok-4.7",
           "profileName": "Global xAI Grok 4.7",
+          "routeRegions": [
+            "sa-east-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GLM 5.3 globally across all supported AWS Regions.",
+          "models": [
+            "zai.glm-5.3"
+          ],
+          "profileId": "global.zai.glm-5.3",
+          "profileName": "Global Z.AI GLM 5.3",
           "routeRegions": [
             "sa-east-1"
           ]
@@ -12742,6 +12919,17 @@
           "routeRegions": [
             "us-east-1"
           ]
+        },
+        {
+          "description": "Routes requests to GLM 5.3 globally across all supported AWS Regions.",
+          "models": [
+            "zai.glm-5.3"
+          ],
+          "profileId": "global.zai.glm-5.3",
+          "profileName": "Global Z.AI GLM 5.3",
+          "routeRegions": [
+            "us-east-1"
+          ]
         }
       ],
       "onDemand": [
@@ -12802,6 +12990,23 @@
           ],
           "modelId": "amazon.nova-2-sonic-v1:0",
           "modelName": "Nova 2 Sonic",
+          "outputModalities": [
+            "SPEECH",
+            "TEXT"
+          ],
+          "providerName": "Amazon",
+          "responseStreamingSupported": true
+        },
+        {
+          "inferenceTypesSupported": [
+            "ON_DEMAND"
+          ],
+          "inputModalities": [
+            "SPEECH",
+            "TEXT"
+          ],
+          "modelId": "amazon.nova-2-5-sonic",
+          "modelName": "Nova 2.5 Sonic",
           "outputModalities": [
             "SPEECH",
             "TEXT"
@@ -14543,6 +14748,20 @@
             "us-east-2",
             "us-west-2"
           ]
+        },
+        {
+          "description": "Routes requests to GLM 5.3 in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "zai.glm-5.3"
+          ],
+          "profileId": "us.zai.glm-5.3",
+          "profileName": "US Z.AI GLM 5.3",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
         }
       ]
     },
@@ -14863,6 +15082,17 @@
           ],
           "profileId": "global.xai.grok-4.7",
           "profileName": "Global xAI Grok 4.7",
+          "routeRegions": [
+            "us-east-2"
+          ]
+        },
+        {
+          "description": "Routes requests to GLM 5.3 globally across all supported AWS Regions.",
+          "models": [
+            "zai.glm-5.3"
+          ],
+          "profileId": "global.zai.glm-5.3",
+          "profileName": "Global Z.AI GLM 5.3",
           "routeRegions": [
             "us-east-2"
           ]
@@ -16340,6 +16570,20 @@
             "us-east-2",
             "us-west-2"
           ]
+        },
+        {
+          "description": "Routes requests to GLM 5.3 in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "zai.glm-5.3"
+          ],
+          "profileId": "us.zai.glm-5.3",
+          "profileName": "US Z.AI GLM 5.3",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
         }
       ]
     },
@@ -16649,6 +16893,17 @@
           ],
           "profileId": "global.xai.grok-4.7",
           "profileName": "Global xAI Grok 4.7",
+          "routeRegions": [
+            "us-west-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GLM 5.3 globally across all supported AWS Regions.",
+          "models": [
+            "zai.glm-5.3"
+          ],
+          "profileId": "global.zai.glm-5.3",
+          "profileName": "Global Z.AI GLM 5.3",
           "routeRegions": [
             "us-west-1"
           ]
@@ -17177,6 +17432,21 @@
             "us-west-1",
             "us-west-2"
           ]
+        },
+        {
+          "description": "Routes requests to GLM 5.3 in us-east-1, us-east-2, us-west-1, us-west-2.",
+          "geo": "us",
+          "models": [
+            "zai.glm-5.3"
+          ],
+          "profileId": "us.zai.glm-5.3",
+          "profileName": "US Z.AI GLM 5.3",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-1",
+            "us-west-2"
+          ]
         }
       ]
     },
@@ -17500,6 +17770,17 @@
           "routeRegions": [
             "us-west-2"
           ]
+        },
+        {
+          "description": "Routes requests to GLM 5.3 globally across all supported AWS Regions.",
+          "models": [
+            "zai.glm-5.3"
+          ],
+          "profileId": "global.zai.glm-5.3",
+          "profileName": "Global Z.AI GLM 5.3",
+          "routeRegions": [
+            "us-west-2"
+          ]
         }
       ],
       "onDemand": [
@@ -17512,6 +17793,23 @@
           ],
           "modelId": "amazon.nova-2-sonic-v1:0",
           "modelName": "Nova 2 Sonic",
+          "outputModalities": [
+            "SPEECH",
+            "TEXT"
+          ],
+          "providerName": "Amazon",
+          "responseStreamingSupported": true
+        },
+        {
+          "inferenceTypesSupported": [
+            "ON_DEMAND"
+          ],
+          "inputModalities": [
+            "SPEECH",
+            "TEXT"
+          ],
+          "modelId": "amazon.nova-2-5-sonic",
+          "modelName": "Nova 2.5 Sonic",
           "outputModalities": [
             "SPEECH",
             "TEXT"
@@ -19248,6 +19546,20 @@
           ],
           "profileId": "us.xai.grok-4.7",
           "profileName": "US xAI Grok 4.7",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to GLM 5.3 in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "zai.glm-5.3"
+          ],
+          "profileId": "us.zai.glm-5.3",
+          "profileName": "US Z.AI GLM 5.3",
           "routeRegions": [
             "us-east-1",
             "us-east-2",
