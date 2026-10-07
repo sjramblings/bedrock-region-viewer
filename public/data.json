@@ -17,7 +17,7 @@
     "me-south-1": "",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-10-06T19:16:12.173Z",
+  "generatedAt": "2026-10-07T19:40:27.840Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -61,6 +61,17 @@
           ],
           "profileId": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
           "profileName": "Global Anthropic Claude Haiku 4.5",
+          "routeRegions": [
+            "ap-northeast-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "global.anthropic.claude-haiku-5-5",
+          "profileName": "Global Anthropic Claude Haiku 5.5",
           "routeRegions": [
             "ap-northeast-1"
           ]
@@ -198,7 +209,7 @@
           ]
         },
         {
-          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "description": "Routes requests to Moonshot AI Kimi K3 globally across all supported AWS Regions.",
           "models": [
             "moonshotai.kimi-k3"
           ],
@@ -1213,6 +1224,19 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 in ap-northeast-1 and ap-northeast-3.",
+          "geo": "jp",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "jp.anthropic.claude-haiku-5-5",
+          "profileName": "JP Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "ap-northeast-1",
+            "ap-northeast-3"
+          ]
+        },
+        {
           "description": "Routes requests to Claude Opus 4.7 in ap-northeast-3, ap-northeast-1.",
           "geo": "jp",
           "models": [
@@ -1321,6 +1345,17 @@
           ],
           "profileId": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
           "profileName": "Global Anthropic Claude Haiku 4.5",
+          "routeRegions": [
+            "ap-northeast-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "global.anthropic.claude-haiku-5-5",
+          "profileName": "Global Anthropic Claude Haiku 5.5",
           "routeRegions": [
             "ap-northeast-2"
           ]
@@ -1447,7 +1482,7 @@
           ]
         },
         {
-          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "description": "Routes requests to Moonshot AI Kimi K3 globally across all supported AWS Regions.",
           "models": [
             "moonshotai.kimi-k3"
           ],
@@ -1950,6 +1985,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "global.anthropic.claude-haiku-5-5",
+          "profileName": "Global Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "ap-northeast-3"
+          ]
+        },
+        {
           "description": "Routes requests to Anthropic Claude Opus 4.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-opus-4-5-20251101-v1:0"
@@ -2071,7 +2117,7 @@
           ]
         },
         {
-          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "description": "Routes requests to Moonshot AI Kimi K3 globally across all supported AWS Regions.",
           "models": [
             "moonshotai.kimi-k3"
           ],
@@ -2293,6 +2339,19 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 in ap-northeast-1 and ap-northeast-3.",
+          "geo": "jp",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "jp.anthropic.claude-haiku-5-5",
+          "profileName": "JP Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "ap-northeast-1",
+            "ap-northeast-3"
+          ]
+        },
+        {
           "description": "Routes requests to Claude Opus 4.7 in ap-northeast-3, ap-northeast-1.",
           "geo": "jp",
           "models": [
@@ -2401,6 +2460,17 @@
           ],
           "profileId": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
           "profileName": "Global Anthropic Claude Haiku 4.5",
+          "routeRegions": [
+            "ap-south-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "global.anthropic.claude-haiku-5-5",
+          "profileName": "Global Anthropic Claude Haiku 5.5",
           "routeRegions": [
             "ap-south-1"
           ]
@@ -2527,7 +2597,7 @@
           ]
         },
         {
-          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "description": "Routes requests to Moonshot AI Kimi K3 globally across all supported AWS Regions.",
           "models": [
             "moonshotai.kimi-k3"
           ],
@@ -3591,6 +3661,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "global.anthropic.claude-haiku-5-5",
+          "profileName": "Global Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "ap-southeast-1"
+          ]
+        },
+        {
           "description": "Routes requests to Anthropic Claude Opus 4.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-opus-4-5-20251101-v1:0"
@@ -3712,7 +3793,7 @@
           ]
         },
         {
-          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "description": "Routes requests to Moonshot AI Kimi K3 globally across all supported AWS Regions.",
           "models": [
             "moonshotai.kimi-k3"
           ],
@@ -4132,6 +4213,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "global.anthropic.claude-haiku-5-5",
+          "profileName": "Global Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "ap-southeast-2"
+          ]
+        },
+        {
           "description": "Routes requests to Anthropic Claude Opus 4.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-opus-4-5-20251101-v1:0"
@@ -4253,7 +4345,7 @@
           ]
         },
         {
-          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "description": "Routes requests to Moonshot AI Kimi K3 globally across all supported AWS Regions.",
           "models": [
             "moonshotai.kimi-k3"
           ],
@@ -5269,6 +5361,19 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 in ap-southeast-2 and ap-southeast-4.",
+          "geo": "au",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "au.anthropic.claude-haiku-5-5",
+          "profileName": "AU Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "ap-southeast-2",
+            "ap-southeast-4"
+          ]
+        },
+        {
           "description": "Routes requests to Claude Opus 4.6 in ap-southeast-2, ap-southeast-4.",
           "geo": "au",
           "models": [
@@ -5421,6 +5526,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "global.anthropic.claude-haiku-5-5",
+          "profileName": "Global Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "ca-central-1"
+          ]
+        },
+        {
           "description": "Routes requests to Anthropic Claude Opus 4.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-opus-4-5-20251101-v1:0"
@@ -5542,7 +5658,7 @@
           ]
         },
         {
-          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "description": "Routes requests to Moonshot AI Kimi K3 globally across all supported AWS Regions.",
           "models": [
             "moonshotai.kimi-k3"
           ],
@@ -5970,6 +6086,21 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 in ca-central-1, us-east-1, us-east-2 and us-west-2.",
+          "geo": "us",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "us.anthropic.claude-haiku-5-5",
+          "profileName": "US Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "ca-central-1",
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to Claude Opus 4.5 in us-east-1, us-east-2, ca-central-1, us-west-2.",
           "geo": "us",
           "models": [
@@ -6120,7 +6251,7 @@
           ]
         },
         {
-          "description": "Routes requests to Kimi K3 in us-east-1, us-east-2, ca-central-1, us-west-2.",
+          "description": "Routes requests to Moonshot AI Kimi K3 in ca-central-1, us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
             "moonshotai.kimi-k3"
@@ -6345,6 +6476,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "global.anthropic.claude-haiku-5-5",
+          "profileName": "Global Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "eu-central-1"
+          ]
+        },
+        {
           "description": "Routes requests to Anthropic Claude Opus 4.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-opus-4-5-20251101-v1:0"
@@ -6466,7 +6608,7 @@
           ]
         },
         {
-          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "description": "Routes requests to Moonshot AI Kimi K3 globally across all supported AWS Regions.",
           "models": [
             "moonshotai.kimi-k3"
           ],
@@ -6986,6 +7128,23 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 in eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1 and eu-west-3.",
+          "geo": "eu",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "eu.anthropic.claude-haiku-5-5",
+          "profileName": "EU Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "eu-central-1",
+            "eu-north-1",
+            "eu-south-1",
+            "eu-south-2",
+            "eu-west-1",
+            "eu-west-3"
+          ]
+        },
+        {
           "description": "Routes requests to Claude Opus 4.5 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1, eu-central-1.",
           "geo": "eu",
           "models": [
@@ -7298,6 +7457,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "global.anthropic.claude-haiku-5-5",
+          "profileName": "Global Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "eu-north-1"
+          ]
+        },
+        {
           "description": "Routes requests to Anthropic Claude Opus 4.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-opus-4-5-20251101-v1:0"
@@ -7419,7 +7589,7 @@
           ]
         },
         {
-          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "description": "Routes requests to Moonshot AI Kimi K3 globally across all supported AWS Regions.",
           "models": [
             "moonshotai.kimi-k3"
           ],
@@ -7963,6 +8133,23 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 in eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1 and eu-west-3.",
+          "geo": "eu",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "eu.anthropic.claude-haiku-5-5",
+          "profileName": "EU Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "eu-central-1",
+            "eu-north-1",
+            "eu-south-1",
+            "eu-south-2",
+            "eu-west-1",
+            "eu-west-3"
+          ]
+        },
+        {
           "description": "Routes requests to Claude Opus 4.5 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1, eu-central-1.",
           "geo": "eu",
           "models": [
@@ -8247,6 +8434,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "global.anthropic.claude-haiku-5-5",
+          "profileName": "Global Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "eu-west-1"
+          ]
+        },
+        {
           "description": "Routes requests to Anthropic Claude Opus 4.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-opus-4-5-20251101-v1:0"
@@ -8379,7 +8577,7 @@
           ]
         },
         {
-          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "description": "Routes requests to Moonshot AI Kimi K3 globally across all supported AWS Regions.",
           "models": [
             "moonshotai.kimi-k3"
           ],
@@ -9185,6 +9383,23 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 in eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1 and eu-west-3.",
+          "geo": "eu",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "eu.anthropic.claude-haiku-5-5",
+          "profileName": "EU Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "eu-central-1",
+            "eu-north-1",
+            "eu-south-1",
+            "eu-south-2",
+            "eu-west-1",
+            "eu-west-3"
+          ]
+        },
+        {
           "description": "Routes requests to Claude Opus 4.5 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1, eu-central-1.",
           "geo": "eu",
           "models": [
@@ -9531,6 +9746,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "global.anthropic.claude-haiku-5-5",
+          "profileName": "Global Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "eu-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to Anthropic Claude Opus 4.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-opus-4-5-20251101-v1:0"
@@ -9652,7 +9878,7 @@
           ]
         },
         {
-          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "description": "Routes requests to Moonshot AI Kimi K3 globally across all supported AWS Regions.",
           "models": [
             "moonshotai.kimi-k3"
           ],
@@ -10634,6 +10860,24 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 in eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1, eu-west-2 and eu-west-3.",
+          "geo": "eu",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "eu.anthropic.claude-haiku-5-5",
+          "profileName": "EU Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "eu-central-1",
+            "eu-north-1",
+            "eu-south-1",
+            "eu-south-2",
+            "eu-west-1",
+            "eu-west-2",
+            "eu-west-3"
+          ]
+        },
+        {
           "description": "Routes requests to Claude Opus 4.5 in eu-north-1, eu-west-3, eu-south-1, eu-west-2, eu-south-2, eu-west-1, eu-central-1.",
           "geo": "eu",
           "models": [
@@ -10898,6 +11142,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "global.anthropic.claude-haiku-5-5",
+          "profileName": "Global Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "eu-west-3"
+          ]
+        },
+        {
           "description": "Routes requests to Anthropic Claude Opus 4.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-opus-4-5-20251101-v1:0"
@@ -11019,7 +11274,7 @@
           ]
         },
         {
-          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "description": "Routes requests to Moonshot AI Kimi K3 globally across all supported AWS Regions.",
           "models": [
             "moonshotai.kimi-k3"
           ],
@@ -11389,6 +11644,23 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 in eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1 and eu-west-3.",
+          "geo": "eu",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "eu.anthropic.claude-haiku-5-5",
+          "profileName": "EU Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "eu-central-1",
+            "eu-north-1",
+            "eu-south-1",
+            "eu-south-2",
+            "eu-west-1",
+            "eu-west-3"
+          ]
+        },
+        {
           "description": "Routes requests to Claude Opus 4.5 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1, eu-central-1.",
           "geo": "eu",
           "models": [
@@ -11690,6 +11962,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "global.anthropic.claude-haiku-5-5",
+          "profileName": "Global Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "sa-east-1"
+          ]
+        },
+        {
           "description": "Routes requests to Anthropic Claude Opus 4.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-opus-4-5-20251101-v1:0"
@@ -11811,7 +12094,7 @@
           ]
         },
         {
-          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "description": "Routes requests to Moonshot AI Kimi K3 globally across all supported AWS Regions.",
           "models": [
             "moonshotai.kimi-k3"
           ],
@@ -12646,6 +12929,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "global.anthropic.claude-haiku-5-5",
+          "profileName": "Global Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "us-east-1"
+          ]
+        },
+        {
           "description": "Routes requests to Anthropic Claude Opus 4.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-opus-4-5-20251101-v1:0"
@@ -12778,7 +13072,7 @@
           ]
         },
         {
-          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "description": "Routes requests to Moonshot AI Kimi K3 globally across all supported AWS Regions.",
           "models": [
             "moonshotai.kimi-k3"
           ],
@@ -13996,6 +14290,20 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 in us-east-1, us-east-2 and us-west-2.",
+          "geo": "us",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "us.anthropic.claude-haiku-5-5",
+          "profileName": "US Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to Claude Opus 4.1 in us-east-1, us-west-2 and us-east-2.",
           "geo": "us",
           "models": [
@@ -14328,7 +14636,7 @@
           ]
         },
         {
-          "description": "Routes requests to Kimi K3 in us-east-1, us-east-2, us-west-2.",
+          "description": "Routes requests to Moonshot AI Kimi K3 in us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
             "moonshotai.kimi-k3"
@@ -14812,6 +15120,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "global.anthropic.claude-haiku-5-5",
+          "profileName": "Global Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "us-east-2"
+          ]
+        },
+        {
           "description": "Routes requests to Anthropic Claude Opus 4.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-opus-4-5-20251101-v1:0"
@@ -14944,7 +15263,7 @@
           ]
         },
         {
-          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "description": "Routes requests to Moonshot AI Kimi K3 globally across all supported AWS Regions.",
           "models": [
             "moonshotai.kimi-k3"
           ],
@@ -15831,6 +16150,20 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 in us-east-1, us-east-2 and us-west-2.",
+          "geo": "us",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "us.anthropic.claude-haiku-5-5",
+          "profileName": "US Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to Claude Opus 4.1 in us-east-1, us-west-2 and us-east-2.",
           "geo": "us",
           "models": [
@@ -16181,7 +16514,7 @@
           ]
         },
         {
-          "description": "Routes requests to Kimi K3 in us-east-1, us-east-2, us-west-2.",
+          "description": "Routes requests to Moonshot AI Kimi K3 in us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
             "moonshotai.kimi-k3"
@@ -16634,6 +16967,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "global.anthropic.claude-haiku-5-5",
+          "profileName": "Global Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "us-west-1"
+          ]
+        },
+        {
           "description": "Routes requests to Anthropic Claude Opus 4.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-opus-4-5-20251101-v1:0"
@@ -16755,7 +17099,7 @@
           ]
         },
         {
-          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "description": "Routes requests to Moonshot AI Kimi K3 globally across all supported AWS Regions.",
           "models": [
             "moonshotai.kimi-k3"
           ],
@@ -17002,6 +17346,21 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 in us-east-1, us-east-2, us-west-1 and us-west-2.",
+          "geo": "us",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "us.anthropic.claude-haiku-5-5",
+          "profileName": "US Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-1",
+            "us-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to Anthropic Claude Opus 4.5 in us-east-1, us-east-2, us-west-2 and us-west-1.",
           "geo": "us",
           "models": [
@@ -17212,7 +17571,7 @@
           ]
         },
         {
-          "description": "Routes requests to Kimi K3 in us-east-1, us-east-2, us-west-1, us-west-2.",
+          "description": "Routes requests to Moonshot AI Kimi K3 in us-east-1, us-east-2, us-west-1 and us-west-2.",
           "geo": "us",
           "models": [
             "moonshotai.kimi-k3"
@@ -17497,6 +17856,17 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 globally across all supported AWS Regions.",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "global.anthropic.claude-haiku-5-5",
+          "profileName": "Global Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "us-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to Anthropic Claude Opus 4.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-opus-4-5-20251101-v1:0"
@@ -17629,7 +17999,7 @@
           ]
         },
         {
-          "description": "Routes requests to Kimi K3 globally across all supported AWS Regions.",
+          "description": "Routes requests to Moonshot AI Kimi K3 globally across all supported AWS Regions.",
           "models": [
             "moonshotai.kimi-k3"
           ],
@@ -18829,6 +19199,20 @@
           ]
         },
         {
+          "description": "Routes requests to Anthropic Claude Haiku 5.5 in us-east-1, us-east-2 and us-west-2.",
+          "geo": "us",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "us.anthropic.claude-haiku-5-5",
+          "profileName": "US Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to Claude Opus 4.1 in us-east-1, us-west-2 and us-east-2.",
           "geo": "us",
           "models": [
@@ -19161,7 +19545,7 @@
           ]
         },
         {
-          "description": "Routes requests to Kimi K3 in us-east-1, us-east-2, us-west-2.",
+          "description": "Routes requests to Moonshot AI Kimi K3 in us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
             "moonshotai.kimi-k3"
