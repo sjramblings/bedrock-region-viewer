@@ -17,7 +17,7 @@
     "me-south-1": "",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-10-07T19:40:27.840Z",
+  "generatedAt": "2026-10-09T19:11:31.011Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -325,6 +325,17 @@
           ],
           "profileId": "global.twelvelabs.pegasus-1-2-v1:0",
           "profileName": "GLOBAL TwelveLabs Pegasus v1.2",
+          "routeRegions": [
+            "ap-northeast-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Pegasus v1.5 globally across all supported AWS Regions.",
+          "models": [
+            "twelvelabs.pegasus-1-5-v1:0"
+          ],
+          "profileId": "global.twelvelabs.pegasus-1-5-v1:0",
+          "profileName": "Global TwelveLabs Pegasus v1.5",
           "routeRegions": [
             "ap-northeast-1"
           ]
@@ -1603,6 +1614,17 @@
           ]
         },
         {
+          "description": "Routes requests to Pegasus v1.5 globally across all supported AWS Regions.",
+          "models": [
+            "twelvelabs.pegasus-1-5-v1:0"
+          ],
+          "profileId": "global.twelvelabs.pegasus-1-5-v1:0",
+          "profileName": "Global TwelveLabs Pegasus v1.5",
+          "routeRegions": [
+            "ap-northeast-2"
+          ]
+        },
+        {
           "description": "Routes requests to Grok 4.6 globally across all supported AWS Regions.",
           "models": [
             "xai.grok-4.6"
@@ -2238,6 +2260,17 @@
           ]
         },
         {
+          "description": "Routes requests to Pegasus v1.5 globally across all supported AWS Regions.",
+          "models": [
+            "twelvelabs.pegasus-1-5-v1:0"
+          ],
+          "profileId": "global.twelvelabs.pegasus-1-5-v1:0",
+          "profileName": "Global TwelveLabs Pegasus v1.5",
+          "routeRegions": [
+            "ap-northeast-3"
+          ]
+        },
+        {
           "description": "Routes requests to Grok 4.6 globally across all supported AWS Regions.",
           "models": [
             "xai.grok-4.6"
@@ -2713,6 +2746,17 @@
           ],
           "profileId": "global.twelvelabs.pegasus-1-2-v1:0",
           "profileName": "GLOBAL TwelveLabs Pegasus v1.2",
+          "routeRegions": [
+            "ap-south-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Pegasus v1.5 globally across all supported AWS Regions.",
+          "models": [
+            "twelvelabs.pegasus-1-5-v1:0"
+          ],
+          "profileId": "global.twelvelabs.pegasus-1-5-v1:0",
+          "profileName": "Global TwelveLabs Pegasus v1.5",
           "routeRegions": [
             "ap-south-1"
           ]
@@ -3914,6 +3958,17 @@
           ]
         },
         {
+          "description": "Routes requests to Pegasus v1.5 globally across all supported AWS Regions.",
+          "models": [
+            "twelvelabs.pegasus-1-5-v1:0"
+          ],
+          "profileId": "global.twelvelabs.pegasus-1-5-v1:0",
+          "profileName": "Global TwelveLabs Pegasus v1.5",
+          "routeRegions": [
+            "ap-southeast-1"
+          ]
+        },
+        {
           "description": "Routes requests to Grok 4.6 globally across all supported AWS Regions.",
           "models": [
             "xai.grok-4.6"
@@ -4461,6 +4516,17 @@
           ],
           "profileId": "global.twelvelabs.pegasus-1-2-v1:0",
           "profileName": "GLOBAL TwelveLabs Pegasus v1.2",
+          "routeRegions": [
+            "ap-southeast-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Pegasus v1.5 globally across all supported AWS Regions.",
+          "models": [
+            "twelvelabs.pegasus-1-5-v1:0"
+          ],
+          "profileId": "global.twelvelabs.pegasus-1-5-v1:0",
+          "profileName": "Global TwelveLabs Pegasus v1.5",
           "routeRegions": [
             "ap-southeast-2"
           ]
@@ -5476,6 +5542,19 @@
             "ap-southeast-2",
             "ap-southeast-4"
           ]
+        },
+        {
+          "description": "Routes requests to Claude Sonnet 5.5 in ap-southeast-2, ap-southeast-4.",
+          "geo": "au",
+          "models": [
+            "anthropic.claude-sonnet-5-5"
+          ],
+          "profileId": "au.anthropic.claude-sonnet-5-5",
+          "profileName": "AU Anthropic Claude Sonnet 5.5",
+          "routeRegions": [
+            "ap-southeast-2",
+            "ap-southeast-4"
+          ]
         }
       ]
     },
@@ -5774,6 +5853,17 @@
           ],
           "profileId": "global.twelvelabs.pegasus-1-2-v1:0",
           "profileName": "GLOBAL TwelveLabs Pegasus v1.2",
+          "routeRegions": [
+            "ca-central-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Pegasus v1.5 globally across all supported AWS Regions.",
+          "models": [
+            "twelvelabs.pegasus-1-5-v1:0"
+          ],
+          "profileId": "global.twelvelabs.pegasus-1-5-v1:0",
+          "profileName": "Global TwelveLabs Pegasus v1.5",
           "routeRegions": [
             "ca-central-1"
           ]
@@ -6724,6 +6814,17 @@
           ],
           "profileId": "global.twelvelabs.pegasus-1-2-v1:0",
           "profileName": "GLOBAL TwelveLabs Pegasus v1.2",
+          "routeRegions": [
+            "eu-central-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Pegasus v1.5 globally across all supported AWS Regions.",
+          "models": [
+            "twelvelabs.pegasus-1-5-v1:0"
+          ],
+          "profileId": "global.twelvelabs.pegasus-1-5-v1:0",
+          "profileName": "Global TwelveLabs Pegasus v1.5",
           "routeRegions": [
             "eu-central-1"
           ]
@@ -7705,6 +7806,17 @@
           ],
           "profileId": "global.twelvelabs.pegasus-1-2-v1:0",
           "profileName": "GLOBAL TwelveLabs Pegasus v1.2",
+          "routeRegions": [
+            "eu-north-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Pegasus v1.5 globally across all supported AWS Regions.",
+          "models": [
+            "twelvelabs.pegasus-1-5-v1:0"
+          ],
+          "profileId": "global.twelvelabs.pegasus-1-5-v1:0",
+          "profileName": "Global TwelveLabs Pegasus v1.5",
           "routeRegions": [
             "eu-north-1"
           ]
@@ -8693,6 +8805,17 @@
           ],
           "profileId": "global.twelvelabs.pegasus-1-2-v1:0",
           "profileName": "Global TwelveLabs Pegasus v1.2",
+          "routeRegions": [
+            "eu-west-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Pegasus v1.5 globally across all supported AWS Regions.",
+          "models": [
+            "twelvelabs.pegasus-1-5-v1:0"
+          ],
+          "profileId": "global.twelvelabs.pegasus-1-5-v1:0",
+          "profileName": "Global TwelveLabs Pegasus v1.5",
           "routeRegions": [
             "eu-west-1"
           ]
@@ -9994,6 +10117,17 @@
           ],
           "profileId": "global.twelvelabs.pegasus-1-2-v1:0",
           "profileName": "GLOBAL TwelveLabs Pegasus v1.2",
+          "routeRegions": [
+            "eu-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Pegasus v1.5 globally across all supported AWS Regions.",
+          "models": [
+            "twelvelabs.pegasus-1-5-v1:0"
+          ],
+          "profileId": "global.twelvelabs.pegasus-1-5-v1:0",
+          "profileName": "Global TwelveLabs Pegasus v1.5",
           "routeRegions": [
             "eu-west-2"
           ]
@@ -11395,6 +11529,17 @@
           ]
         },
         {
+          "description": "Routes requests to Pegasus v1.5 globally across all supported AWS Regions.",
+          "models": [
+            "twelvelabs.pegasus-1-5-v1:0"
+          ],
+          "profileId": "global.twelvelabs.pegasus-1-5-v1:0",
+          "profileName": "Global TwelveLabs Pegasus v1.5",
+          "routeRegions": [
+            "eu-west-3"
+          ]
+        },
+        {
           "description": "Routes requests to Grok 4.6 globally across all supported AWS Regions.",
           "models": [
             "xai.grok-4.6"
@@ -12210,6 +12355,17 @@
           ],
           "profileId": "global.twelvelabs.pegasus-1-2-v1:0",
           "profileName": "GLOBAL TwelveLabs Pegasus v1.2",
+          "routeRegions": [
+            "sa-east-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Pegasus v1.5 globally across all supported AWS Regions.",
+          "models": [
+            "twelvelabs.pegasus-1-5-v1:0"
+          ],
+          "profileId": "global.twelvelabs.pegasus-1-5-v1:0",
+          "profileName": "Global TwelveLabs Pegasus v1.5",
           "routeRegions": [
             "sa-east-1"
           ]
@@ -13188,6 +13344,17 @@
           ],
           "profileId": "global.twelvelabs.pegasus-1-2-v1:0",
           "profileName": "GLOBAL TwelveLabs Pegasus v1.2",
+          "routeRegions": [
+            "us-east-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Pegasus v1.5 globally across all supported AWS Regions.",
+          "models": [
+            "twelvelabs.pegasus-1-5-v1:0"
+          ],
+          "profileId": "global.twelvelabs.pegasus-1-5-v1:0",
+          "profileName": "Global TwelveLabs Pegasus v1.5",
           "routeRegions": [
             "us-east-1"
           ]
@@ -15002,6 +15169,20 @@
           ]
         },
         {
+          "description": "Routes requests to Pegasus v1.5 in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "twelvelabs.pegasus-1-5-v1:0"
+          ],
+          "profileId": "us.twelvelabs.pegasus-1-5-v1:0",
+          "profileName": "US TwelveLabs Pegasus v1.5",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to Palmyra X4 in us-east-1, us-east-2, us-west-2.",
           "geo": "us",
           "models": [
@@ -15379,6 +15560,17 @@
           ],
           "profileId": "global.twelvelabs.pegasus-1-2-v1:0",
           "profileName": "GLOBAL TwelveLabs Pegasus v1.2",
+          "routeRegions": [
+            "us-east-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Pegasus v1.5 globally across all supported AWS Regions.",
+          "models": [
+            "twelvelabs.pegasus-1-5-v1:0"
+          ],
+          "profileId": "global.twelvelabs.pegasus-1-5-v1:0",
+          "profileName": "Global TwelveLabs Pegasus v1.5",
           "routeRegions": [
             "us-east-2"
           ]
@@ -16849,6 +17041,20 @@
           ]
         },
         {
+          "description": "Routes requests to Pegasus v1.5 in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "twelvelabs.pegasus-1-5-v1:0"
+          ],
+          "profileId": "us.twelvelabs.pegasus-1-5-v1:0",
+          "profileName": "US TwelveLabs Pegasus v1.5",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to Palmyra X4 in us-east-1, us-east-2, us-west-2.",
           "geo": "us",
           "models": [
@@ -17215,6 +17421,17 @@
           ],
           "profileId": "global.twelvelabs.pegasus-1-2-v1:0",
           "profileName": "GLOBAL TwelveLabs Pegasus v1.2",
+          "routeRegions": [
+            "us-west-1"
+          ]
+        },
+        {
+          "description": "Routes requests to Pegasus v1.5 globally across all supported AWS Regions.",
+          "models": [
+            "twelvelabs.pegasus-1-5-v1:0"
+          ],
+          "profileId": "global.twelvelabs.pegasus-1-5-v1:0",
+          "profileName": "Global TwelveLabs Pegasus v1.5",
           "routeRegions": [
             "us-west-1"
           ]
@@ -17733,6 +17950,21 @@
           ]
         },
         {
+          "description": "Routes requests to Pegasus v1.5 in us-east-1, us-east-2, us-west-1, us-west-2.",
+          "geo": "us",
+          "models": [
+            "twelvelabs.pegasus-1-5-v1:0"
+          ],
+          "profileId": "us.twelvelabs.pegasus-1-5-v1:0",
+          "profileName": "US TwelveLabs Pegasus v1.5",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-1",
+            "us-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to Palmyra X4 in us-east-1, us-east-2, us-west-1, us-west-2.",
           "geo": "us",
           "models": [
@@ -18115,6 +18347,17 @@
           ],
           "profileId": "global.twelvelabs.pegasus-1-2-v1:0",
           "profileName": "GLOBAL TwelveLabs Pegasus v1.2",
+          "routeRegions": [
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Pegasus v1.5 globally across all supported AWS Regions.",
+          "models": [
+            "twelvelabs.pegasus-1-5-v1:0"
+          ],
+          "profileId": "global.twelvelabs.pegasus-1-5-v1:0",
+          "profileName": "Global TwelveLabs Pegasus v1.5",
           "routeRegions": [
             "us-west-2"
           ]
@@ -19874,6 +20117,20 @@
           ],
           "profileId": "us.twelvelabs.pegasus-1-2-v1:0",
           "profileName": "US TwelveLabs Pegasus v1.2",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to Pegasus v1.5 in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "twelvelabs.pegasus-1-5-v1:0"
+          ],
+          "profileId": "us.twelvelabs.pegasus-1-5-v1:0",
+          "profileName": "US TwelveLabs Pegasus v1.5",
           "routeRegions": [
             "us-east-1",
             "us-east-2",
