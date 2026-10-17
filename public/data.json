@@ -17,7 +17,7 @@
     "me-south-1": "",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-10-09T19:11:31.011Z",
+  "generatedAt": "2026-10-17T16:47:13.831Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -242,7 +242,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
           ],
@@ -286,7 +286,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-luna"
           ],
@@ -1526,7 +1526,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
           ],
@@ -1570,7 +1570,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-luna"
           ],
@@ -2095,7 +2095,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Sonnet 4.6 globally across all supported AWS Regions.",
+          "description": "Routes requests to Anthropic Claude Sonnet 4.6 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-sonnet-4-6"
           ],
@@ -2172,7 +2172,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
           ],
@@ -2216,7 +2216,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-luna"
           ],
@@ -2437,7 +2437,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Sonnet 4.6 in ap-northeast-3, ap-northeast-1.",
+          "description": "Routes requests to Anthropic Claude Sonnet 4.6 in ap-northeast-1 and ap-northeast-3.",
           "geo": "jp",
           "models": [
             "anthropic.claude-sonnet-4-6"
@@ -2586,7 +2586,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Sonnet 4.6 globally across all supported AWS Regions.",
+          "description": "Routes requests to Anthropic Claude Sonnet 4.6 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-sonnet-4-6"
           ],
@@ -2663,7 +2663,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
           ],
@@ -2707,7 +2707,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-luna"
           ],
@@ -2825,38 +2825,6 @@
           ],
           "providerName": "Amazon",
           "responseStreamingSupported": false
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-haiku-20240307-v1:0",
-          "modelName": "Claude 3 Haiku",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-sonnet-20240229-v1:0",
-          "modelName": "Claude 3 Sonnet",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
         },
         {
           "inferenceTypesSupported": [
@@ -3870,7 +3838,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
           ],
@@ -3914,7 +3882,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-luna"
           ],
@@ -4003,38 +3971,6 @@
         }
       ],
       "onDemand": [
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-haiku-20240307-v1:0",
-          "modelName": "Claude 3 Haiku",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-5-sonnet-20240620-v1:0",
-          "modelName": "Claude 3.5 Sonnet",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
         {
           "inferenceTypesSupported": [
             "INFERENCE_PROFILE",
@@ -4433,7 +4369,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
           ],
@@ -4477,7 +4413,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-luna"
           ],
@@ -5693,7 +5629,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Sonnet 4.6 globally across all supported AWS Regions.",
+          "description": "Routes requests to Anthropic Claude Sonnet 4.6 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-sonnet-4-6"
           ],
@@ -5770,7 +5706,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
           ],
@@ -5814,7 +5750,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-luna"
           ],
@@ -6296,7 +6232,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Sonnet 4.6 in us-east-1, us-east-2, ca-central-1, us-west-2.",
+          "description": "Routes requests to Anthropic Claude Sonnet 4.6 in ca-central-1, us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
             "anthropic.claude-sonnet-4-6"
@@ -6383,7 +6319,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-5.6 Luna in us-east-1, us-east-2, ca-central-1, us-west-2.",
+          "description": "Routes requests to OpenAI GPT-5.6 Luna in ca-central-1, us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
             "openai.gpt-5.6-luna"
@@ -6443,7 +6379,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Luna in us-east-1, us-east-2, ca-central-1, us-west-2.",
+          "description": "Routes requests to OpenAI GPT-6 Luna in ca-central-1, us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
             "openai.gpt-6-luna"
@@ -6731,7 +6667,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
           ],
@@ -6775,7 +6711,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-luna"
           ],
@@ -7723,7 +7659,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
           ],
@@ -7767,7 +7703,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-luna"
           ],
@@ -8279,7 +8215,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Opus 4.6 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1, eu-central-1.",
+          "description": "Routes requests to Anthropic Claude Opus 4.6 in eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1 and eu-west-3.",
           "geo": "eu",
           "models": [
             "anthropic.claude-opus-4-6-v1"
@@ -8722,7 +8658,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
           ],
@@ -8766,7 +8702,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-luna"
           ],
@@ -10034,7 +9970,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
           ],
@@ -10078,7 +10014,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-luna"
           ],
@@ -11030,7 +10966,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Opus 4.6 in eu-north-1, eu-west-3, eu-south-1, eu-west-2, eu-south-2, eu-west-1, eu-central-1.",
+          "description": "Routes requests to Anthropic Claude Opus 4.6 in eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1, eu-west-2 and eu-west-3.",
           "geo": "eu",
           "models": [
             "anthropic.claude-opus-4-6-v1"
@@ -11441,7 +11377,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
           ],
@@ -11485,7 +11421,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-luna"
           ],
@@ -12195,7 +12131,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Sonnet 4.6 globally across all supported AWS Regions.",
+          "description": "Routes requests to Anthropic Claude Sonnet 4.6 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-sonnet-4-6"
           ],
@@ -12272,7 +12208,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
           ],
@@ -12316,7 +12252,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-luna"
           ],
@@ -13162,17 +13098,6 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Sonnet 4 globally across all supported AWS Regions.",
-          "models": [
-            "anthropic.claude-sonnet-4-20250514-v1:0"
-          ],
-          "profileId": "global.anthropic.claude-sonnet-4-20250514-v1:0",
-          "profileName": "Global Claude Sonnet 4",
-          "routeRegions": [
-            "us-east-1"
-          ]
-        },
-        {
           "description": "Routes requests to Claude Sonnet 4.5 globally across all supported AWS Regions.",
           "models": [
             "anthropic.claude-sonnet-4-5-20250929-v1:0"
@@ -13261,7 +13186,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
           ],
@@ -13305,7 +13230,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-luna"
           ],
@@ -14845,7 +14770,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-5.6 Luna in us-east-1, us-east-2, us-west-2.",
+          "description": "Routes requests to OpenAI GPT-5.6 Luna in us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
             "openai.gpt-5.6-luna"
@@ -14901,7 +14826,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Luna in us-east-1, us-east-2, us-west-2.",
+          "description": "Routes requests to OpenAI GPT-6 Luna in us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
             "openai.gpt-6-luna"
@@ -15477,7 +15402,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
           ],
@@ -15521,7 +15446,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-luna"
           ],
@@ -16747,7 +16672,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-5.6 Luna in us-east-1, us-east-2, us-west-2.",
+          "description": "Routes requests to OpenAI GPT-5.6 Luna in us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
             "openai.gpt-5.6-luna"
@@ -16803,7 +16728,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Luna in us-east-1, us-east-2, us-west-2.",
+          "description": "Routes requests to OpenAI GPT-6 Luna in us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
             "openai.gpt-6-luna"
@@ -17338,7 +17263,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
           ],
@@ -17382,7 +17307,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-luna"
           ],
@@ -17830,7 +17755,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-5.6 Luna in us-east-1, us-east-2, us-west-1, us-west-2.",
+          "description": "Routes requests to OpenAI GPT-5.6 Luna in us-east-1, us-east-2, us-west-1 and us-west-2.",
           "geo": "us",
           "models": [
             "openai.gpt-5.6-luna"
@@ -17890,7 +17815,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Luna in us-east-1, us-east-2, us-west-1, us-west-2.",
+          "description": "Routes requests to OpenAI GPT-6 Luna in us-east-1, us-east-2, us-west-1 and us-west-2.",
           "geo": "us",
           "models": [
             "openai.gpt-6-luna"
@@ -18264,7 +18189,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-5.6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-5.6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-5.6-luna"
           ],
@@ -18308,7 +18233,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Luna globally across all supported AWS Regions.",
+          "description": "Routes requests to OpenAI GPT-6 Luna globally across all supported AWS Regions.",
           "models": [
             "openai.gpt-6-luna"
           ],
@@ -19830,7 +19755,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-5.6 Luna in us-east-1, us-east-2, us-west-2.",
+          "description": "Routes requests to OpenAI GPT-5.6 Luna in us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
             "openai.gpt-5.6-luna"
@@ -19886,7 +19811,7 @@
           ]
         },
         {
-          "description": "Routes requests to GPT-6 Luna in us-east-1, us-east-2, us-west-2.",
+          "description": "Routes requests to OpenAI GPT-6 Luna in us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
             "openai.gpt-6-luna"
