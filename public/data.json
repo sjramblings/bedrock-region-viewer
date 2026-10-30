@@ -17,7 +17,7 @@
     "me-south-1": "",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-10-26T19:40:57.132Z",
+  "generatedAt": "2026-10-30T18:56:16.753Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -6079,6 +6079,19 @@
           ]
         },
         {
+          "description": "Routes requests to Claude Haiku 5.5 in ca-west-1, ca-central-1.",
+          "geo": "ca",
+          "models": [
+            "anthropic.claude-haiku-5-5"
+          ],
+          "profileId": "ca.anthropic.claude-haiku-5-5",
+          "profileName": "CA Anthropic Claude Haiku 5.5",
+          "routeRegions": [
+            "ca-central-1",
+            "ca-west-1"
+          ]
+        },
+        {
           "description": "Routes requests to Amazon Nova 2 Lite in ca-central-1, us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
@@ -7252,7 +7265,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Opus 4.6 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1, eu-central-1.",
+          "description": "Routes requests to Anthropic Claude Opus 4.6 in eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1 and eu-west-3.",
           "geo": "eu",
           "models": [
             "anthropic.claude-opus-4-6-v1"
