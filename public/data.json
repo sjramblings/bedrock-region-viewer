@@ -17,7 +17,7 @@
     "me-south-1": "",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-11-09T23:14:38.807Z",
+  "generatedAt": "2026-11-13T20:43:10.467Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -1723,38 +1723,6 @@
         },
         {
           "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-haiku-20240307-v1:0",
-          "modelName": "Claude 3 Haiku",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-5-sonnet-20240620-v1:0",
-          "modelName": "Claude 3.5 Sonnet",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
             "INFERENCE_PROFILE",
             "ON_DEMAND"
           ],
@@ -2900,38 +2868,6 @@
           ],
           "providerName": "Amazon",
           "responseStreamingSupported": false
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-haiku-20240307-v1:0",
-          "modelName": "Claude 3 Haiku",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-sonnet-20240229-v1:0",
-          "modelName": "Claude 3 Sonnet",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
         },
         {
           "inferenceTypesSupported": [
@@ -4092,38 +4028,6 @@
         }
       ],
       "onDemand": [
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-haiku-20240307-v1:0",
-          "modelName": "Claude 3 Haiku",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-5-sonnet-20240620-v1:0",
-          "modelName": "Claude 3.5 Sonnet",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
         {
           "inferenceTypesSupported": [
             "INFERENCE_PROFILE",
@@ -7556,7 +7460,7 @@
           ]
         },
         {
-          "description": "Routes requests to Anthropic Claude Sonnet 4.5 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1 and eu-central-1.",
+          "description": "Routes requests to Anthropic Claude Sonnet 4.5 in eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1 and eu-west-3.",
           "geo": "eu",
           "models": [
             "anthropic.claude-sonnet-4-5-20250929-v1:0"
@@ -8588,7 +8492,7 @@
           ]
         },
         {
-          "description": "Routes requests to Anthropic Claude Sonnet 4.5 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1 and eu-central-1.",
+          "description": "Routes requests to Anthropic Claude Sonnet 4.5 in eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1 and eu-west-3.",
           "geo": "eu",
           "models": [
             "anthropic.claude-sonnet-4-5-20250929-v1:0"
@@ -9865,7 +9769,7 @@
           ]
         },
         {
-          "description": "Routes requests to Anthropic Claude Sonnet 4.5 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1 and eu-central-1.",
+          "description": "Routes requests to Anthropic Claude Sonnet 4.5 in eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1 and eu-west-3.",
           "geo": "eu",
           "models": [
             "anthropic.claude-sonnet-4-5-20250929-v1:0"
@@ -10501,38 +10405,6 @@
             "EMBEDDING"
           ],
           "providerName": "Amazon"
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-sonnet-20240229-v1:0",
-          "modelName": "Claude 3 Sonnet",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-7-sonnet-20250219-v1:0",
-          "modelName": "Claude 3.7 Sonnet",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
         },
         {
           "inferenceTypesSupported": [
@@ -11376,7 +11248,7 @@
           ]
         },
         {
-          "description": "Routes requests to Anthropic Claude Sonnet 4.5 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1, eu-central-1 and eu-west-2.",
+          "description": "Routes requests to Anthropic Claude Sonnet 4.5 in eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1, eu-west-2 and eu-west-3.",
           "geo": "eu",
           "models": [
             "anthropic.claude-sonnet-4-5-20250929-v1:0"
@@ -12197,7 +12069,7 @@
           ]
         },
         {
-          "description": "Routes requests to Anthropic Claude Sonnet 4.5 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1 and eu-central-1.",
+          "description": "Routes requests to Anthropic Claude Sonnet 4.5 in eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1 and eu-west-3.",
           "geo": "eu",
           "models": [
             "anthropic.claude-sonnet-4-5-20250929-v1:0"
@@ -12739,38 +12611,6 @@
             "EMBEDDING"
           ],
           "providerName": "Amazon"
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-haiku-20240307-v1:0",
-          "modelName": "Claude 3 Haiku",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-sonnet-20240229-v1:0",
-          "modelName": "Claude 3 Sonnet",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
         },
         {
           "inferenceTypesSupported": [
