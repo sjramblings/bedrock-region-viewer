@@ -17,7 +17,7 @@
     "me-south-1": "",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-11-16T23:09:21.905Z",
+  "generatedAt": "2026-11-17T21:58:30.021Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -347,6 +347,28 @@
           ],
           "profileId": "global.openai.gpt-6.1-terra",
           "profileName": "Global OpenAI GPT-6.1 Terra",
+          "routeRegions": [
+            "ap-northeast-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Astra globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-astra"
+          ],
+          "profileId": "global.openai.gpt-6.2-astra",
+          "profileName": "Global OpenAI GPT-6.2 Astra",
+          "routeRegions": [
+            "ap-northeast-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-sol"
+          ],
+          "profileId": "global.openai.gpt-6.2-sol",
+          "profileName": "Global OpenAI GPT-6.2 Sol",
           "routeRegions": [
             "ap-northeast-1"
           ]
@@ -1650,6 +1672,28 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.2 Astra globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-astra"
+          ],
+          "profileId": "global.openai.gpt-6.2-astra",
+          "profileName": "Global OpenAI GPT-6.2 Astra",
+          "routeRegions": [
+            "ap-northeast-2"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-sol"
+          ],
+          "profileId": "global.openai.gpt-6.2-sol",
+          "profileName": "Global OpenAI GPT-6.2 Sol",
+          "routeRegions": [
+            "ap-northeast-2"
+          ]
+        },
+        {
           "description": "Routes requests to Pegasus v1.2 globally across all supported AWS Regions.",
           "models": [
             "twelvelabs.pegasus-1-2-v1:0"
@@ -2278,6 +2322,28 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.2 Astra globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-astra"
+          ],
+          "profileId": "global.openai.gpt-6.2-astra",
+          "profileName": "Global OpenAI GPT-6.2 Astra",
+          "routeRegions": [
+            "ap-northeast-3"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-sol"
+          ],
+          "profileId": "global.openai.gpt-6.2-sol",
+          "profileName": "Global OpenAI GPT-6.2 Sol",
+          "routeRegions": [
+            "ap-northeast-3"
+          ]
+        },
+        {
           "description": "Routes requests to Pegasus v1.2 globally across all supported AWS Regions.",
           "models": [
             "twelvelabs.pegasus-1-2-v1:0"
@@ -2778,6 +2844,28 @@
           ],
           "profileId": "global.openai.gpt-6.1-terra",
           "profileName": "Global OpenAI GPT-6.1 Terra",
+          "routeRegions": [
+            "ap-south-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Astra globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-astra"
+          ],
+          "profileId": "global.openai.gpt-6.2-astra",
+          "profileName": "Global OpenAI GPT-6.2 Astra",
+          "routeRegions": [
+            "ap-south-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-sol"
+          ],
+          "profileId": "global.openai.gpt-6.2-sol",
+          "profileName": "Global OpenAI GPT-6.2 Sol",
           "routeRegions": [
             "ap-south-1"
           ]
@@ -3972,6 +4060,28 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.2 Astra globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-astra"
+          ],
+          "profileId": "global.openai.gpt-6.2-astra",
+          "profileName": "Global OpenAI GPT-6.2 Astra",
+          "routeRegions": [
+            "ap-southeast-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-sol"
+          ],
+          "profileId": "global.openai.gpt-6.2-sol",
+          "profileName": "Global OpenAI GPT-6.2 Sol",
+          "routeRegions": [
+            "ap-southeast-1"
+          ]
+        },
+        {
           "description": "Routes requests to Pegasus v1.2 globally across all supported AWS Regions.",
           "models": [
             "twelvelabs.pegasus-1-2-v1:0"
@@ -4512,6 +4622,28 @@
           ],
           "profileId": "global.openai.gpt-6.1-terra",
           "profileName": "Global OpenAI GPT-6.1 Terra",
+          "routeRegions": [
+            "ap-southeast-2"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Astra globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-astra"
+          ],
+          "profileId": "global.openai.gpt-6.2-astra",
+          "profileName": "Global OpenAI GPT-6.2 Astra",
+          "routeRegions": [
+            "ap-southeast-2"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-sol"
+          ],
+          "profileId": "global.openai.gpt-6.2-sol",
+          "profileName": "Global OpenAI GPT-6.2 Sol",
           "routeRegions": [
             "ap-southeast-2"
           ]
@@ -5868,6 +6000,28 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.2 Astra globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-astra"
+          ],
+          "profileId": "global.openai.gpt-6.2-astra",
+          "profileName": "Global OpenAI GPT-6.2 Astra",
+          "routeRegions": [
+            "ca-central-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-sol"
+          ],
+          "profileId": "global.openai.gpt-6.2-sol",
+          "profileName": "Global OpenAI GPT-6.2 Sol",
+          "routeRegions": [
+            "ca-central-1"
+          ]
+        },
+        {
           "description": "Routes requests to Pegasus v1.2 globally across all supported AWS Regions.",
           "models": [
             "twelvelabs.pegasus-1-2-v1:0"
@@ -6580,6 +6734,36 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.2 Astra in us-east-1, us-east-2, ca-central-1, us-west-2.",
+          "geo": "us",
+          "models": [
+            "openai.gpt-6.2-astra"
+          ],
+          "profileId": "us.openai.gpt-6.2-astra",
+          "profileName": "US OpenAI GPT-6.2 Astra",
+          "routeRegions": [
+            "ca-central-1",
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Sol in us-east-1, us-east-2, ca-central-1, us-west-2.",
+          "geo": "us",
+          "models": [
+            "openai.gpt-6.2-sol"
+          ],
+          "profileId": "us.openai.gpt-6.2-sol",
+          "profileName": "US OpenAI GPT-6.2 Sol",
+          "routeRegions": [
+            "ca-central-1",
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to Grok 4.6 in us-east-1, us-east-2, ca-central-1, us-west-2.",
           "geo": "us",
           "models": [
@@ -6928,6 +7112,28 @@
           ],
           "profileId": "global.openai.gpt-6.1-terra",
           "profileName": "Global OpenAI GPT-6.1 Terra",
+          "routeRegions": [
+            "eu-central-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Astra globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-astra"
+          ],
+          "profileId": "global.openai.gpt-6.2-astra",
+          "profileName": "Global OpenAI GPT-6.2 Astra",
+          "routeRegions": [
+            "eu-central-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-sol"
+          ],
+          "profileId": "global.openai.gpt-6.2-sol",
+          "profileName": "Global OpenAI GPT-6.2 Sol",
           "routeRegions": [
             "eu-central-1"
           ]
@@ -7936,6 +8142,28 @@
           ],
           "profileId": "global.openai.gpt-6.1-terra",
           "profileName": "Global OpenAI GPT-6.1 Terra",
+          "routeRegions": [
+            "eu-north-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Astra globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-astra"
+          ],
+          "profileId": "global.openai.gpt-6.2-astra",
+          "profileName": "Global OpenAI GPT-6.2 Astra",
+          "routeRegions": [
+            "eu-north-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-sol"
+          ],
+          "profileId": "global.openai.gpt-6.2-sol",
+          "profileName": "Global OpenAI GPT-6.2 Sol",
           "routeRegions": [
             "eu-north-1"
           ]
@@ -8951,6 +9179,28 @@
           ],
           "profileId": "global.openai.gpt-6.1-terra",
           "profileName": "Global OpenAI GPT-6.1 Terra",
+          "routeRegions": [
+            "eu-west-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Astra globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-astra"
+          ],
+          "profileId": "global.openai.gpt-6.2-astra",
+          "profileName": "Global OpenAI GPT-6.2 Astra",
+          "routeRegions": [
+            "eu-west-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-sol"
+          ],
+          "profileId": "global.openai.gpt-6.2-sol",
+          "profileName": "Global OpenAI GPT-6.2 Sol",
           "routeRegions": [
             "eu-west-1"
           ]
@@ -10279,6 +10529,28 @@
           ],
           "profileId": "global.openai.gpt-6.1-terra",
           "profileName": "Global OpenAI GPT-6.1 Terra",
+          "routeRegions": [
+            "eu-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Astra globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-astra"
+          ],
+          "profileId": "global.openai.gpt-6.2-astra",
+          "profileName": "Global OpenAI GPT-6.2 Astra",
+          "routeRegions": [
+            "eu-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-sol"
+          ],
+          "profileId": "global.openai.gpt-6.2-sol",
+          "profileName": "Global OpenAI GPT-6.2 Sol",
           "routeRegions": [
             "eu-west-2"
           ]
@@ -11692,6 +11964,28 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.2 Astra globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-astra"
+          ],
+          "profileId": "global.openai.gpt-6.2-astra",
+          "profileName": "Global OpenAI GPT-6.2 Astra",
+          "routeRegions": [
+            "eu-west-3"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-sol"
+          ],
+          "profileId": "global.openai.gpt-6.2-sol",
+          "profileName": "Global OpenAI GPT-6.2 Sol",
+          "routeRegions": [
+            "eu-west-3"
+          ]
+        },
+        {
           "description": "Routes requests to Pegasus v1.2 globally across all supported AWS Regions.",
           "models": [
             "twelvelabs.pegasus-1-2-v1:0"
@@ -12534,6 +12828,28 @@
           ],
           "profileId": "global.openai.gpt-6.1-terra",
           "profileName": "Global OpenAI GPT-6.1 Terra",
+          "routeRegions": [
+            "sa-east-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Astra globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-astra"
+          ],
+          "profileId": "global.openai.gpt-6.2-astra",
+          "profileName": "Global OpenAI GPT-6.2 Astra",
+          "routeRegions": [
+            "sa-east-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-sol"
+          ],
+          "profileId": "global.openai.gpt-6.2-sol",
+          "profileName": "Global OpenAI GPT-6.2 Sol",
           "routeRegions": [
             "sa-east-1"
           ]
@@ -13513,6 +13829,28 @@
           ],
           "profileId": "global.openai.gpt-6.1-terra",
           "profileName": "Global OpenAI GPT-6.1 Terra",
+          "routeRegions": [
+            "us-east-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Astra globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-astra"
+          ],
+          "profileId": "global.openai.gpt-6.2-astra",
+          "profileName": "Global OpenAI GPT-6.2 Astra",
+          "routeRegions": [
+            "us-east-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-sol"
+          ],
+          "profileId": "global.openai.gpt-6.2-sol",
+          "profileName": "Global OpenAI GPT-6.2 Sol",
           "routeRegions": [
             "us-east-1"
           ]
@@ -15151,6 +15489,30 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.2 Astra in us-east-1.",
+          "geo": "us",
+          "models": [
+            "openai.gpt-6.2-astra"
+          ],
+          "profileId": "us.openai.gpt-6.2-astra",
+          "profileName": "US OpenAI GPT-6.2 Astra",
+          "routeRegions": [
+            "us-east-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Sol in us-east-1.",
+          "geo": "us",
+          "models": [
+            "openai.gpt-6.2-sol"
+          ],
+          "profileId": "us.openai.gpt-6.2-sol",
+          "profileName": "US OpenAI GPT-6.2 Sol",
+          "routeRegions": [
+            "us-east-1"
+          ]
+        },
+        {
           "description": "Routes requests to Stable Image Conservative Upscale in us-east-1, us-east-2, us-west-2.",
           "geo": "us",
           "models": [
@@ -15790,6 +16152,28 @@
           ],
           "profileId": "global.openai.gpt-6.1-terra",
           "profileName": "Global OpenAI GPT-6.1 Terra",
+          "routeRegions": [
+            "us-east-2"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Astra globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-astra"
+          ],
+          "profileId": "global.openai.gpt-6.2-astra",
+          "profileName": "Global OpenAI GPT-6.2 Astra",
+          "routeRegions": [
+            "us-east-2"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-sol"
+          ],
+          "profileId": "global.openai.gpt-6.2-sol",
+          "profileName": "Global OpenAI GPT-6.2 Sol",
           "routeRegions": [
             "us-east-2"
           ]
@@ -17114,6 +17498,34 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.2 Astra in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "openai.gpt-6.2-astra"
+          ],
+          "profileId": "us.openai.gpt-6.2-astra",
+          "profileName": "US OpenAI GPT-6.2 Astra",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Sol in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "openai.gpt-6.2-sol"
+          ],
+          "profileId": "us.openai.gpt-6.2-sol",
+          "profileName": "US OpenAI GPT-6.2 Sol",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to Stable Image Conservative Upscale in us-east-1, us-east-2, us-west-2.",
           "geo": "us",
           "models": [
@@ -17717,6 +18129,28 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.2 Astra globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-astra"
+          ],
+          "profileId": "global.openai.gpt-6.2-astra",
+          "profileName": "Global OpenAI GPT-6.2 Astra",
+          "routeRegions": [
+            "us-west-1"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-sol"
+          ],
+          "profileId": "global.openai.gpt-6.2-sol",
+          "profileName": "Global OpenAI GPT-6.2 Sol",
+          "routeRegions": [
+            "us-west-1"
+          ]
+        },
+        {
           "description": "Routes requests to Pegasus v1.2 globally across all supported AWS Regions.",
           "models": [
             "twelvelabs.pegasus-1-2-v1:0"
@@ -18267,6 +18701,36 @@
           ]
         },
         {
+          "description": "Routes requests to GPT-6.2 Astra in us-east-1, us-east-2, us-west-1, us-west-2.",
+          "geo": "us",
+          "models": [
+            "openai.gpt-6.2-astra"
+          ],
+          "profileId": "us.openai.gpt-6.2-astra",
+          "profileName": "US OpenAI GPT-6.2 Astra",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-1",
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Sol in us-east-1, us-east-2, us-west-1, us-west-2.",
+          "geo": "us",
+          "models": [
+            "openai.gpt-6.2-sol"
+          ],
+          "profileId": "us.openai.gpt-6.2-sol",
+          "profileName": "US OpenAI GPT-6.2 Sol",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-1",
+            "us-west-2"
+          ]
+        },
+        {
           "description": "Routes requests to Pegasus v1.2 in us-east-1, us-east-2, us-west-1, us-west-2.",
           "geo": "us",
           "models": [
@@ -18701,6 +19165,28 @@
           ],
           "profileId": "global.openai.gpt-6.1-terra",
           "profileName": "Global OpenAI GPT-6.1 Terra",
+          "routeRegions": [
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Astra globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-astra"
+          ],
+          "profileId": "global.openai.gpt-6.2-astra",
+          "profileName": "Global OpenAI GPT-6.2 Astra",
+          "routeRegions": [
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Sol globally across all supported AWS Regions.",
+          "models": [
+            "openai.gpt-6.2-sol"
+          ],
+          "profileId": "global.openai.gpt-6.2-sol",
+          "profileName": "Global OpenAI GPT-6.2 Sol",
           "routeRegions": [
             "us-west-2"
           ]
@@ -20314,6 +20800,34 @@
           ],
           "profileId": "us.openai.gpt-6.1-terra",
           "profileName": "US OpenAI GPT-6.1 Terra",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Astra in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "openai.gpt-6.2-astra"
+          ],
+          "profileId": "us.openai.gpt-6.2-astra",
+          "profileName": "US OpenAI GPT-6.2 Astra",
+          "routeRegions": [
+            "us-east-1",
+            "us-east-2",
+            "us-west-2"
+          ]
+        },
+        {
+          "description": "Routes requests to GPT-6.2 Sol in us-east-1, us-east-2, us-west-2.",
+          "geo": "us",
+          "models": [
+            "openai.gpt-6.2-sol"
+          ],
+          "profileId": "us.openai.gpt-6.2-sol",
+          "profileName": "US OpenAI GPT-6.2 Sol",
           "routeRegions": [
             "us-east-1",
             "us-east-2",
