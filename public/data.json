@@ -17,7 +17,7 @@
     "me-south-1": "",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-11-17T21:58:30.021Z",
+  "generatedAt": "2026-11-26T22:44:41.333Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -6407,7 +6407,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Opus 4.5 in us-east-1, us-east-2, ca-central-1, us-west-2.",
+          "description": "Routes requests to Anthropic Claude Opus 4.5 in ca-central-1, us-east-1, us-east-2 and us-west-2.",
           "geo": "us",
           "models": [
             "anthropic.claude-opus-4-5-20251101-v1:0"
@@ -7577,7 +7577,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Opus 4.5 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1, eu-central-1.",
+          "description": "Routes requests to Anthropic Claude Opus 4.5 in eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1 and eu-west-3.",
           "geo": "eu",
           "models": [
             "anthropic.claude-opus-4-5-20251101-v1:0"
@@ -8631,7 +8631,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Opus 4.5 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1, eu-central-1.",
+          "description": "Routes requests to Anthropic Claude Opus 4.5 in eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1 and eu-west-3.",
           "geo": "eu",
           "models": [
             "anthropic.claude-opus-4-5-20251101-v1:0"
@@ -9930,7 +9930,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Opus 4.5 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1, eu-central-1.",
+          "description": "Routes requests to Anthropic Claude Opus 4.5 in eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1 and eu-west-3.",
           "geo": "eu",
           "models": [
             "anthropic.claude-opus-4-5-20251101-v1:0"
@@ -11425,7 +11425,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Opus 4.5 in eu-north-1, eu-west-3, eu-south-1, eu-west-2, eu-south-2, eu-west-1, eu-central-1.",
+          "description": "Routes requests to Anthropic Claude Opus 4.5 in eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1, eu-west-2 and eu-west-3.",
           "geo": "eu",
           "models": [
             "anthropic.claude-opus-4-5-20251101-v1:0"
@@ -12274,7 +12274,7 @@
           ]
         },
         {
-          "description": "Routes requests to Claude Opus 4.5 in eu-north-1, eu-west-3, eu-south-1, eu-south-2, eu-west-1, eu-central-1.",
+          "description": "Routes requests to Anthropic Claude Opus 4.5 in eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1 and eu-west-3.",
           "geo": "eu",
           "models": [
             "anthropic.claude-opus-4-5-20251101-v1:0"
@@ -13912,36 +13912,6 @@
         }
       ],
       "onDemand": [
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "TEXT"
-          ],
-          "modelId": "ai21.jamba-1-5-large-v1:0",
-          "modelName": "Jamba 1.5 Large",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "AI21 Labs",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "TEXT"
-          ],
-          "modelId": "ai21.jamba-1-5-mini-v1:0",
-          "modelName": "Jamba 1.5 Mini",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "AI21 Labs",
-          "responseStreamingSupported": true
-        },
         {
           "inferenceTypesSupported": [
             "ON_DEMAND"
@@ -18329,7 +18299,7 @@
           ]
         },
         {
-          "description": "Routes requests to Anthropic Claude Opus 4.5 in us-east-1, us-east-2, us-west-2 and us-west-1.",
+          "description": "Routes requests to Anthropic Claude Opus 4.5 in us-east-1, us-east-2, us-west-1 and us-west-2.",
           "geo": "us",
           "models": [
             "anthropic.claude-opus-4-5-20251101-v1:0"
