@@ -17,7 +17,7 @@
     "me-south-1": "",
     "mx-central-1": "The security token included in the request is invalid"
   },
-  "generatedAt": "2026-11-26T22:44:41.333Z",
+  "generatedAt": "2026-11-27T22:26:49.123Z",
   "regions": {
     "ap-northeast-1": {
       "global": [
@@ -6122,38 +6122,6 @@
             "EMBEDDING"
           ],
           "providerName": "Amazon"
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-haiku-20240307-v1:0",
-          "modelName": "Claude 3 Haiku",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
-        },
-        {
-          "inferenceTypesSupported": [
-            "ON_DEMAND"
-          ],
-          "inputModalities": [
-            "IMAGE",
-            "TEXT"
-          ],
-          "modelId": "anthropic.claude-3-sonnet-20240229-v1:0",
-          "modelName": "Claude 3 Sonnet",
-          "outputModalities": [
-            "TEXT"
-          ],
-          "providerName": "Anthropic",
-          "responseStreamingSupported": true
         },
         {
           "inferenceTypesSupported": [
